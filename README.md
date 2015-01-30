@@ -1,2 +1,2 @@
-# JARM
-Just Another Random Mod
+# JARM (Just Another Random Mod)
+Just another random, stupid and useless mod.
