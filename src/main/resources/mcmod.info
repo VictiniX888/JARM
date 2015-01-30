@@ -1,14 +1,14 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
+  "modid": "jarm",
+  "name": "Just Another Random Mod",
+  "description": "It's just another random, stupid and useless mod.",
   "version": "${version}",
   "mcversion": "${mcversion}",
-  "url": "",
+  "url": "https://github.com/VictiniX888/JARM",
   "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
+  "authorList": ["VictiniX888"],
+  "credits": "The Forge and FML guys, for making Forge",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
