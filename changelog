@@ -5,3 +5,9 @@ Build 1
 
 Build 2
 - Add config option to enable/disable stuff
+
+Build 3
+- Update Forge to 10.13.2.1291
+- Fix configs
+- Add config to specify text that appears when Random Gun is used
+- Update credits
