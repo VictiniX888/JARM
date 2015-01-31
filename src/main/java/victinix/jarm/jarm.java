@@ -4,6 +4,7 @@ import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import victinix.jarm.items.modItems;
 import victinix.jarm.lib.Data;
 
 /**
@@ -16,6 +17,8 @@ public class jarm {
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
+
+        modItems.init();
 
     }
 
