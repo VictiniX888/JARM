@@ -5,7 +5,8 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import victinix.jarm.items.modItems;
-import victinix.jarm.lib.Data;
+import victinix.jarm.libs.Data;
+import victinix.jarm.libs.Tabs;
 
 /**
  * Created by VictiniX888 on 30-Jan-2015.
@@ -19,7 +20,6 @@ public class jarm {
     public void preInit(FMLPreInitializationEvent event) {
 
         modItems.init();
-
     }
 
     @Mod.EventHandler
@@ -30,5 +30,6 @@ public class jarm {
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event) {
 
+        Tabs.postInit();
     }
 }

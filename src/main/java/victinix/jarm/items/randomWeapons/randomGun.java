@@ -7,7 +7,8 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.world.World;
-import victinix.jarm.lib.Data;
+import victinix.jarm.libs.Data;
+import victinix.jarm.libs.Tabs;
 
 /**
  * Created by VictiniX888 on 31-Jan-2015.
@@ -20,7 +21,7 @@ public class randomGun extends Item {
     public randomGun() {
 
         setUnlocalizedName(Data.MODID + ":" + name);
-        setCreativeTab(CreativeTabs.tabTools);
+        setCreativeTab(Tabs.tabRandom);
         GameRegistry.registerItem(this, name);
     }
 

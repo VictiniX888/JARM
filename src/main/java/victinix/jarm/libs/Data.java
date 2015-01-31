@@ -1,4 +1,4 @@
-package victinix.jarm.lib;
+package victinix.jarm.libs;
 
 /**
  * Created by VictiniX888 on 30-Jan-2015.
