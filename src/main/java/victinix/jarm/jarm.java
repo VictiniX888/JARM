@@ -23,13 +23,13 @@ public class jarm {
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
 
-        modItems.init();
-
         File configFile = event.getSuggestedConfigurationFile();
         Configurations.configExists = configFile.exists();
         Configurations.config = new Configuration(configFile);
         Configurations.config.load();
         Configurations.refreshConfig();
+
+        modItems.init();
     }
 
     @Mod.EventHandler
