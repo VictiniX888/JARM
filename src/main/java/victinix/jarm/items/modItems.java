@@ -1,5 +1,6 @@
 package victinix.jarm.items;
 
+import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.item.Item;
 
 /**
@@ -13,5 +14,6 @@ public class modItems {
     public static void init() {
 
         randomGun = new victinix.jarm.items.randomWeapons.randomGun();
+        GameRegistry.registerItem(randomGun, "randomGun");
     }
 }

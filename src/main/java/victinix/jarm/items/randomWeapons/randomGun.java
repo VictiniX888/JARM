@@ -22,7 +22,6 @@ public class randomGun extends Item {
 
         setUnlocalizedName(Data.MODID + ":" + name);
         setCreativeTab(Tabs.tabRandom);
-        GameRegistry.registerItem(this, name);
     }
 
     @Override
@@ -30,7 +29,7 @@ public class randomGun extends Item {
 
         if (!world.isRemote) {
 
-            entityPlayer.addChatMessage(new ChatComponentText("I'm happy"));
+            entityPlayer.addChatMessage(new ChatComponentText("Malware has been installed on your PC"));
         }
 
         return itemStack;
