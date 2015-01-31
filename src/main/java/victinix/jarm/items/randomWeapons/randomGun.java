@@ -7,6 +7,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.world.World;
+import victinix.jarm.libs.Configurations;
 import victinix.jarm.libs.Data;
 import victinix.jarm.libs.Tabs;
 
@@ -29,7 +30,7 @@ public class randomGun extends Item {
 
         if (!world.isRemote) {
 
-            entityPlayer.addChatMessage(new ChatComponentText("Malware has been installed on your PC"));
+            entityPlayer.addChatMessage(new ChatComponentText(Configurations.randomGunText));
         }
 
         return itemStack;

@@ -2,8 +2,6 @@ package victinix.jarm.items;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.item.Item;
-import net.minecraftforge.common.config.Configuration;
-import victinix.jarm.jarm;
 import victinix.jarm.libs.Configurations;
 
 /**
