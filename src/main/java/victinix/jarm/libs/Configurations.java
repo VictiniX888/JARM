@@ -19,12 +19,12 @@ public class Configurations {
 
         String category;
 
-        /* registry */
+        //registry
         category = "registry";
 
         randomGunRegister = config.get(category, "randomGunRegister", true).getBoolean(true);
 
-        /* randomText */
+        //randomText
         category = "randomText";
 
         randomGunText = config.get(category, "randomGunText", "Malware has been installed on your PC", "Text that appears when Random Gun is used.").getString();
