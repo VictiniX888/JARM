@@ -15,6 +15,7 @@ public class Configurations {
     public static boolean hotdogRegister;
 
     public static String randomGunText;
+    public static String randomGunTexture;
 
     public static boolean refreshConfig() {
 
@@ -26,10 +27,11 @@ public class Configurations {
         randomGunRegister = config.get(category, "randomGunRegister", true).getBoolean(true);
         hotdogRegister = config.get(category, "hotdogRegister", true).getBoolean(true);
 
-        //randomText
-        category = "randomText";
+        //randomWeapons
+        category = "randomWeapons";
 
         randomGunText = config.get(category, "randomGunText", "Malware has been installed on your PC", "Text that appears when Random Gun is used.").getString();
+        randomGunTexture = config.get(category, "randomGunTexture", "pistol", "Texture for Random Gun. Options = pistol & submachineGun").getString();
 
         if (config.hasChanged())
             config.save();

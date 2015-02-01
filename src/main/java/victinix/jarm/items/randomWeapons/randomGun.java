@@ -18,11 +18,12 @@ import victinix.jarm.libs.Tabs;
 public class randomGun extends Item {
 
     private String name = "randomGun";
+    private String name2 = Configurations.randomGunTexture;
 
     public randomGun() {
 
         setUnlocalizedName(Data.MODID + ":" + name);
-        setTextureName(Data.MODID + ":" + name);
+        setTextureName(Data.MODID + ":" + name2);
         setCreativeTab(Tabs.tabRandom);
     }
 
