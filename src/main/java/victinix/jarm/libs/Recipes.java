@@ -9,6 +9,13 @@ import victinix.jarm.items.modItems;
 
 /**
  * Created by VictiniX888 on 01-Feb-2015.
+ * It's distributed as part of the JARM Mod.
+ * Get the Source Code in github:
+ * https://github.com/VictiniX888/JARM
+ *
+ * JARM is Open Source and distributed under the
+ * Creative Commons Attribution-NonCommercial-ShareAlike
+ * 4.0 International Public License
  */
 
 public class Recipes {
