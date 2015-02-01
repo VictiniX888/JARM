@@ -42,7 +42,7 @@ public class Configurations {
         category = "randomWeapons";
 
         randomGunText = config.get(category, "randomGunText", "Malware has been installed on your PC", "Text that appears when Random Gun is used.").getString();
-        randomGunTexture = config.get(category, "randomGunTexture", "pistol", "Texture for Random Gun. Options = pistol & submachineGun").getString();
+        randomGunTexture = config.get(category, "randomGunTexture", "pistol", "Texture for Random Gun. Options = AK, MSBS, pistol, sniper & submachineGun").getString();
 
         //food
         category = "food";
