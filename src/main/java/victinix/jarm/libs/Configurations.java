@@ -24,6 +24,10 @@ public class Configurations {
     public static String randomGunText;
     public static String randomGunTexture;
 
+    public static int hotdogHeal;
+    public static double hotdogSaturation;
+    public static boolean hotdogWolfMeat;
+
     public static boolean refreshConfig() {
 
         String category;
@@ -39,6 +43,13 @@ public class Configurations {
 
         randomGunText = config.get(category, "randomGunText", "Malware has been installed on your PC", "Text that appears when Random Gun is used.").getString();
         randomGunTexture = config.get(category, "randomGunTexture", "pistol", "Texture for Random Gun. Options = pistol & submachineGun").getString();
+
+        //food
+        category = "food";
+
+        hotdogHeal = config.get(category, "hotdogHeal", 10, "Amount of hunger Hotdog heals").getInt();
+        hotdogSaturation = config.get(category, "hotdogSaturation", 0.8F, "Amount of saturation Hotdog gives").getDouble();
+        hotdogWolfMeat = config.get(category, "hotdogWolfMeat", true, "Can Hotdog be eaten by wolves?").getBoolean(true);
 
         if (config.hasChanged())
             config.save();

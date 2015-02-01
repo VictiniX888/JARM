@@ -25,7 +25,7 @@ public class modItems {
         randomGun = new victinix.jarm.items.randomWeapons.randomGun();
         if(Configurations.randomGunRegister)
             GameRegistry.registerItem(randomGun, "randomGun");
-        hotdog = new victinix.jarm.items.food.hotdog(10, 0.8f, true);
+        hotdog = new victinix.jarm.items.food.hotdog(Configurations.hotdogHeal, (float) Configurations.hotdogSaturation, Configurations.hotdogWolfMeat);
         if(Configurations.hotdogRegister)
             GameRegistry.registerItem(hotdog, "hotdog");
     }
