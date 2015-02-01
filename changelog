@@ -11,3 +11,9 @@ Build 3
 - Fix configs
 - Add config to specify text that appears when Random Gun is used
 - Update credits
+
+Build 4
+- Added license
+- Code cleanup
+- Deobf jars
+- Added texture for Random Gun
