@@ -5,6 +5,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.ShapedOreRecipe;
+import net.minecraftforge.oredict.ShapelessOreRecipe;
 import victinix.jarm.items.modItems;
 
 /**
@@ -29,6 +30,12 @@ public class Recipes {
                     "  A",
                     'A', "ingotIron",
                     'B', new ItemStack(Blocks.stone_button)
+            }));
+
+        if(Configurations.hotdogRegister)
+            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(modItems.hotdog, 2, 0), new Object[]{
+                    new ItemStack(Items.bread),
+                    new ItemStack(Items.cooked_chicken)
             }));
     }
 }

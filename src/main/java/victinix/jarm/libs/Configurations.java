@@ -47,8 +47,8 @@ public class Configurations {
         //food
         category = "food";
 
-        hotdogHeal = config.get(category, "hotdogHeal", 10, "Amount of hunger Hotdog heals").getInt();
-        hotdogSaturation = config.get(category, "hotdogSaturation", 0.8F, "Amount of saturation Hotdog gives. The original config option is correct, however, setting the value as X.XF would be easier. Example = 0.8F").getDouble();
+        hotdogHeal = config.get(category, "hotdogHeal", 6, "Amount of hunger Hotdog heals").getInt();
+        hotdogSaturation = config.get(category, "hotdogSaturation", 0.4F, "Amount of saturation Hotdog gives. The original config option is correct, however, setting the value as X.XF would be easier. Example = 0.8F").getDouble();
         hotdogWolfMeat = config.get(category, "hotdogWolfMeat", true, "Can Hotdog be eaten by wolves?").getBoolean(true);
 
         if (config.hasChanged())
