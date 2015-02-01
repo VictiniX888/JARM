@@ -12,6 +12,7 @@ public class Configurations {
     public static boolean configExists;
 
     public static boolean randomGunRegister;
+    public static boolean hotdogRegister;
 
     public static String randomGunText;
 
@@ -23,6 +24,7 @@ public class Configurations {
         category = "registry";
 
         randomGunRegister = config.get(category, "randomGunRegister", true).getBoolean(true);
+        hotdogRegister = config.get(category, "hotdogRegister", true).getBoolean(true);
 
         //randomText
         category = "randomText";
