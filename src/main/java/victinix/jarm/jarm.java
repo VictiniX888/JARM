@@ -8,6 +8,7 @@ import net.minecraftforge.common.config.Configuration;
 import victinix.jarm.items.modItems;
 import victinix.jarm.libs.Configurations;
 import victinix.jarm.libs.Data;
+import victinix.jarm.libs.Recipes;
 import victinix.jarm.libs.Tabs;
 
 import java.io.File;
@@ -30,6 +31,7 @@ public class jarm {
         Configurations.refreshConfig();
 
         modItems.init();
+        Recipes.registerCraftingRecipes();
     }
 
     @Mod.EventHandler
