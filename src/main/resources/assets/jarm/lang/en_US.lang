@@ -1,5 +1,8 @@
 #Random Weapons
 item.jarm:randomGun.name=Random Gun
 
+#Food
+item.jarm:hotdog.name=Hotdog
+
 #Creative Tab
 itemGroup.tabRandom=JARM
