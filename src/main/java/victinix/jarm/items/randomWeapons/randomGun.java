@@ -22,6 +22,7 @@ public class randomGun extends Item {
     public randomGun() {
 
         setUnlocalizedName(Data.MODID + ":" + name);
+        setTextureName(Data.MODID + ":" + name);
         setCreativeTab(Tabs.tabRandom);
     }
 
