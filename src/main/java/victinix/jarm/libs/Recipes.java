@@ -33,7 +33,7 @@ public class Recipes {
             }));
 
         if(Configurations.hotdogRegister)
-            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(modItems.hotdog, 2, 0), new Object[]{
+            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(modItems.hotdog, Configurations.hotdogCraftingAmount, 0), new Object[]{
                     new ItemStack(Items.bread),
                     new ItemStack(Items.cooked_chicken)
             }));

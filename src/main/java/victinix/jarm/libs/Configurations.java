@@ -24,6 +24,7 @@ public class Configurations {
     public static String randomGunText;
     public static String randomGunTexture;
 
+    public static int hotdogCraftingAmount;
     public static int hotdogHeal;
     public static double hotdogSaturation;
     public static boolean hotdogWolfMeat;
@@ -47,6 +48,7 @@ public class Configurations {
         //food
         category = "food";
 
+        hotdogCraftingAmount = config.get(category, "hotdogCraftingAmount", 2, "Amount of Hotdogs crafted per recipe").getInt();
         hotdogHeal = config.get(category, "hotdogHeal", 6, "Amount of hunger Hotdog heals").getInt();
         hotdogSaturation = config.get(category, "hotdogSaturation", 0.4F, "Amount of saturation Hotdog gives. The original config option is correct, however, setting the value as X.XF would be easier. Example = 0.8F").getDouble();
         hotdogWolfMeat = config.get(category, "hotdogWolfMeat", true, "Can Hotdog be eaten by wolves?").getBoolean(true);
