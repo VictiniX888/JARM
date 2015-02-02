@@ -18,8 +18,9 @@ public class Configurations {
     public static Configuration config;
     public static boolean configExists;
 
-    public static boolean randomGunRegister;
     public static boolean hotdogRegister;
+    public static boolean emeraldSwordRegister;
+    public static boolean randomGunRegister;
 
     public static String randomGunText;
     public static String randomGunTexture;
@@ -36,8 +37,9 @@ public class Configurations {
         //registry
         category = "registry";
 
-        randomGunRegister = config.get(category, "randomGunRegister", true).getBoolean(true);
         hotdogRegister = config.get(category, "hotdogRegister", true).getBoolean(true);
+        emeraldSwordRegister = config.get(category, "emeraldSwordRegister", true).getBoolean(true);
+        randomGunRegister = config.get(category, "randomGunRegister", true).getBoolean(true);
 
         //randomWeapons
         category = "randomWeapons";

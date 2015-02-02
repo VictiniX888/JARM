@@ -2,7 +2,9 @@ package victinix.jarm.items;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.item.Item;
+import net.minecraftforge.common.util.EnumHelper;
 import victinix.jarm.libs.Configurations;
+import net.minecraft.item.Item.ToolMaterial;
 
 /**
  * Created by VictiniX888 on 31-Jan-2015.
@@ -17,16 +19,26 @@ import victinix.jarm.libs.Configurations;
 
 public class modItems {
 
-    public static Item randomGun;
     public static Item hotdog;
+
+    public static Item emeraldSword;
+    public static Item randomGun;
+
+    public static Item.ToolMaterial RANDOMEMERALD;
 
     public static void init() {
 
-        randomGun = new victinix.jarm.items.randomWeapons.randomGun();
-        if(Configurations.randomGunRegister)
-            GameRegistry.registerItem(randomGun, "randomGun");
+        RANDOMEMERALD = EnumHelper.addToolMaterial("RANDOMEMERALD", 4, 3000, 10F, 4.0F, 18);
+
         hotdog = new victinix.jarm.items.food.hotdog(Configurations.hotdogHeal, (float) Configurations.hotdogSaturation, Configurations.hotdogWolfMeat);
         if(Configurations.hotdogRegister)
             GameRegistry.registerItem(hotdog, "hotdog");
+
+        emeraldSword = new victinix.jarm.items.randomWeapons.emeraldSword(modItems.RANDOMEMERALD);
+        if(Configurations.emeraldSwordRegister)
+            GameRegistry.registerItem(emeraldSword, "emeraldSword");
+        randomGun = new victinix.jarm.items.randomWeapons.randomGun();
+        if(Configurations.randomGunRegister)
+            GameRegistry.registerItem(randomGun, "randomGun");
     }
 }
