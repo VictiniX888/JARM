@@ -22,6 +22,11 @@ public class Configurations {
     public static boolean emeraldSwordRegister;
     public static boolean randomGunRegister;
 
+    public static int emeraldSwordHarvestLevel;
+    public static int emeraldSwordDurability;
+    public static double emeraldSwordMiningSpeed;
+    public static double emeraldSwordDamage;
+    public static int emeraldSwordEnchantability;
     public static String randomGunText;
     public static String randomGunTexture;
 
@@ -44,6 +49,11 @@ public class Configurations {
         //randomWeapons
         category = "randomWeapons";
 
+        emeraldSwordHarvestLevel = config.get(category, "emeraldSwordHarvestLevel", 4, "Harvest level of Emerald Sword").getInt();
+        emeraldSwordDurability = config.get(category, "emraldSwordDurability", 3000, "Durability of Emerald Sword").getInt();
+        emeraldSwordMiningSpeed = config.get(category, "emeraldSwordMiningSpeed", 10F, "Mining speed of Emerald Sword. The original config option is correct, however, setting the value as X.XF would be easier. Example = 10.0F").getDouble();
+        emeraldSwordDamage = config.get(category, "emeraldSwordDamage", 0.4F, "Damage of Emerald Sword. The original config option is correct, however, setting the value as X.XF would be easier. Example = 0.4F").getDouble();
+        emeraldSwordEnchantability = config.get(category, "emeraldSwordEnchantability", 18, "Enchantability of Emerald Sword").getInt();
         randomGunText = config.get(category, "randomGunText", "Malware has been installed on your PC", "Text that appears when Random Gun is used.").getString();
         randomGunTexture = config.get(category, "randomGunTexture", "pistol", "Texture for Random Gun. Options = ak, msbs, pistol, sniper & submachineGun").getString();
 
@@ -52,7 +62,7 @@ public class Configurations {
 
         hotdogCraftingAmount = config.get(category, "hotdogCraftingAmount", 2, "Amount of Hotdogs crafted per recipe").getInt();
         hotdogHeal = config.get(category, "hotdogHeal", 6, "Amount of hunger Hotdog heals").getInt();
-        hotdogSaturation = config.get(category, "hotdogSaturation", 0.4F, "Amount of saturation Hotdog gives. The original config option is correct, however, setting the value as X.XF would be easier. Example = 0.8F").getDouble();
+        hotdogSaturation = config.get(category, "hotdogSaturation", 0.4F, "Amount of saturation Hotdog gives. The original config option is correct, however, setting the value as X.XF would be easier. Example = 0.4F").getDouble();
         hotdogWolfMeat = config.get(category, "hotdogWolfMeat", true, "Can Hotdog be eaten by wolves?").getBoolean(true);
 
         if (config.hasChanged())

@@ -19,16 +19,16 @@ import net.minecraft.item.Item.ToolMaterial;
 
 public class modItems {
 
+    public static Item.ToolMaterial RANDOMEMERALD;
+
     public static Item hotdog;
 
     public static Item emeraldSword;
     public static Item randomGun;
 
-    public static Item.ToolMaterial RANDOMEMERALD;
-
     public static void init() {
 
-        RANDOMEMERALD = EnumHelper.addToolMaterial("RANDOMEMERALD", 4, 3000, 10F, 4.0F, 18);
+        RANDOMEMERALD = EnumHelper.addToolMaterial("RANDOMEMERALD", Configurations.emeraldSwordHarvestLevel, Configurations.emeraldSwordDurability, (float) Configurations.emeraldSwordMiningSpeed, (float) Configurations.emeraldSwordDamage, Configurations.emeraldSwordEnchantability);
 
         hotdog = new victinix.jarm.items.food.hotdog(Configurations.hotdogHeal, (float) Configurations.hotdogSaturation, Configurations.hotdogWolfMeat);
         if(Configurations.hotdogRegister)
