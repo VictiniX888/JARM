@@ -18,6 +18,7 @@ public class randomGun extends Item {
 
     public randomGun() {
 
+        super();
         setUnlocalizedName(Data.MODID + ":" + name);
         setTextureName(Data.MODID + ":" + name2);
         setMaxStackSize(1);
