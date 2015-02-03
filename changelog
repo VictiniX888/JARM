@@ -29,3 +29,10 @@ Build 6
 - Updated file headers
 - Added more textures for Random Gun
 - Update credits
+
+Build 7
+- Added Emerald Sword
+- Removed file headers
+- Fixed up float configs
+- Changed Random Gun max stack size to 1
+- Added super to Random Gun class
