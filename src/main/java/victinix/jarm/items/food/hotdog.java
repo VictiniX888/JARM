@@ -12,6 +12,7 @@ public class hotdog extends ItemFood {
 
         super(heal, saturation, wolfMeat);
         setUnlocalizedName(Data.MODID + ":" + name);
+        setTextureName(Data.MODID + ":" + name);
         setCreativeTab(Tabs.tabRandom);
     }
 }
