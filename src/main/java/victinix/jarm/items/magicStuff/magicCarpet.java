@@ -27,7 +27,7 @@ public class magicCarpet extends Item {
 
         if(entityPlayer.getHeldItem() != null && entityPlayer.getHeldItem().getItem() == this)
             entityPlayer.capabilities.allowFlying = true;
-        if(entityPlayer.getHeldItem().getItem() != this) {
+        if(entityPlayer.getHeldItem().getItem() != this && !entityPlayer.capabilities.isCreativeMode) {
             entityPlayer.capabilities.allowFlying = false;
             if(entityPlayer.capabilities.isFlying)
                 entityPlayer.capabilities.isFlying = false;
