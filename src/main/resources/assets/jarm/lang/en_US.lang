@@ -1,6 +1,9 @@
 #Food
 item.jarm:hotdog.name=Hotdog
 
+#Magic Stuff
+item.jarm:magicCarpet.name=Magic Carpet
+
 #Random Weapons
 item.jarm:emeraldSword.name=Emerald Sword
 item.jarm:randomGun.name=Random Gun
