@@ -26,8 +26,11 @@ public class randomBazooka extends Item {
         EntityPlayer entityPlayer = (EntityPlayer) entity;
 
         if(entityPlayer.getHeldItem() != null && entityPlayer.getHeldItem().getItem() == this)
-                entityPlayer.capabilities.allowFlying = true;
-        else
+            entityPlayer.capabilities.allowFlying = true;
+        if(entityPlayer.getHeldItem().getItem() != this) {
             entityPlayer.capabilities.allowFlying = false;
+            if(entityPlayer.capabilities.isFlying)
+                entityPlayer.capabilities.isFlying = false;
+        }
     }
 }
