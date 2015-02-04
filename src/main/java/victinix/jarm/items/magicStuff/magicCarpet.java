@@ -1,4 +1,4 @@
-package victinix.jarm.items.randomWeapons;
+package victinix.jarm.items.magicStuff;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
@@ -8,11 +8,11 @@ import net.minecraft.world.World;
 import victinix.jarm.libs.Data;
 import victinix.jarm.libs.Tabs;
 
-public class randomBazooka extends Item {
+public class magicCarpet extends Item {
 
-    private String name = "randomBazooka";
+    private String name = "magicCarpet";
 
-    public randomBazooka() {
+    public magicCarpet() {
 
         super();
         setUnlocalizedName(Data.MODID + ":" + name);
