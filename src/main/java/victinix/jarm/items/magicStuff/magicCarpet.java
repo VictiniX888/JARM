@@ -27,15 +27,16 @@ public class magicCarpet extends Item {
     @Override
     public void onUpdate(ItemStack itemStack, World world, Entity entity, int i, boolean flag) {
 
+        @Nullable
+
         EntityPlayer entityPlayer = (EntityPlayer) entity;
 
-        if(entityPlayer.getCurrentEquippedItem().getItem() != null && entityPlayer.getCurrentEquippedItem().getItem() == this && !entityPlayer.capabilities.isCreativeMode) {
+        if(entityPlayer.getHeldItem() != null && entityPlayer.getHeldItem().getItem() == this)
             entityPlayer.capabilities.allowFlying = true;
-        }
-
-        if(entityPlayer.getCurrentEquippedItem().getItem() != null && entityPlayer.getCurrentEquippedItem().getItem() != this && !entityPlayer.capabilities.isCreativeMode) {
+        if(entityPlayer.getHeldItem().getItem() != null && entityPlayer.getHeldItem().getItem() != this && !entityPlayer.capabilities.isCreativeMode) {
             entityPlayer.capabilities.allowFlying = false;
-            entityPlayer.capabilities.isFlying = false;
+            if(entityPlayer.capabilities.isFlying)
+                entityPlayer.capabilities.isFlying = false;
         }
     }
 }
