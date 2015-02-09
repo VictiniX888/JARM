@@ -1,5 +1,6 @@
 package victinix.jarm.items.magicStuff;
 
+import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
@@ -20,6 +21,7 @@ public class magicCarpet extends Item {
         setUnlocalizedName(Data.MODID + ":" + name);
         setTextureName(Data.MODID + ":" + name);
         setCreativeTab(Tabs.tabRandom);
+        GameRegistry.registerItem(this, name);
     }
 
     @Override

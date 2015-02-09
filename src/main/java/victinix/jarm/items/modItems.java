@@ -1,9 +1,11 @@
 package victinix.jarm.items;
 
-import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.item.Item;
 import net.minecraftforge.common.util.EnumHelper;
+import victinix.jarm.items.food.hotdog;
 import victinix.jarm.items.magicStuff.magicCarpet;
+import victinix.jarm.items.randomWeapons.emeraldSword;
+import victinix.jarm.items.randomWeapons.randomGun;
 import victinix.jarm.libs.Configurations;
 
 public class modItems {
@@ -21,18 +23,11 @@ public class modItems {
 
         RANDOMEMERALD = EnumHelper.addToolMaterial("RANDOMEMERALD", Configurations.emeraldSwordHarvestLevel, Configurations.emeraldSwordDurability, (float) Configurations.emeraldSwordMiningSpeed, (float) Configurations.emeraldSwordDamage, Configurations.emeraldSwordEnchantability);
 
-        hotdog = new victinix.jarm.items.food.hotdog(Configurations.hotdogHeal, (float) Configurations.hotdogSaturation, Configurations.hotdogWolfMeat);
-        if(Configurations.hotdogRegister)
-            GameRegistry.registerItem(hotdog, "hotdog");
+        hotdog = new hotdog(Configurations.hotdogHeal, (float) Configurations.hotdogSaturation, Configurations.hotdogWolfMeat);
 
         magicCarpet = new magicCarpet();
-        GameRegistry.registerItem(magicCarpet, "magicCarpet");
 
-        emeraldSword = new victinix.jarm.items.randomWeapons.emeraldSword(modItems.RANDOMEMERALD);
-        if(Configurations.emeraldSwordRegister)
-            GameRegistry.registerItem(emeraldSword, "emeraldSword");
-        randomGun = new victinix.jarm.items.randomWeapons.randomGun();
-        if(Configurations.randomGunRegister)
-            GameRegistry.registerItem(randomGun, "randomGun");
+        emeraldSword = new emeraldSword(modItems.RANDOMEMERALD);
+        randomGun = new randomGun();
     }
 }

@@ -23,6 +23,8 @@ public class randomGun extends Item {
         setTextureName(Data.MODID + ":" + name2);
         setMaxStackSize(1);
         setCreativeTab(Tabs.tabRandom);
+        if(Configurations.randomGunRegister)
+            GameRegistry.registerItem(this, name);
     }
 
     @Override
