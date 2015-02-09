@@ -16,6 +16,7 @@ public class Configurations {
     public static double emeraldSwordMiningSpeed;
     public static double emeraldSwordDamage;
     public static int emeraldSwordEnchantability;
+    public static boolean emeraldSwordFire;
     public static String randomGunText;
     public static String randomGunTexture;
 
@@ -43,6 +44,7 @@ public class Configurations {
         emeraldSwordMiningSpeed = config.get(category, "emeraldSwordMiningSpeed", 10, "Mining speed of Emerald Sword.").getDouble();
         emeraldSwordDamage = config.get(category, "emeraldSwordDamage", 4, "Damage of Emerald Sword.").getDouble();
         emeraldSwordEnchantability = config.get(category, "emeraldSwordEnchantability", 18, "Enchantability of Emerald Sword").getInt();
+        emeraldSwordFire = config.get(category, "emeraldSwordFire", true, "Whether Emerald Sword has Fire Aspect.").getBoolean(true);
         randomGunText = config.get(category, "randomGunText", "Malware has been installed on your PC", "Text that appears when Random Gun is used.").getString();
         randomGunTexture = config.get(category, "randomGunTexture", "pistol", "Texture for Random Gun. Options = ak, msbs, pistol, sniper & submachineGun").getString();
 
