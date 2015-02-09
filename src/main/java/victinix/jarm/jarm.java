@@ -6,7 +6,10 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.common.config.Configuration;
 import victinix.jarm.items.modItems;
-import victinix.jarm.libs.*;
+import victinix.jarm.libs.Configurations;
+import victinix.jarm.libs.Data;
+import victinix.jarm.libs.Recipes;
+import victinix.jarm.libs.Tabs;
 
 import java.io.File;
 
@@ -23,7 +26,6 @@ public class jarm {
         Configurations.config.load();
         Configurations.refreshConfig();
 
-        Materials.RANDOMEMERALD();
         modItems.init();
         Recipes.registerCraftingRecipes();
     }

@@ -1,6 +1,7 @@
 package victinix.jarm.items.randomWeapons;
 
 import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -22,8 +23,6 @@ public class randomGun extends Item {
         setTextureName(Data.MODID + ":" + name2);
         setMaxStackSize(1);
         setCreativeTab(Tabs.tabRandom);
-        if(Configurations.randomGunRegister)
-            GameRegistry.registerItem(this, name);
     }
 
     @Override

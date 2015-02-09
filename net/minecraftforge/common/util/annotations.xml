@@ -1,5 +1,0 @@
-<root>
-    <item name='net.minecraftforge.common.util.EnumHelper net.minecraft.item.Item.ToolMaterial addToolMaterial(java.lang.String, int, int, float, float, int)'>
-        <annotation name='org.jetbrains.annotations.Nullable'/>
-    </item>
-</root>
