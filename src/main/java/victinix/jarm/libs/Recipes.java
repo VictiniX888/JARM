@@ -18,6 +18,15 @@ public class Recipes {
                     new ItemStack(Items.cooked_chicken)
             }));
 
+        if(Configurations.diamondHandbagRegister)
+            GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(modItems.diamondHandbag, 1, 0), new Object[]{
+                    "AAA",
+                    "A A",
+                    "BBB",
+                    'A', "gemDiamond",
+                    'B', "blockDiamond"
+            }));
+
         if(Configurations.emeraldSwordRegister)
             GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(modItems.emeraldSword, 1, 0), new Object[]{
                     "A",
