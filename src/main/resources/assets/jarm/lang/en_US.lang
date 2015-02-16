@@ -7,7 +7,10 @@ item.jarm:emeraldSword.name=Emerald Sword
 item.jarm:randomGun.name=Random Gun
 
 #Tooltips
-jarm.randomGun.tooltip=Shoot with caution!
+jarm.hotdog.tooltip=Yum!
+jarm.diamondHandbag.tooltip=You can't store anything in it
+jarm.emeraldSword.tooltip=Better than a Diamond Sword
+jarm.randomGun.tooltip=Shoot with caution
 
 #Creative Tab
 itemGroup.tabRandom=JARM

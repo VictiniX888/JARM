@@ -2,12 +2,16 @@ package victinix.jarm.items.randomWeapons;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import net.minecraft.potion.PotionEffect;
+import net.minecraft.util.StatCollector;
 import victinix.jarm.libs.Configurations;
 import victinix.jarm.libs.Data;
 import victinix.jarm.libs.Tabs;
+
+import java.util.List;
 
 public class emeraldSword extends ItemSword {
 
@@ -22,6 +26,12 @@ public class emeraldSword extends ItemSword {
         if(Configurations.emeraldSwordRegister) {
             GameRegistry.registerItem(this, name);
         }
+    }
+
+    @Override
+    public void addInformation(ItemStack itemStack, EntityPlayer entityPlayer, List list, boolean something) {
+        list.add(StatCollector.translateToLocal("jarm.emeraldSword.tooltip"));
+
     }
 
     @Override
