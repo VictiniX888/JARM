@@ -6,10 +6,13 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ChatComponentText;
+import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
 import victinix.jarm.libs.Configurations;
 import victinix.jarm.libs.Data;
 import victinix.jarm.libs.Tabs;
+
+import java.util.List;
 
 public class randomGun extends Item {
 
@@ -26,6 +29,12 @@ public class randomGun extends Item {
         if(Configurations.randomGunRegister) {
             GameRegistry.registerItem(this, name);
         }
+    }
+
+    @Override
+    public void addInformation(ItemStack itemStack, EntityPlayer entityPlayer, List list, boolean something) {
+
+        list.add(StatCollector.translateToLocal("jarm.randomGun.tooltip"));
     }
 
     @Override

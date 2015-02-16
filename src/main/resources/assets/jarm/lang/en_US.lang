@@ -6,5 +6,8 @@ item.jarm:diamondHandbag.name=Diamond Handbag
 item.jarm:emeraldSword.name=Emerald Sword
 item.jarm:randomGun.name=Random Gun
 
+#Tooltips
+jarm.randomGun.tooltip=Shoot with caution!
+
 #Creative Tab
 itemGroup.tabRandom=JARM
