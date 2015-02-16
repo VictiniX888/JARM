@@ -23,15 +23,15 @@ public class randomGun extends Item {
         setTextureName(Data.MODID + ":" + name2);
         setMaxStackSize(1);
         setCreativeTab(Tabs.tabRandom);
-        if(Configurations.randomGunRegister)
+        if(Configurations.randomGunRegister) {
             GameRegistry.registerItem(this, name);
+        }
     }
 
     @Override
     public ItemStack onItemRightClick(ItemStack itemStack, World world, EntityPlayer entityPlayer) {
 
-        if (!world.isRemote) {
-
+        if(!world.isRemote) {
             entityPlayer.addChatMessage(new ChatComponentText(Configurations.randomGunText));
         }
 

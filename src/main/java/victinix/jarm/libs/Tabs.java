@@ -12,20 +12,24 @@ public class Tabs {
         private ItemStack stack;
 
         public CustomCreativeTab(String label) {
+
             super(label);
         }
 
         @Override
         public Item getTabIconItem() {
+
             return stack.getItem();
         }
 
         public void setTabIconItemStack(ItemStack stack) {
+
             this.stack = stack;
         }
 
         @Override
         public ItemStack getIconItemStack() {
+
             return stack;
         }
     }

@@ -58,8 +58,9 @@ public class Configurations {
         hotdogSaturation = config.get(category, "hotdogSaturation", 0.4, "Amount of saturation Hotdog gives.").getDouble();
         hotdogWolfMeat = config.get(category, "hotdogWolfMeat", true, "Can Hotdog be eaten by wolves?").getBoolean(true);
 
-        if (config.hasChanged())
+        if(config.hasChanged()) {
             config.save();
+        }
 
         return true;
     }

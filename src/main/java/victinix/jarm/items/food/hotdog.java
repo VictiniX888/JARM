@@ -16,7 +16,8 @@ public class hotdog extends ItemFood {
         setUnlocalizedName(Data.MODID + ":" + name);
         setTextureName(Data.MODID + ":" + name);
         setCreativeTab(Tabs.tabRandom);
-        if(Configurations.hotdogRegister)
+        if(Configurations.hotdogRegister) {
             GameRegistry.registerItem(this, name);
+        }
     }
 }

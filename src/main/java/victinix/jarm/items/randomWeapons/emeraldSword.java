@@ -19,15 +19,17 @@ public class emeraldSword extends ItemSword {
         setUnlocalizedName(Data.MODID + ":" + name);
         setTextureName(Data.MODID + ":" + name);
         setCreativeTab(Tabs.tabRandom);
-        if(Configurations.emeraldSwordRegister)
+        if(Configurations.emeraldSwordRegister) {
             GameRegistry.registerItem(this, name);
+        }
     }
 
     @Override
     public boolean hitEntity(ItemStack itemStack, EntityLivingBase entityAttacked, EntityLivingBase entityAttacking) {
 
-        if(Configurations.emeraldSwordFire)
+        if(Configurations.emeraldSwordFire) {
             entityAttacked.setFire(2);
+        }
 
         return true;
     }
