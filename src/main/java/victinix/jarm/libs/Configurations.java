@@ -24,7 +24,6 @@ public class Configurations {
     public static int hotdogCraftingAmount;
     public static int hotdogHeal;
     public static double hotdogSaturation;
-    public static boolean hotdogWolfMeat;
 
     public static boolean refreshConfig() {
 
@@ -56,7 +55,6 @@ public class Configurations {
         hotdogCraftingAmount = config.get(category, "hotdogCraftingAmount", 2, "Amount of Hotdogs crafted per recipe").getInt();
         hotdogHeal = config.get(category, "hotdogHeal", 6, "Amount of hunger Hotdog heals").getInt();
         hotdogSaturation = config.get(category, "hotdogSaturation", 0.4, "Amount of saturation Hotdog gives.").getDouble();
-        hotdogWolfMeat = config.get(category, "hotdogWolfMeat", true, "Can Hotdog be eaten by wolves?").getBoolean(true);
 
         if(config.hasChanged()) {
             config.save();
