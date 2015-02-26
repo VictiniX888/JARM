@@ -19,7 +19,8 @@ public class Configurations {
     public static int emeraldSwordEnchantability;
     public static boolean emeraldSwordFire;
     public static String randomGunText;
-    public static String randomGunTexture;
+    public static boolean randomGunTextureRandom;
+    public static String randomGunTextureFixed;
 
     public static int hotdogCraftingAmount;
     public static int hotdogHeal;
@@ -47,7 +48,8 @@ public class Configurations {
         emeraldSwordEnchantability = config.get(category, "emeraldSwordEnchantability", 18, "Enchantability of Emerald Sword").getInt();
         emeraldSwordFire = config.get(category, "emeraldSwordFire", true, "Whether Emerald Sword has Fire Aspect.").getBoolean(true);
         randomGunText = config.get(category, "randomGunText", "Malware has been installed on your PC", "Text that appears when Random Gun is used.").getString();
-        randomGunTexture = config.get(category, "randomGunTexture", "pistol", "Texture for Random Gun. Options = ak, msbs, pistol, sniper & submachineGun").getString();
+        randomGunTextureRandom = config.get(category, "randomGunTextureRandom", true, "Whether the Random Gun texture is randomized").getBoolean(true);
+        randomGunTextureFixed = config.get(category, "randomGunTextureFixed", "pistol", "Texture for Random Gun. Options = ak, msbs, pistol, sniper & submachineGun. Only applies if randomGunTextureRandom is set to false").getString();
 
         //food
         category = "food";

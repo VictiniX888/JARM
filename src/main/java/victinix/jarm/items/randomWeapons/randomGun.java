@@ -19,7 +19,7 @@ public class randomGun extends Item {
 
     private String[] name3 = {"ak", "msbs", "pistol", "sniper", "submachineGun"};
     private String name = "randomGun";
-    private String name2 = Configurations.randomGunTexture;
+    private String name2 = Configurations.randomGunTextureFixed;
 
     Random random = new Random();
     int texture = random.nextInt(name3.length);
@@ -28,7 +28,12 @@ public class randomGun extends Item {
 
         super();
         setUnlocalizedName(Data.MODID + ":" + name);
-        setTextureName(Data.MODID + ":" + name3[texture]);
+        if(Configurations.randomGunTextureRandom) {
+            setTextureName(Data.MODID + ":" + name3[texture]);
+        }
+        else {
+            setTextureName(Data.MODID + ":" + name2);
+        }
         setMaxStackSize(1);
         setCreativeTab(Tabs.tabRandom);
         if(Configurations.randomGunRegister) {
