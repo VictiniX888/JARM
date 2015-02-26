@@ -13,17 +13,22 @@ import victinix.jarm.libs.Data;
 import victinix.jarm.libs.Tabs;
 
 import java.util.List;
+import java.util.Random;
 
 public class randomGun extends Item {
 
+    private String[] name3 = {"ak", "msbs", "pistol", "sniper", "submachineGun"};
     private String name = "randomGun";
     private String name2 = Configurations.randomGunTexture;
+
+    Random random = new Random();
+    int texture = random.nextInt(name3.length);
 
     public randomGun() {
 
         super();
         setUnlocalizedName(Data.MODID + ":" + name);
-        setTextureName(Data.MODID + ":" + name2);
+        setTextureName(Data.MODID + ":" + name3[texture]);
         setMaxStackSize(1);
         setCreativeTab(Tabs.tabRandom);
         if(Configurations.randomGunRegister) {
