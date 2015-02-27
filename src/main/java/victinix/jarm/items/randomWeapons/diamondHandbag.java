@@ -7,16 +7,20 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
+import net.minecraft.util.DamageSource;
 import net.minecraft.util.StatCollector;
 import victinix.jarm.libs.Configurations;
 import victinix.jarm.libs.Data;
 import victinix.jarm.libs.Tabs;
 
 import java.util.List;
+import java.util.Random;
 
 public class diamondHandbag extends ItemSword {
 
     private String name = "diamondHandbag";
+
+    Random random = new Random();
 
     public diamondHandbag(ToolMaterial toolMaterial) {
 
@@ -39,6 +43,12 @@ public class diamondHandbag extends ItemSword {
     public boolean hitEntity(ItemStack itemStack, EntityLivingBase entityAttacked, EntityLivingBase entityAttacking) {
 
         entityAttacked.addPotionEffect(new PotionEffect(Potion.wither.id, 100));
+
+        float recoilChance = random.nextFloat();
+
+        if(recoilChance <= 0.10f) {
+            entityAttacking.attackEntityFrom(DamageSource.generic, 4);
+        }
 
         return true;
     }
