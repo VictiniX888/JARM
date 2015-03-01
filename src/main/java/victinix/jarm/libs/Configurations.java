@@ -12,6 +12,8 @@ public class Configurations {
     public static boolean emeraldSwordRegister;
     public static boolean randomGunRegister;
 
+    public static boolean diamondHandbagRecoil;
+    public static float diamondHandbagRecoilChance;
     public static int emeraldSwordHarvestLevel;
     public static int emeraldSwordDurability;
     public static double emeraldSwordMiningSpeed;
@@ -41,6 +43,8 @@ public class Configurations {
         //randomWeapons
         category = "randomWeapons";
 
+        diamondHandbagRecoil = config.get(category, "diamondHandbagRecoil", true, "Whether the Diamond Handbag gives recoil").getBoolean(true);
+        diamondHandbagRecoilChance = config.getFloat("diamondHandbagRecoilChance", category, 0.10f, 0.01f, 1.00f, "Chance of Diamond Handbag recoil. 1.0 = 100%");
         emeraldSwordHarvestLevel = config.get(category, "emeraldSwordHarvestLevel", 4, "Harvest level of Emerald Sword").getInt();
         emeraldSwordDurability = config.get(category, "emraldSwordDurability", 3000, "Durability of Emerald Sword").getInt();
         emeraldSwordMiningSpeed = config.get(category, "emeraldSwordMiningSpeed", 10, "Mining speed of Emerald Sword.").getDouble();

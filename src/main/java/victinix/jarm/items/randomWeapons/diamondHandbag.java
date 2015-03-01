@@ -45,9 +45,10 @@ public class diamondHandbag extends ItemSword {
         entityAttacked.addPotionEffect(new PotionEffect(Potion.wither.id, 100));
 
         float recoilChance = random.nextFloat();
-
-        if(recoilChance <= 0.10f) {
-            entityAttacking.attackEntityFrom(DamageSource.generic, 4);
+        if(Configurations.diamondHandbagRecoil) {
+            if (recoilChance <= Configurations.diamondHandbagRecoilChance) {
+                entityAttacking.attackEntityFrom(DamageSource.generic, 4);
+            }
         }
 
         return true;
