@@ -2,13 +2,13 @@ package victinix.jarm.items;
 
 import net.minecraft.item.Item;
 import net.minecraftforge.common.util.EnumHelper;
-import victinix.jarm.items.food.hotdog;
-import victinix.jarm.items.randomWeapons.diamondHandbag;
-import victinix.jarm.items.randomWeapons.emeraldSword;
-import victinix.jarm.items.randomWeapons.randomGun;
+import victinix.jarm.items.food.Hotdog;
+import victinix.jarm.items.randomweapons.DiamondHandbag;
+import victinix.jarm.items.randomweapons.EmeraldSword;
+import victinix.jarm.items.randomweapons.RandomGun;
 import victinix.jarm.libs.Configurations;
 
-public class modItems {
+public class ModItems {
 
     public static Item.ToolMaterial RANDOMEMERALD;
 
@@ -22,10 +22,10 @@ public class modItems {
 
         RANDOMEMERALD = EnumHelper.addToolMaterial("RANDOMEMERALD", Configurations.emeraldSwordHarvestLevel, Configurations.emeraldSwordDurability, (float) Configurations.emeraldSwordMiningSpeed, (float) Configurations.emeraldSwordDamage, Configurations.emeraldSwordEnchantability);
 
-        hotdog = new hotdog(Configurations.hotdogHeal, (float) Configurations.hotdogSaturation, true);
+        hotdog = new Hotdog(Configurations.hotdogHeal, (float) Configurations.hotdogSaturation, true);
 
-        diamondHandbag = new diamondHandbag(Item.ToolMaterial.EMERALD);
-        emeraldSword = new emeraldSword(modItems.RANDOMEMERALD);
-        randomGun = new randomGun();
+        diamondHandbag = new DiamondHandbag(Item.ToolMaterial.EMERALD);
+        emeraldSword = new EmeraldSword(ModItems.RANDOMEMERALD);
+        randomGun = new RandomGun();
     }
 }

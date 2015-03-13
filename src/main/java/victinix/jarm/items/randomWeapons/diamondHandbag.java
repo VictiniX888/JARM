@@ -1,4 +1,4 @@
-package victinix.jarm.items.randomWeapons;
+package victinix.jarm.items.randomweapons;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.entity.EntityLivingBase;
@@ -16,13 +16,13 @@ import victinix.jarm.libs.Tabs;
 import java.util.List;
 import java.util.Random;
 
-public class diamondHandbag extends ItemSword {
+public class DiamondHandbag extends ItemSword {
 
     private String name = "diamondHandbag";
 
     Random random = new Random();
 
-    public diamondHandbag(ToolMaterial toolMaterial) {
+    public DiamondHandbag(ToolMaterial toolMaterial) {
 
         super(toolMaterial);
         setUnlocalizedName(Data.MODID + ":" + name);

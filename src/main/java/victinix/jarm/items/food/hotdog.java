@@ -11,11 +11,11 @@ import victinix.jarm.libs.Tabs;
 
 import java.util.List;
 
-public class hotdog extends ItemFood {
+public class Hotdog extends ItemFood {
 
     private String name = "hotdog";
 
-    public hotdog(int heal, float saturation, boolean wolfMeat) {
+    public Hotdog(int heal, float saturation, boolean wolfMeat) {
 
         super(heal, saturation, wolfMeat);
         setUnlocalizedName(Data.MODID + ":" + name);

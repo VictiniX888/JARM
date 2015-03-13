@@ -4,9 +4,8 @@ import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
-import victinix.jarm.items.modItems;
+import victinix.jarm.items.ModItems;
 import victinix.jarm.libs.Configurations;
 import victinix.jarm.libs.Data;
 import victinix.jarm.libs.Recipes;
@@ -16,7 +15,7 @@ import java.io.File;
 
 @Mod(modid = Data.MODID, name = Data.MODNAME, version = Data.VERSION)
 
-public class jarm {
+public class JARM {
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
@@ -27,7 +26,7 @@ public class jarm {
         Configurations.config.load();
         Configurations.refreshConfig();
 
-        modItems.init();
+        ModItems.init();
         Recipes.registerCraftingRecipes();
     }
 
