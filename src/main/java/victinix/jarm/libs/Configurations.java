@@ -7,6 +7,7 @@ public class Configurations {
     public static Configuration config;
     public static boolean configExists;
 
+    public static boolean coolSquidRegister;
     public static boolean hotdogRegister;
     public static boolean diamondHandbagRegister;
     public static boolean emeraldSwordRegister;
@@ -35,6 +36,7 @@ public class Configurations {
         //registry
         category = "registry";
 
+        coolSquidRegister = config.get(category, "coolSquidRegister", true).getBoolean(true);
         hotdogRegister = config.get(category, "hotdogRegister", true).getBoolean(true);
         diamondHandbagRegister = config.get(category, "diamondHandbagRegister", true).getBoolean(true);
         emeraldSwordRegister = config.get(category, "emeraldSwordRegister", true).getBoolean(true);
