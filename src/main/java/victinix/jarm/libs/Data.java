@@ -1,6 +1,6 @@
 package victinix.jarm.libs;
 
-public class Dataa {
+public class Data {
 
     public static final String MODID = "jarm";
     public static final String MODNAME = "Just Another Random Mod";

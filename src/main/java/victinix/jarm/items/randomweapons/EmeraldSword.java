@@ -1,4 +1,4 @@
-package victinix.jarm.items.randomweaponss;
+package victinix.jarm.items.randomweapons;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.entity.EntityLivingBase;
@@ -6,23 +6,23 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import net.minecraft.util.StatCollector;
-import victinix.jarm.libs.Configurationss;
-import victinix.jarm.libs.Dataa;
-import victinix.jarm.libs.Tabss;
+import victinix.jarm.libs.Configurations;
+import victinix.jarm.libs.Data;
+import victinix.jarm.libs.Tabs;
 
 import java.util.List;
 
-public class EmeraldSwordd extends ItemSword {
+public class EmeraldSword extends ItemSword {
 
     private String name = "emeraldSword";
 
-    public EmeraldSwordd(ToolMaterial toolMaterial) {
+    public EmeraldSword(ToolMaterial toolMaterial) {
 
         super(toolMaterial);
-        setUnlocalizedName(Dataa.MODID + ":" + name);
-        setTextureName(Dataa.MODID + ":" + name);
-        setCreativeTab(Tabss.tabRandom);
-        if(Configurationss.emeraldSwordRegister) {
+        setUnlocalizedName(Data.MODID + ":" + name);
+        setTextureName(Data.MODID + ":" + name);
+        setCreativeTab(Tabs.tabRandom);
+        if(Configurations.emeraldSwordRegister) {
             GameRegistry.registerItem(this, name);
         }
     }
@@ -36,7 +36,7 @@ public class EmeraldSwordd extends ItemSword {
     @Override
     public boolean hitEntity(ItemStack itemStack, EntityLivingBase entityAttacked, EntityLivingBase entityAttacking) {
 
-        if(Configurationss.emeraldSwordFire) {
+        if(Configurations.emeraldSwordFire) {
             entityAttacked.setFire(2);
         }
 

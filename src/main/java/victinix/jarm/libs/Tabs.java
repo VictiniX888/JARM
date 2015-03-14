@@ -5,7 +5,7 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
-public class Tabss {
+public class Tabs {
 
     private static class CustomCreativeTab extends CreativeTabs {
 

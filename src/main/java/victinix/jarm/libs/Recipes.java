@@ -8,18 +8,18 @@ import net.minecraftforge.oredict.ShapedOreRecipe;
 import net.minecraftforge.oredict.ShapelessOreRecipe;
 import victinix.jarm.items.ModItems;
 
-public class Recipess {
+public class Recipes {
 
     public static void registerCraftingRecipes() {
 
-        if(Configurationss.hotdogRegister) {
-            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ModItems.hotdog, Configurationss.hotdogCraftingAmount, 0), new Object[]{
+        if(Configurations.hotdogRegister) {
+            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ModItems.hotdog, Configurations.hotdogCraftingAmount, 0), new Object[]{
                     new ItemStack(Items.bread),
                     new ItemStack(Items.cooked_chicken)
             }));
         }
 
-        if(Configurationss.diamondHandbagRegister) {
+        if(Configurations.diamondHandbagRegister) {
             GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.diamondHandbag, 1, 0), new Object[]{
                     "AAA",
                     "A A",
@@ -29,7 +29,7 @@ public class Recipess {
             }));
         }
 
-        if(Configurationss.emeraldSwordRegister) {
+        if(Configurations.emeraldSwordRegister) {
             GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.emeraldSword, 1, 0), new Object[]{
                     "A",
                     "A",
@@ -39,7 +39,7 @@ public class Recipess {
             }));
         }
 
-        if(Configurationss.randomGunRegister) {
+        if(Configurations.randomGunRegister) {
             GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.randomGun, 1, 0), new Object[]{
                     "AAA",
                     " BA",

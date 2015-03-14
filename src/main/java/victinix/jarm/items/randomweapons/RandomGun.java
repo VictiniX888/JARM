@@ -1,4 +1,4 @@
-package victinix.jarm.items.randomweaponss;
+package victinix.jarm.items.randomweapons;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.entity.player.EntityPlayer;
@@ -7,35 +7,35 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
-import victinix.jarm.libs.Configurationss;
-import victinix.jarm.libs.Dataa;
-import victinix.jarm.libs.Tabss;
+import victinix.jarm.libs.Configurations;
+import victinix.jarm.libs.Data;
+import victinix.jarm.libs.Tabs;
 
 import java.util.List;
 import java.util.Random;
 
-public class RandomGunn extends Item {
+public class RandomGun extends Item {
 
     private String[] name3 = {"ak", "msbs", "pistol", "sniper", "submachineGun"};
     private String name = "randomGun";
-    private String name2 = Configurationss.randomGunTextureFixed;
+    private String name2 = Configurations.randomGunTextureFixed;
 
     Random random = new Random();
     int texture = random.nextInt(name3.length);
 
-    public RandomGunn() {
+    public RandomGun() {
 
         super();
-        setUnlocalizedName(Dataa.MODID + ":" + name);
-        if(Configurationss.randomGunTextureRandom) {
-            setTextureName(Dataa.MODID + ":" + name3[texture]);
+        setUnlocalizedName(Data.MODID + ":" + name);
+        if(Configurations.randomGunTextureRandom) {
+            setTextureName(Data.MODID + ":" + name3[texture]);
         }
         else {
-            setTextureName(Dataa.MODID + ":" + name2);
+            setTextureName(Data.MODID + ":" + name2);
         }
         setMaxStackSize(1);
-        setCreativeTab(Tabss.tabRandom);
-        if(Configurationss.randomGunRegister) {
+        setCreativeTab(Tabs.tabRandom);
+        if(Configurations.randomGunRegister) {
             GameRegistry.registerItem(this, name);
         }
     }
@@ -50,7 +50,7 @@ public class RandomGunn extends Item {
     public ItemStack onItemRightClick(ItemStack itemStack, World world, EntityPlayer entityPlayer) {
 
         if(!world.isRemote) {
-            entityPlayer.addChatMessage(new ChatComponentText(Configurationss.randomGunText));
+            entityPlayer.addChatMessage(new ChatComponentText(Configurations.randomGunText));
         }
 
         return itemStack;

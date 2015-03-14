@@ -2,7 +2,7 @@ package victinix.jarm.libs;
 
 import net.minecraftforge.common.config.Configuration;
 
-public class Configurationss {
+public class Configurations {
 
     public static Configuration config;
     public static boolean configExists;
@@ -40,8 +40,8 @@ public class Configurationss {
         emeraldSwordRegister = config.get(category, "emeraldSwordRegister", true).getBoolean(true);
         randomGunRegister = config.get(category, "randomGunRegister", true).getBoolean(true);
 
-        //randomweaponss
-        category = "randomweaponss";
+        //randomweapons
+        category = "randomweapons";
 
         diamondHandbagRecoil = config.get(category, "diamondHandbagRecoil", true, "Whether the Diamond Handbag gives recoil").getBoolean(true);
         diamondHandbagRecoilChance = config.getFloat("diamondHandbagRecoilChance", category, 0.10f, 0.01f, 1.00f, "Chance of Diamond Handbag recoil. 1.0 = 100%");

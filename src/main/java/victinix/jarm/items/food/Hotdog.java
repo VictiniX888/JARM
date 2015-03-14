@@ -5,23 +5,23 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.StatCollector;
-import victinix.jarm.libs.Configurationss;
-import victinix.jarm.libs.Dataa;
-import victinix.jarm.libs.Tabss;
+import victinix.jarm.libs.Configurations;
+import victinix.jarm.libs.Data;
+import victinix.jarm.libs.Tabs;
 
 import java.util.List;
 
-public class Hotdogg extends ItemFood {
+public class Hotdog extends ItemFood {
 
     private String name = "hotdog";
 
-    public Hotdogg(int heal, float saturation, boolean wolfMeat) {
+    public Hotdog(int heal, float saturation, boolean wolfMeat) {
 
         super(heal, saturation, wolfMeat);
-        setUnlocalizedName(Dataa.MODID + ":" + name);
-        setTextureName(Dataa.MODID + ":" + name);
-        setCreativeTab(Tabss.tabRandom);
-        if(Configurationss.hotdogRegister) {
+        setUnlocalizedName(Data.MODID + ":" + name);
+        setTextureName(Data.MODID + ":" + name);
+        setCreativeTab(Tabs.tabRandom);
+        if(Configurations.hotdogRegister) {
             GameRegistry.registerItem(this, name);
         }
     }

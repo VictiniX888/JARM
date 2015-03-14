@@ -1,4 +1,4 @@
-package victinix.jarm.items.randomweaponss;
+package victinix.jarm.items.randomweapons;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.entity.EntityLivingBase;
@@ -9,26 +9,26 @@ import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.StatCollector;
-import victinix.jarm.libs.Configurationss;
-import victinix.jarm.libs.Dataa;
-import victinix.jarm.libs.Tabss;
+import victinix.jarm.libs.Configurations;
+import victinix.jarm.libs.Data;
+import victinix.jarm.libs.Tabs;
 
 import java.util.List;
 import java.util.Random;
 
-public class DiamondHandbagg extends ItemSword {
+public class DiamondHandbag extends ItemSword {
 
     private String name = "diamondHandbag";
 
     Random random = new Random();
 
-    public DiamondHandbagg(ToolMaterial toolMaterial) {
+    public DiamondHandbag(ToolMaterial toolMaterial) {
 
         super(toolMaterial);
-        setUnlocalizedName(Dataa.MODID + ":" + name);
-        setTextureName(Dataa.MODID + ":" + name);
-        setCreativeTab(Tabss.tabRandom);
-        if(Configurationss.diamondHandbagRegister) {
+        setUnlocalizedName(Data.MODID + ":" + name);
+        setTextureName(Data.MODID + ":" + name);
+        setCreativeTab(Tabs.tabRandom);
+        if(Configurations.diamondHandbagRegister) {
             GameRegistry.registerItem(this, name);
         }
     }
@@ -45,8 +45,8 @@ public class DiamondHandbagg extends ItemSword {
         entityAttacked.addPotionEffect(new PotionEffect(Potion.wither.id, 100));
 
         float recoilChance = random.nextFloat();
-        if(Configurationss.diamondHandbagRecoil) {
-            if (recoilChance <= Configurationss.diamondHandbagRecoilChance) {
+        if(Configurations.diamondHandbagRecoil) {
+            if (recoilChance <= Configurations.diamondHandbagRecoilChance) {
                 entityAttacking.attackEntityFrom(DamageSource.generic, 4);
             }
         }
