@@ -29,6 +29,5 @@ public class Hotdog extends ItemFood {
     @Override
     public void addInformation(ItemStack itemStack, EntityPlayer entityPlayer, List list, boolean something) {
         list.add(StatCollector.translateToLocal("jarm.hotdog.tooltip"));
-
     }
 }
