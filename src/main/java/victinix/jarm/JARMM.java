@@ -5,29 +5,29 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.common.config.Configuration;
-import victinix.jarm.items.ModItems;
-import victinix.jarm.libs.Configurations;
-import victinix.jarm.libs.Data;
-import victinix.jarm.libs.Recipes;
-import victinix.jarm.libs.Tabs;
+import victinix.jarm.items.ModiiItems;
+import victinix.jarm.libs.Configurationss;
+import victinix.jarm.libs.Dataa;
+import victinix.jarm.libs.Recipess;
+import victinix.jarm.libs.Tabss;
 
 import java.io.File;
 
-@Mod(modid = Data.MODID, name = Data.MODNAME, version = Data.VERSION)
+@Mod(modid = Dataa.MODID, name = Dataa.MODNAME, version = Dataa.VERSION)
 
-public class JARM {
+public class JARMM {
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
 
         File configFile = event.getSuggestedConfigurationFile();
-        Configurations.configExists = configFile.exists();
-        Configurations.config = new Configuration(configFile);
-        Configurations.config.load();
-        Configurations.refreshConfig();
+        Configurationss.configExists = configFile.exists();
+        Configurationss.config = new Configuration(configFile);
+        Configurationss.config.load();
+        Configurationss.refreshConfig();
 
-        ModItems.init();
-        Recipes.registerCraftingRecipes();
+        ModiiItems.init();
+        Recipess.registerCraftingRecipes();
     }
 
     @Mod.EventHandler
@@ -38,6 +38,6 @@ public class JARM {
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event) {
 
-        Tabs.postInit();
+        Tabss.postInit();
     }
 }
