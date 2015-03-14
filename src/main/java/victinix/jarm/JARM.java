@@ -4,8 +4,10 @@ import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
 import victinix.jarm.items.ModItems;
+import victinix.jarm.items.food.SquidEventHandler;
 import victinix.jarm.libs.Configurations;
 import victinix.jarm.libs.Data;
 import victinix.jarm.libs.Recipes;
@@ -39,5 +41,6 @@ public class JARM {
     public void postInit(FMLPostInitializationEvent event) {
 
         Tabs.postInit();
+        MinecraftForge.EVENT_BUS.register(new SquidEventHandler());
     }
 }
