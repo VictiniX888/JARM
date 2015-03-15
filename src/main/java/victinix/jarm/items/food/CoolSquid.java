@@ -8,7 +8,7 @@ import victinix.jarm.libs.Tabs;
 
 public class CoolSquid extends ItemFood {
 
-    private String name = "Cool Squid";
+    private String name = "coolSquid";
 
     public CoolSquid(int heal, float saturation, boolean wolfMeat) {
 
