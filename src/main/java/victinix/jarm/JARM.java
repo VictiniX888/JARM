@@ -7,7 +7,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
 import victinix.jarm.items.ModItems;
-import victinix.jarm.items.food.SquidEventHandler;
+import victinix.jarm.events.SquidEventHandler;
 import victinix.jarm.libs.Configurations;
 import victinix.jarm.libs.Data;
 import victinix.jarm.libs.Recipes;

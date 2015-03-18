@@ -1,4 +1,4 @@
-package victinix.jarm.items.food;
+package victinix.jarm.events;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import net.minecraft.entity.item.EntityItem;
