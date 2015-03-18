@@ -22,10 +22,10 @@ public class ModItems {
 
     public static void init() {
 
-        RANDOMEMERALD = EnumHelper.addToolMaterial("RANDOMEMERALD", Configurations.emeraldSwordHarvestLevel, Configurations.emeraldSwordDurability, (float) Configurations.emeraldSwordMiningSpeed, (float) Configurations.emeraldSwordDamage, Configurations.emeraldSwordEnchantability);
+        RANDOMEMERALD = EnumHelper.addToolMaterial("RANDOMEMERALD", Configurations.emeraldSwordHarvestLevel, Configurations.emeraldSwordDurability, Configurations.emeraldSwordMiningSpeed, Configurations.emeraldSwordDamage, Configurations.emeraldSwordEnchantability);
 
-        coolSquid = new CoolSquid(3, 0.1f, true);
-        hotdog = new Hotdog(Configurations.hotdogHeal, (float) Configurations.hotdogSaturation, true);
+        coolSquid = new CoolSquid(Configurations.coolSquidHeal, Configurations.coolSquidSaturation, true);
+        hotdog = new Hotdog(Configurations.hotdogHeal, Configurations.hotdogSaturation, true);
 
         diamondHandbag = new DiamondHandbag(Item.ToolMaterial.EMERALD);
         emeraldSword = new EmeraldSword(ModItems.RANDOMEMERALD);
