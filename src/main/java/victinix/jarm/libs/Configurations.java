@@ -25,7 +25,6 @@ public class Configurations {
     public static boolean randomGunTextureRandom;
     public static String randomGunTextureFixed;
 
-    public static int coolSquidDropAmount;
     public static int coolSquidHeal;
     public static float coolSquidSaturation;
     public static int hotdogCraftingAmount;
@@ -63,9 +62,8 @@ public class Configurations {
         //food
         category = "food";
 
-        coolSquidDropAmount = config.get(category, "coolSquidDropAmount", 2, "Amount of Cool Squid dropped when Squid dies").getInt();
-        coolSquidHeal = config.get(category, "coolSquidHeal", 3, "Amount of hunger Cool Squid heals").getInt();
-        coolSquidSaturation = config.getFloat("coolSquidSaturation", category, 0.1f, 0.01f, 1.00f, "Amount of saturation Cool Squid gives.");
+        coolSquidHeal = config.get(category, "coolSquidHeal", 6, "Amount of hunger Cool Squid heals").getInt();
+        coolSquidSaturation = config.getFloat("coolSquidSaturation", category, 0.2f, 0.01f, 1.00f, "Amount of saturation Cool Squid gives.");
         hotdogCraftingAmount = config.get(category, "hotdogCraftingAmount", 2, "Amount of Hotdogs crafted per recipe").getInt();
         hotdogHeal = config.get(category, "hotdogHeal", 6, "Amount of hunger Hotdog heals").getInt();
         hotdogSaturation = config.getFloat("hotdogSaturation", category, 0.4f, 0.01f, 1.00f, "Amount of saturation Hotdog gives.");

@@ -14,7 +14,7 @@ public class SquidEventHandler {
     public void squidEvent(LivingDropsEvent event) {
 
         if(event.entity instanceof EntitySquid) {
-            ItemStack itemStack = new ItemStack(ModItems.coolSquid, Configurations.coolSquidDropAmount);
+            ItemStack itemStack = new ItemStack(ModItems.coolSquid, 1);
             event.drops.add(new EntityItem(event.entity.worldObj, event.entity.posX, event.entity.posY, event.entity.posZ, itemStack));
         }
     }
