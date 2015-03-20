@@ -36,3 +36,11 @@ Build 7
 - Fixed up float configs
 - Changed Random Gun max stack size to 1
 - Added super to Random Gun class
+
+Build 8
+- Added Fire Aspect to Emerald Sword
+- Added Diamond Handbag
+- Added tooltips for all items, except Cool Squid
+- Added randomization of Random Gun texture
+- Added Cool Squid, dropped by Squids on death
+- Removed Hotdog wolfmeat config
