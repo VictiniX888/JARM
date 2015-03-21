@@ -15,7 +15,7 @@ import victinix.jarm.libs.Tabs;
 
 import java.io.File;
 
-@Mod(modid = Data.MODID, name = Data.MODNAME, version = Data.VERSION)
+@Mod(modid = Data.MODID, name = Data.MODNAME, version = Data.VERSION, dependencies = Data.DEPENDENCIES)
 
 public class JARM {
 
