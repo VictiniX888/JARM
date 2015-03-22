@@ -22,7 +22,7 @@ group= "victinix.jarm" // http://maven.apache.org/guides/mini/guide-naming-conve
 archivesBaseName = "jarm"
 
 minecraft {
-    version = "1.7.10-10.13.2.1307-1.7.10"
+    version = "1.7.10-10.13.2.1340-1.7.10"
     runDir = "eclipse"
 }
 
