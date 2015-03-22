@@ -7,6 +7,7 @@ public class Configurations {
     public static Configuration config;
     public static boolean configExists;
 
+    public static boolean cookedSquidRegister;
     public static boolean coolSquidRegister;
     public static boolean hotdogRegister;
     public static boolean diamondHandbagRegister;
@@ -25,6 +26,8 @@ public class Configurations {
     public static boolean randomGunTextureRandom;
     public static String randomGunTextureFixed;
 
+    public static int cookedSquidHeal;
+    public static float cookedSquidSaturation;
     public static int coolSquidHeal;
     public static float coolSquidSaturation;
     public static int hotdogCraftingAmount;
@@ -38,6 +41,7 @@ public class Configurations {
         //registry
         category = "registry";
 
+        cookedSquidRegister = config.get(category, "cookedSquidRegister", true).getBoolean(true);
         coolSquidRegister = config.get(category, "coolSquidRegister", true).getBoolean(true);
         hotdogRegister = config.get(category, "hotdogRegister", true).getBoolean(true);
         diamondHandbagRegister = config.get(category, "diamondHandbagRegister", true).getBoolean(true);
@@ -62,6 +66,8 @@ public class Configurations {
         //food
         category = "food";
 
+        cookedSquidHeal = config.get(category, "cookedSquidHeal", 1, "Amount of hunger Cooked Squid heals").getInt();
+        cookedSquidSaturation = config.getFloat("cookedSquidSaturation", category, 0.04f, 0.01f, 1.00f, "Amount of saturation Cooked Squid gives.");
         coolSquidHeal = config.get(category, "coolSquidHeal", 6, "Amount of hunger Cool Squid heals").getInt();
         coolSquidSaturation = config.getFloat("coolSquidSaturation", category, 0.2f, 0.01f, 1.00f, "Amount of saturation Cool Squid gives.");
         hotdogCraftingAmount = config.get(category, "hotdogCraftingAmount", 2, "Amount of Hotdogs crafted per recipe").getInt();

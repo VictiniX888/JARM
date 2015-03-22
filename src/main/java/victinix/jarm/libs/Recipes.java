@@ -12,6 +12,15 @@ public class Recipes {
 
     public static void registerCraftingRecipes() {
 
+        if(Configurations.cookedSquidRegister) {
+            GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.cookedSquid, 8, 0), new Object[]{
+                    "A",
+                    "B",
+                    'A', new ItemStack(ModItems.emeraldSword),
+                    'B', new ItemStack(ModItems.coolSquid)
+            }));
+        }
+
         if(Configurations.hotdogRegister) {
             GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ModItems.hotdog, Configurations.hotdogCraftingAmount, 0), new Object[]{
                     new ItemStack(Items.bread),
