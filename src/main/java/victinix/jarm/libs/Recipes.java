@@ -4,6 +4,8 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.ShapedRecipes;
+import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 import net.minecraftforge.oredict.ShapelessOreRecipe;
 import victinix.jarm.items.ModItems;
@@ -16,7 +18,7 @@ public class Recipes {
             GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.cookedSquid, 8, 0), new Object[]{
                     "A",
                     "B",
-                    'A', new ItemStack(ModItems.emeraldSword),
+                    'A', new ItemStack(ModItems.emeraldSword, 1, OreDictionary.WILDCARD_VALUE),
                     'B', new ItemStack(ModItems.coolSquid)
             }));
         }
