@@ -36,6 +36,8 @@ public class EmeraldSword extends ItemSword {
     @Override
     public boolean hitEntity(ItemStack itemStack, EntityLivingBase entityAttacked, EntityLivingBase entityAttacking) {
 
+        itemStack.damageItem(1, entityAttacking);
+
         if(Configurations.emeraldSwordFire) {
             entityAttacked.setFire(2);
         }
