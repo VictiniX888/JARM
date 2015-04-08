@@ -44,4 +44,19 @@ public class EmeraldSword extends ItemSword {
 
         return true;
     }
+
+    @Override
+    public boolean hasContainerItem(ItemStack stack) {
+
+        return true;
+    }
+
+    @Override
+    public ItemStack getContainerItem(ItemStack itemStack) {
+
+        ItemStack damagedSword = itemStack.copy();
+        damagedSword.setItemDamage(damagedSword.getItemDamage() + 7);
+
+        return damagedSword;
+    }
 }
