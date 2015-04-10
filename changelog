@@ -44,3 +44,8 @@ Build 8
 - Added randomization of Random Gun texture
 - Added Cool Squid, dropped by Squids on death
 - Removed Hotdog wolfmeat config
+
+Build 9
+- Cool Squid doesn't drop when Harvestcraft is loaded anymore
+- Added Cooked Squid
+- Fixed Emerald Sword not taking damage
