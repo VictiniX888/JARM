@@ -49,3 +49,7 @@ Build 9
 - Cool Squid doesn't drop when Harvestcraft is loaded anymore
 - Added Cooked Squid
 - Fixed Emerald Sword not taking damage
+
+Build 10
+- Downgraded required Forge version
+- Added config for Cooked Squid crafting amount
