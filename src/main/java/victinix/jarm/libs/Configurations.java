@@ -26,6 +26,7 @@ public class Configurations {
     public static boolean randomGunTextureRandom;
     public static String randomGunTextureFixed;
 
+    public static int cookedSquidCraftingAmount;
     public static int cookedSquidHeal;
     public static float cookedSquidSaturation;
     public static int coolSquidHeal;
@@ -66,6 +67,7 @@ public class Configurations {
         //food
         category = "food";
 
+        cookedSquidCraftingAmount = config.get(category, "cookedSquidCraftingAmount", 8, "Amount of Cooked Squid crafted per recipe").getInt();
         cookedSquidHeal = config.get(category, "cookedSquidHeal", 1, "Amount of hunger Cooked Squid heals").getInt();
         cookedSquidSaturation = config.getFloat("cookedSquidSaturation", category, 0.04f, 0.01f, 1.00f, "Amount of saturation Cooked Squid gives.");
         coolSquidHeal = config.get(category, "coolSquidHeal", 6, "Amount of hunger Cool Squid heals").getInt();

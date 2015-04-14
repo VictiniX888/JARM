@@ -15,7 +15,7 @@ public class Recipes {
     public static void registerCraftingRecipes() {
 
         if(Configurations.cookedSquidRegister) {
-            GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.cookedSquid, 8, 0), new Object[]{
+            GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.cookedSquid, Configurations.cookedSquidCraftingAmount, 0), new Object[]{
                     "A",
                     "B",
                     'A', new ItemStack(ModItems.emeraldSword, 1, OreDictionary.WILDCARD_VALUE),

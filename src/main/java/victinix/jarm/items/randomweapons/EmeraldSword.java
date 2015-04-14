@@ -55,7 +55,7 @@ public class EmeraldSword extends ItemSword {
     public ItemStack getContainerItem(ItemStack itemStack) {
 
         ItemStack damagedSword = itemStack.copy();
-        damagedSword.setItemDamage(damagedSword.getItemDamage() + 7);
+        damagedSword.setItemDamage(damagedSword.getItemDamage() + (Configurations.cookedSquidCraftingAmount - 1));
 
         return damagedSword;
     }
