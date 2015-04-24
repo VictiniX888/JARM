@@ -5,6 +5,7 @@ import net.minecraftforge.common.util.EnumHelper;
 import victinix.jarm.items.food.CookedSquid;
 import victinix.jarm.items.food.CoolSquid;
 import victinix.jarm.items.food.Hotdog;
+import victinix.jarm.items.mathstuff.ItemDuper;
 import victinix.jarm.items.randomweapons.DiamondHandbag;
 import victinix.jarm.items.randomweapons.EmeraldSword;
 import victinix.jarm.items.randomweapons.RandomGun;
@@ -18,6 +19,8 @@ public class ModItems {
     public static Item coolSquid;
     public static Item hotdog;
 
+    public static Item itemDuper;
+
     public static Item diamondHandbag;
     public static Item emeraldSword;
     public static Item randomGun;
@@ -29,6 +32,8 @@ public class ModItems {
         cookedSquid = new CookedSquid(Configurations.cookedSquidHeal, Configurations.cookedSquidSaturation, true);
         coolSquid = new CoolSquid(Configurations.coolSquidHeal, Configurations.coolSquidSaturation, true);
         hotdog = new Hotdog(Configurations.hotdogHeal, Configurations.hotdogSaturation, true);
+
+        itemDuper = new ItemDuper();
 
         diamondHandbag = new DiamondHandbag(Item.ToolMaterial.EMERALD);
         emeraldSword = new EmeraldSword(ModItems.RANDOMEMERALD);
