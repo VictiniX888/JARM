@@ -29,7 +29,9 @@ public class ItemDuper extends Item {
     public ItemStack onItemRightClick(ItemStack itemStack, World world, EntityPlayer entityPlayer) {
 
         ItemStack itemToBeDuped = entityPlayer.inventory.getStackInSlot(0);
-        itemStack.stackSize--;
+
+            itemStack.stackSize--;
+        }
 
         return itemToBeDuped;
     }
