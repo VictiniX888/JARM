@@ -32,7 +32,7 @@ public class ItemDuper extends Item {
 
         if(itemToBeDuped != null && entityPlayer.inventory.getFirstEmptyStack() != -1) {
             itemStack.stackSize--;
-            return itemToBeDuped;
+            return itemToBeDuped.copy();
         }
 
         else {
