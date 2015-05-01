@@ -30,6 +30,7 @@ public class ItemDuper extends Item {
 
         ItemStack itemToBeDuped = entityPlayer.inventory.getStackInSlot(0);
 
+        if(itemToBeDuped != null && entityPlayer.inventory.getFirstEmptyStack() != -1) {
             itemStack.stackSize--;
         }
 
