@@ -17,7 +17,7 @@ public class ItemDuper extends Item {
     public ItemDuper() {
 
         super();
-        setMaxDamage(1);
+        setMaxStackSize(1);
         setUnlocalizedName(Data.MODID + ":" + name);
         setCreativeTab(Tabs.tabRandom);
         if(Configurations.itemDuperRegister) {
@@ -29,10 +29,8 @@ public class ItemDuper extends Item {
     public ItemStack onItemRightClick(ItemStack itemStack, World world, EntityPlayer entityPlayer) {
 
         ItemStack itemToBeDuped = entityPlayer.inventory.getStackInSlot(0);
+        itemStack.stackSize--;
 
-        itemStack.damageItem(2, entityPlayer);
-        entityPlayer.inventory.setInventorySlotContents(entityPlayer.inventory.getFirstEmptyStack(), itemToBeDuped);
-
-        return itemStack;
+        return itemToBeDuped;
     }
 }
