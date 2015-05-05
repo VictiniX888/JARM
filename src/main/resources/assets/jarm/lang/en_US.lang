@@ -3,6 +3,9 @@ item.jarm:cookedSquid.name=Cooked Squid
 item.jarm:coolSquid.name=Cool Squid
 item.jarm:hotdog.name=Hotdog
 
+#Magic
+item.jarm:ditto.name=Ditto
+
 #Random Weapons
 item.jarm:diamondHandbag.name=Diamond Handbag
 item.jarm:emeraldSword.name=Emerald Sword

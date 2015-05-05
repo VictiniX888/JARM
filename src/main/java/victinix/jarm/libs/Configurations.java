@@ -10,7 +10,7 @@ public class Configurations {
     public static boolean cookedSquidRegister;
     public static boolean coolSquidRegister;
     public static boolean hotdogRegister;
-    public static boolean itemDuperRegister;
+    public static boolean dittoRegister;
     public static boolean diamondHandbagRegister;
     public static boolean emeraldSwordRegister;
     public static boolean randomGunRegister;
@@ -46,7 +46,7 @@ public class Configurations {
         cookedSquidRegister = config.get(category, "cookedSquidRegister", true).getBoolean(true);
         coolSquidRegister = config.get(category, "coolSquidRegister", true).getBoolean(true);
         hotdogRegister = config.get(category, "hotdogRegister", true).getBoolean(true);
-        itemDuperRegister = config.get(category, "itemDuperRegister", true).getBoolean(true);
+        dittoRegister = config.get(category, "dittoRegister", true).getBoolean(true);
         diamondHandbagRegister = config.get(category, "diamondHandbagRegister", true).getBoolean(true);
         emeraldSwordRegister = config.get(category, "emeraldSwordRegister", true).getBoolean(true);
         randomGunRegister = config.get(category, "randomGunRegister", true).getBoolean(true);

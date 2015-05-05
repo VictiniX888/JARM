@@ -1,4 +1,4 @@
-package victinix.jarm.items.mathstuff;
+package victinix.jarm.items.magic;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.entity.player.EntityPlayer;
@@ -10,17 +10,17 @@ import victinix.jarm.libs.Configurations;
 import victinix.jarm.libs.Data;
 import victinix.jarm.libs.Tabs;
 
-public class ItemDuper extends Item {
+public class Ditto extends Item {
 
-    private String name = "itemDuper";
+    private String name = "ditto";
 
-    public ItemDuper() {
+    public Ditto() {
 
         super();
         setMaxStackSize(1);
         setUnlocalizedName(Data.MODID + ":" + name);
         setCreativeTab(Tabs.tabRandom);
-        if(Configurations.itemDuperRegister) {
+        if(Configurations.dittoRegister) {
             GameRegistry.registerItem(this, name);
         }
     }
