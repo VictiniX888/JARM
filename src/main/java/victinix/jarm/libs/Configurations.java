@@ -17,11 +17,8 @@ public class Configurations {
 
     public static boolean diamondHandbagRecoil;
     public static float diamondHandbagRecoilChance;
-    public static int emeraldSwordHarvestLevel;
     public static int emeraldSwordDurability;
-    public static float emeraldSwordMiningSpeed;
     public static float emeraldSwordDamage;
-    public static int emeraldSwordEnchantability;
     public static boolean emeraldSwordFire;
     public static String randomGunText;
     public static boolean randomGunTextureRandom;
@@ -56,11 +53,8 @@ public class Configurations {
 
         diamondHandbagRecoil = config.get(category, "diamondHandbagRecoil", true, "Whether the Diamond Handbag gives recoil").getBoolean(true);
         diamondHandbagRecoilChance = config.getFloat("diamondHandbagRecoilChance", category, 0.10f, 0.01f, 1.00f, "Chance of Diamond Handbag recoil. 1.0 = 100%");
-        emeraldSwordHarvestLevel = config.get(category, "emeraldSwordHarvestLevel", 4, "Harvest level of Emerald Sword").getInt();
         emeraldSwordDurability = config.get(category, "emraldSwordDurability", 3000, "Durability of Emerald Sword").getInt();
-        emeraldSwordMiningSpeed = config.getFloat("emeraldSwordMiningSpeed", category, 10f, 1f, 100f, "Mining speed of Emerald Sword.");
         emeraldSwordDamage = config.getFloat("emeraldSwordDamage", category, 4f, 1f, 100f, "Damage of Emerald Sword.");
-        emeraldSwordEnchantability = config.get(category, "emeraldSwordEnchantability", 18, "Enchantability of Emerald Sword").getInt();
         emeraldSwordFire = config.get(category, "emeraldSwordFire", true, "Whether Emerald Sword has Fire Aspect.").getBoolean(true);
         randomGunText = config.get(category, "randomGunText", "Malware has been installed on your PC", "Text that appears when Random Gun is used.").getString();
         randomGunTextureRandom = config.get(category, "randomGunTextureRandom", true, "Whether the Random Gun texture is randomized").getBoolean(true);

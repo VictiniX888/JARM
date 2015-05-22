@@ -27,7 +27,7 @@ public class ModItems {
 
     public static void init() {
 
-        RANDOMEMERALD = EnumHelper.addToolMaterial("RANDOMEMERALD", Configurations.emeraldSwordHarvestLevel, Configurations.emeraldSwordDurability, Configurations.emeraldSwordMiningSpeed, Configurations.emeraldSwordDamage, Configurations.emeraldSwordEnchantability);
+        RANDOMEMERALD = EnumHelper.addToolMaterial("RANDOMEMERALD", 4, Configurations.emeraldSwordDurability, 10f, Configurations.emeraldSwordDamage, 18);
 
         cookedSquid = new CookedSquid(Configurations.cookedSquidHeal, Configurations.cookedSquidSaturation, true);
         coolSquid = new CoolSquid(Configurations.coolSquidHeal, Configurations.coolSquidSaturation, true);
