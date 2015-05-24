@@ -43,6 +43,6 @@ public class JARM {
     public void postInit(FMLPostInitializationEvent event) {
 
         Tabs.postInit();
-        MinecraftForge.EVENT_BUS.register(new CrushingEventHandler());
+        EventRegistry.postInit();
     }
 }
