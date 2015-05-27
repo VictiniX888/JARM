@@ -30,7 +30,7 @@ public class Ditto extends Item {
 
         ItemStack itemToBeDuped = entityPlayer.inventory.getStackInSlot(0);
 
-        if(itemToBeDuped != null && itemToBeDuped.stackSize == 1 && itemToBeDuped.getItem() != GameRegistry.findItem("compactstorage", "backpack")) {
+        if(itemToBeDuped != null && itemToBeDuped.stackSize == 1 && itemToBeDuped.getItem() != GameRegistry.findItem(Configurations.dittoBlacklist[0], Configurations.dittoBlacklist[1]) && itemToBeDuped.getItem() != GameRegistry.findItem(Configurations.dittoBlacklist[2], Configurations.dittoBlacklist[3])) {
             itemStack.stackSize--;
             return itemToBeDuped.copy();
         }
