@@ -29,14 +29,8 @@ public class Ditto extends Item {
     public ItemStack onItemRightClick(ItemStack itemStack, World world, EntityPlayer entityPlayer) {
 
         ItemStack itemToBeDuped = entityPlayer.inventory.getStackInSlot(0);
-        int a = 0;
-        int x = 0;
-        int y = 1;
 
-        if(itemToBeDuped != null && itemToBeDuped.stackSize == 1 &&
-        while(a != 100) {
-            itemToBeDuped.getItem() != GameRegistry.findItem(Configurations.dittoBlacklist[x], Configurations.dittoBlacklist[y])
-        } ) {
+        if(itemToBeDuped != null && itemToBeDuped.stackSize == 1 && itemToBeDuped.getItem() != GameRegistry.findItem(Configurations.dittoBlacklist[0], Configurations.dittoBlacklist[1]) && itemToBeDuped.getItem() != GameRegistry.findItem(Configurations.dittoBlacklist[2], Configurations.dittoBlacklist[3])) {
             itemStack.stackSize--;
             return itemToBeDuped.copy();
         }
