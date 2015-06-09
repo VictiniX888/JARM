@@ -62,7 +62,7 @@ public class Recipes {
         }
 
         if(Loader.isModLoaded("AWWayofTime") && Loader.isModLoaded("arcanearteries")) {
-            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(GameRegistry.findItem("AWWayofTime", "bloodRune")), 1, 0, new Object[]{
+            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(GameRegistry.findItem("AWWayofTime", "bloodRune"), 1, 0), new Object[]{
                     new ItemStack(GameRegistry.findItem("arcanearteries", "manaSlate"))
             }));
         }
