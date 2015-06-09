@@ -53,3 +53,9 @@ Build 9
 Build 10
 - Downgraded required Forge version
 - Added config for Cooked Squid crafting amount
+
+Build 11 (branch bm)
+- Added Ditto
+- Added Blood Magic API
+- Added recipe to craft Mana Slate into Blood Rune
+- Added Blood Altar recipe to turn Mana Slate into Reinforced Slate
