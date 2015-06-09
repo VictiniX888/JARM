@@ -67,3 +67,6 @@ Build 12 (branch bm)
 - Added Botania API
 - Added recipe to craft Mana Slate into Blank Slate
 - Added Mana Infusion recipe to craft every tier of Slates
+
+Build 13 (branch bm)
+- Fixed crash on startup
