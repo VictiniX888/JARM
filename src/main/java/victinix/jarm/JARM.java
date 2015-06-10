@@ -45,9 +45,7 @@ public class JARM {
 
         Tabs.postInit();
         MinecraftForge.EVENT_BUS.register(new SquidEventHandler());
-        if(Loader.isModLoaded("Botania")) {
-            BotaniaCompat.postInit();
-        }
+        BotaniaCompat.postInit();
         if(Loader.isModLoaded("AWWayofTime")) {
             BloodMagicCompat.postInit();
         }
