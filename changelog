@@ -57,15 +57,15 @@ Build 10
 Build 11 (branch bm)
 - Added Ditto
 - Added Blood Magic API
-- Added recipe to craft Mana Slate into Blood Rune
-- Added Blood Altar recipe to turn Mana Slate into Reinforced Slate
+- Added recipe to craft Botanical Slate into Blood Rune
+- Added Blood Altar recipe to turn Botanical Slate into Reinforced Slate
 
 Build 12 (branch bm)
 - Removed Blood Magic API
-- Removed recipe to craft Mana Slate into Blood Rune
-- Removed Blood Altar recipe to turn Mana Slate into Reinforced Slate
+- Removed recipe to craft Botanical Slate into Blood Rune
+- Removed Blood Altar recipe to turn Botanical Slate into Reinforced Slate
 - Added Botania API
-- Added recipe to craft Mana Slate into Blank Slate
+- Added recipe to craft Botanical Slate into Blank Slate
 - Added Mana Infusion recipe to craft every tier of Slates
 
 Build 13 (branch bm)
