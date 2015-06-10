@@ -70,3 +70,7 @@ Build 12 (branch bm)
 
 Build 13 (branch bm)
 - Fixed crash on startup
+
+Build 14 (branch bm)
+- Added soft-dependency on Botania, Blood Magic and Arcane Arteries
+- Fixed recipe to craft Botanical Slate into Blank Slate
