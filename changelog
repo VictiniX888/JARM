@@ -74,3 +74,6 @@ Build 13 (branch bm)
 Build 14 (branch bm)
 - Added soft-dependency on Botania, Blood Magic and Arcane Arteries
 - Fixed recipe to craft Botanical Slate into Blank Slate
+
+Build 15 (branch bm)
+- Removed Botania API
