@@ -13,7 +13,7 @@ public class BloodMagicCompat {
         //crafting
         if(Loader.isModLoaded("AWWayofTime") && Loader.isModLoaded("arcanearteries")) {
             FMLLog.info("test");
-            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(GameRegistry.findItem("AWWayofTime", "bloodRune"), 1, 0), new Object[]{
+            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(GameRegistry.findItem("AWWayofTime", "blankSlate"), 1, 0), new Object[]{
                     new ItemStack(GameRegistry.findItem("arcanearteries", "manaSlate"))
             }));
         }
