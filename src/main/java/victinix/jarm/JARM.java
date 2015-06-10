@@ -7,6 +7,7 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
+import victinix.jarm.compat.BloodMagicCompat;
 import victinix.jarm.compat.BotaniaCompat;
 import victinix.jarm.items.ModItems;
 import victinix.jarm.events.SquidEventHandler;
@@ -37,9 +38,6 @@ public class JARM {
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
 
-        if(Loader.isModLoaded("Botania")) {
-            BotaniaCompat.init();
-        }
     }
 
     @Mod.EventHandler
@@ -47,5 +45,11 @@ public class JARM {
 
         Tabs.postInit();
         MinecraftForge.EVENT_BUS.register(new SquidEventHandler());
+        if(Loader.isModLoaded("Botania")) {
+            BotaniaCompat.postInit();
+        }
+        if(Loader.isModLoaded("AWWayofTime")) {
+            BloodMagicCompat.postInit();
+        }
     }
 }

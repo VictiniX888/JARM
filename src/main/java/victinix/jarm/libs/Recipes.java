@@ -1,5 +1,6 @@
 package victinix.jarm.libs;
 
+import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.init.Blocks;
@@ -58,12 +59,6 @@ public class Recipes {
                     "  A",
                     'A', "ingotIron",
                     'B', new ItemStack(Blocks.stone_button)
-            }));
-        }
-
-        if(Loader.isModLoaded("AWWayofTime") && Loader.isModLoaded("arcanearteries")) {
-            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(GameRegistry.findItem("AWWayofTime", "bloodRune"), 1, 0), new Object[]{
-                    new ItemStack(GameRegistry.findItem("arcanearteries", "manaSlate"))
             }));
         }
     }

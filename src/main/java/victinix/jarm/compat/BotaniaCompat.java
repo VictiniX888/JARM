@@ -6,7 +6,7 @@ import vazkii.botania.api.BotaniaAPI;
 
 public class BotaniaCompat {
 
-    public static void init() {
+    public static void postInit() {
 
         BotaniaAPI.registerManaInfusionRecipe(new ItemStack(GameRegistry.findItem("AWWayofTime", "reinforcedSlate")), new ItemStack(GameRegistry.findItem("AWWayofTime", "blankSlate")), 2000);
         BotaniaAPI.registerManaInfusionRecipe(new ItemStack(GameRegistry.findItem("AWWayofTime", "imbuedSlate")), new ItemStack(GameRegistry.findItem("AWWayofTime", "reinforcedSlate")), 5000);
