@@ -30,7 +30,6 @@ public class Ditto extends Item {
 
         ItemStack itemToBeDuped = entityPlayer.inventory.getStackInSlot(0);
         int x = Configurations.dittoBlacklist.length;
-        boolean itemFound = false;
 
         if(itemToBeDuped != null && itemToBeDuped.stackSize == 1) {
             for (int i = 0; i < (x-2); i+=2) {
