@@ -78,7 +78,7 @@ public class Configurations {
         category = "magic";
 
         dittoBlacklist = config.getStringList("dittoBlacklist", category, new String[] {
-                "minecraft", "chest", "minecraft", "torch"
+                "tile.chest", "tile.torch"
         }, "Placeholder description");
 
         if(config.hasChanged()) {

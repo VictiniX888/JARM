@@ -10,6 +10,8 @@ import victinix.jarm.libs.Configurations;
 import victinix.jarm.libs.Data;
 import victinix.jarm.libs.Tabs;
 
+import java.util.Arrays;
+
 public class Ditto extends Item {
 
     private String name = "ditto";
@@ -31,20 +33,12 @@ public class Ditto extends Item {
         ItemStack itemToBeDuped = entityPlayer.inventory.getStackInSlot(0);
         int x = Configurations.dittoBlacklist.length;
 
-        if(itemToBeDuped != null && itemToBeDuped.stackSize == 1) {
-            for (int i = 0; i < (x-2); i+=2) {
-                for (int j = 1; j < (x-2); j+=2) {
-                    if (itemToBeDuped.getItem() == GameRegistry.findItem(Configurations.dittoBlacklist[i], Configurations.dittoBlacklist[j])) {
-                        return itemStack;
-                    }
-                    else {
-                        itemStack.stackSize--;
-                        return itemToBeDuped.copy();
-                    }
-                }
-            }
+        if(itemToBeDuped != null && itemToBeDuped.stackSize == 1 && !Arrays.asList(Configurations.dittoBlacklist).contains(itemToBeDuped.getUnlocalizedName())) {
+            itemStack.stackSize--;
+            return itemToBeDuped.copy();
         }
-        else return itemStack;
-        return itemStack;
+        else {
+            return itemStack;
+        }
     }
 }
