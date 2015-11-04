@@ -11,11 +11,11 @@ import victinix.jarm.libs.Tabs;
 
 import java.util.Arrays;
 
-public class Ditto extends Item {
+public class ItemDitto extends Item {
 
     private String name = "ditto";
 
-    public Ditto() {
+    public ItemDitto() {
 
         super();
         setMaxStackSize(1);

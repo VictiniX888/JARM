@@ -1,62 +1,56 @@
-package victinix.jarm.items.randomweapons;
+package victinix.jarm.items.weapons;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
+import net.minecraft.potion.Potion;
+import net.minecraft.potion.PotionEffect;
+import net.minecraft.util.DamageSource;
 import net.minecraft.util.StatCollector;
 import victinix.jarm.libs.Configurations;
 import victinix.jarm.libs.Data;
 import victinix.jarm.libs.Tabs;
 
 import java.util.List;
+import java.util.Random;
 
-public class EmeraldSword extends ItemSword {
+public class ItemDiamondHandbag extends ItemSword {
 
-    private String name = "emeraldSword";
+    private String name = "diamondHandbag";
 
-    public EmeraldSword(ToolMaterial toolMaterial) {
+    Random random = new Random();
+
+    public ItemDiamondHandbag(ToolMaterial toolMaterial) {
 
         super(toolMaterial);
         setUnlocalizedName(Data.MODID + ":" + name);
         setTextureName(Data.MODID + ":" + name);
         setCreativeTab(Tabs.tabRandom);
-        if(Configurations.emeraldSwordRegister) {
+        if(Configurations.diamondHandbagRegister) {
             GameRegistry.registerItem(this, name);
         }
     }
 
     @Override
     public void addInformation(ItemStack itemStack, EntityPlayer entityPlayer, List list, boolean something) {
-        list.add(StatCollector.translateToLocal("jarm.emeraldSword.tooltip"));
+        list.add(StatCollector.translateToLocal("jarm.diamondHandbag.tooltip"));
 
     }
 
     @Override
     public boolean hitEntity(ItemStack itemStack, EntityLivingBase entityAttacked, EntityLivingBase entityAttacking) {
 
-        itemStack.damageItem(1, entityAttacking);
+        entityAttacked.addPotionEffect(new PotionEffect(Potion.wither.id, 100));
 
-        if(Configurations.emeraldSwordFire) {
-            entityAttacked.setFire(2);
+        float recoilChance = random.nextFloat();
+        if(Configurations.diamondHandbagRecoil) {
+            if (recoilChance <= Configurations.diamondHandbagRecoilChance) {
+                entityAttacking.attackEntityFrom(DamageSource.generic, 4);
+            }
         }
 
         return true;
-    }
-
-    @Override
-    public boolean hasContainerItem(ItemStack stack) {
-
-        return true;
-    }
-
-    @Override
-    public ItemStack getContainerItem(ItemStack itemStack) {
-
-        ItemStack damagedSword = itemStack.copy();
-        damagedSword.setItemDamage(damagedSword.getItemDamage() + (Configurations.cookedSquidCraftingAmount - 1));
-
-        return damagedSword;
     }
 }

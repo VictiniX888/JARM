@@ -6,17 +6,17 @@ import victinix.jarm.libs.Configurations;
 import victinix.jarm.libs.Data;
 import victinix.jarm.libs.Tabs;
 
-public class CookedSquid extends ItemFood {
+public class ItemCoolSquid extends ItemFood {
 
-    private String name = "cookedSquid";
+    private String name = "coolSquid";
 
-    public CookedSquid(int heal, float saturation, boolean wolfMeat) {
+    public ItemCoolSquid(int heal, float saturation, boolean wolfMeat) {
 
         super(heal, saturation, wolfMeat);
         setUnlocalizedName(Data.MODID + ":" + name);
         setTextureName(Data.MODID + ":" + name);
         setCreativeTab(Tabs.tabRandom);
-        if(Configurations.cookedSquidRegister)
+        if(Configurations.coolSquidRegister)
             GameRegistry.registerItem(this, name);
     }
 }
