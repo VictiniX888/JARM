@@ -14,6 +14,7 @@ public class Configurations {
     public static boolean diamondHandbagRegister;
     public static boolean emeraldSwordRegister;
     public static boolean randomGunRegister;
+    public static boolean xProducerRegister;
 
     public static boolean diamondHandbagRecoil;
     public static float diamondHandbagRecoilChance;
@@ -34,6 +35,7 @@ public class Configurations {
     public static float hotdogSaturation;
 
     public static String[] dittoBlacklist;
+    public static boolean xProducerDamage;
 
     public static boolean refreshConfig() {
 
@@ -49,6 +51,7 @@ public class Configurations {
         diamondHandbagRegister = config.get(category, "diamondHandbagRegister", true).getBoolean(true);
         emeraldSwordRegister = config.get(category, "emeraldSwordRegister", true).getBoolean(true);
         randomGunRegister = config.get(category, "randomGunRegister", true).getBoolean(true);
+        xProducerRegister = config.get(category, "xProducerRegister", true).getBoolean(true);
 
         //weapons
         category = "weapons";
@@ -80,6 +83,7 @@ public class Configurations {
         dittoBlacklist = config.getStringList("dittoBlacklist", category, new String[] {
                 "tile.chest", "item.dolly.normal.full"
         }, "Placeholder description");
+        xProducerDamage = config.get(category, "xProducerDamage", true).getBoolean(true);
 
         if(config.hasChanged()) {
             config.save();

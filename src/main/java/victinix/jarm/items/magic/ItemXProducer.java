@@ -6,6 +6,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
+import victinix.jarm.libs.Configurations;
 import victinix.jarm.libs.Data;
 
 public class ItemXProducer extends Item {
@@ -17,13 +18,17 @@ public class ItemXProducer extends Item {
         super();
         setUnlocalizedName(Data.MODID + ":" + name);
         setTextureName(Data.MODID + ":" + name);
-        GameRegistry.registerItem(this, name);
+        if(Configurations.xProducerRegister) {
+            GameRegistry.registerItem(this, name);
+        }
     }
 
     @Override
     public ItemStack onItemRightClick(ItemStack itemStack, World world, EntityPlayer player) {
 
-        player.attackEntityFrom(DamageSource.generic, 2f);
+        if(Configurations.xProducerDamage) {
+            player.attackEntityFrom(DamageSource.generic, 2f);
+        }
         player.addExperience(10);
 
         return itemStack;
