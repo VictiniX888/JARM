@@ -1,0 +1,22 @@
+#Food
+item.jarm:cookedSquid.name=煮熟鱿鱼
+item.jarm:coolSquid.name=酷鱿鱼
+item.jarm:hotdog.name=热狗
+
+#Magic
+item.jarm:ditto.name=模仿物
+item.jarm:xProducer.name=经验生产者
+
+#Random Weapons
+item.jarm:diamondHandbag.name=钻石手提包
+item.jarm:emeraldSword.name=绿宝石剑
+item.jarm:randomGun.name=任意枪
+
+#Tooltips
+jarm.hotdog.tooltip=好吃！
+jarm.diamondHandbag.tooltip=你不能把东西放进去里面
+jarm.emeraldSword.tooltip=比钻石剑更厉害
+jarm.randomGun.tooltip=小心射击
+
+#Creative Tab
+itemGroup.tabRandom=JARM

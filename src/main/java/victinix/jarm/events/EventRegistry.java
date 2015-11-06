@@ -7,6 +7,6 @@ public class EventRegistry {
     public static void postInit() {
 
         MinecraftForge.EVENT_BUS.register(new CrushingEventHandler());
-        MinecraftForge.EVENT_BUS.register(new SquidEventHandler());
+        MinecraftForge.EVENT_BUS.register(new EventSquidDrops());
     }
 }

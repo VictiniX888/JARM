@@ -7,9 +7,8 @@ import net.minecraft.entity.passive.EntitySquid;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.event.entity.living.LivingDropsEvent;
 import victinix.jarm.items.ModItems;
-import victinix.jarm.libs.Configurations;
 
-public class SquidEventHandler {
+public class EventSquidDrops {
 
     @SubscribeEvent
     public void squidEvent(LivingDropsEvent event) {

@@ -2,14 +2,15 @@ package victinix.jarm.items;
 
 import net.minecraft.item.Item;
 import net.minecraftforge.common.util.EnumHelper;
-import victinix.jarm.items.food.CookedSquid;
-import victinix.jarm.items.food.CoolSquid;
-import victinix.jarm.items.food.Hotdog;
 import victinix.jarm.items.magic.CrushingWand;
-import victinix.jarm.items.magic.Ditto;
-import victinix.jarm.items.randomweapons.DiamondHandbag;
-import victinix.jarm.items.randomweapons.EmeraldSword;
-import victinix.jarm.items.randomweapons.RandomGun;
+import victinix.jarm.items.food.ItemCookedSquid;
+import victinix.jarm.items.food.ItemCoolSquid;
+import victinix.jarm.items.food.ItemHotdog;
+import victinix.jarm.items.magic.ItemDitto;
+import victinix.jarm.items.magic.ItemXProducer;
+import victinix.jarm.items.weapons.ItemDiamondHandbag;
+import victinix.jarm.items.weapons.ItemEmeraldSword;
+import victinix.jarm.items.weapons.ItemRandomGun;
 import victinix.jarm.libs.Configurations;
 
 public class ModItems {
@@ -23,6 +24,7 @@ public class ModItems {
 
     public static Item crushingWand;
     public static Item ditto;
+    public static Item xProducer;
 
     public static Item diamondHandbag;
     public static Item emeraldSword;
@@ -33,15 +35,16 @@ public class ModItems {
         RANDOMEMERALD = EnumHelper.addToolMaterial("RANDOMEMERALD", 4, Configurations.emeraldSwordDurability, 10f, Configurations.emeraldSwordDamage, 18);
         CRUSHER = EnumHelper.addToolMaterial("CRUSHER", 4, 2000, 200f, 0, 0);
 
-        cookedSquid = new CookedSquid(Configurations.cookedSquidHeal, Configurations.cookedSquidSaturation, true);
-        coolSquid = new CoolSquid(Configurations.coolSquidHeal, Configurations.coolSquidSaturation, true);
-        hotdog = new Hotdog(Configurations.hotdogHeal, Configurations.hotdogSaturation, true);
+        cookedSquid = new ItemCookedSquid(Configurations.cookedSquidHeal, Configurations.cookedSquidSaturation, true);
+        coolSquid = new ItemCoolSquid(Configurations.coolSquidHeal, Configurations.coolSquidSaturation, true);
+        hotdog = new ItemHotdog(Configurations.hotdogHeal, Configurations.hotdogSaturation, true);
 
         crushingWand = new CrushingWand(ModItems.CRUSHER);
-        ditto = new Ditto();
+        ditto = new ItemDitto();
+        xProducer = new ItemXProducer();
 
-        diamondHandbag = new DiamondHandbag(Item.ToolMaterial.EMERALD);
-        emeraldSword = new EmeraldSword(ModItems.RANDOMEMERALD);
-        randomGun = new RandomGun();
+        diamondHandbag = new ItemDiamondHandbag(Item.ToolMaterial.EMERALD);
+        emeraldSword = new ItemEmeraldSword(ModItems.RANDOMEMERALD);
+        randomGun = new ItemRandomGun();
     }
 }

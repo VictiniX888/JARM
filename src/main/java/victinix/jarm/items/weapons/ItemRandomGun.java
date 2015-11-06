@@ -1,4 +1,4 @@
-package victinix.jarm.items.randomweapons;
+package victinix.jarm.items.weapons;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.entity.player.EntityPlayer;
@@ -14,7 +14,7 @@ import victinix.jarm.libs.Tabs;
 import java.util.List;
 import java.util.Random;
 
-public class RandomGun extends Item {
+public class ItemRandomGun extends Item {
 
     private String[] name3 = {"ak", "msbs", "pistol", "sniper", "submachineGun"};
     private String name = "randomGun";
@@ -23,7 +23,7 @@ public class RandomGun extends Item {
     Random random = new Random();
     int texture = random.nextInt(name3.length);
 
-    public RandomGun() {
+    public ItemRandomGun() {
 
         super();
         setUnlocalizedName(Data.MODID + ":" + name);

@@ -14,6 +14,7 @@ public class Configurations {
     public static boolean diamondHandbagRegister;
     public static boolean emeraldSwordRegister;
     public static boolean randomGunRegister;
+    public static boolean xProducerRegister;
 
     public static boolean diamondHandbagRecoil;
     public static float diamondHandbagRecoilChance;
@@ -33,6 +34,9 @@ public class Configurations {
     public static int hotdogHeal;
     public static float hotdogSaturation;
 
+    public static String[] dittoBlacklist;
+    public static boolean xProducerDamage;
+
     public static boolean refreshConfig() {
 
         String category;
@@ -47,9 +51,10 @@ public class Configurations {
         diamondHandbagRegister = config.get(category, "diamondHandbagRegister", true).getBoolean(true);
         emeraldSwordRegister = config.get(category, "emeraldSwordRegister", true).getBoolean(true);
         randomGunRegister = config.get(category, "randomGunRegister", true).getBoolean(true);
+        xProducerRegister = config.get(category, "xProducerRegister", true).getBoolean(true);
 
-        //randomweapons
-        category = "randomweapons";
+        //weapons
+        category = "weapons";
 
         diamondHandbagRecoil = config.get(category, "diamondHandbagRecoil", true, "Whether the Diamond Handbag gives recoil").getBoolean(true);
         diamondHandbagRecoilChance = config.getFloat("diamondHandbagRecoilChance", category, 0.10f, 0.01f, 1.00f, "Chance of Diamond Handbag recoil. 1.0 = 100%");
@@ -71,6 +76,14 @@ public class Configurations {
         hotdogCraftingAmount = config.get(category, "hotdogCraftingAmount", 2, "Amount of Hotdogs crafted per recipe").getInt();
         hotdogHeal = config.get(category, "hotdogHeal", 6, "Amount of hunger Hotdog heals").getInt();
         hotdogSaturation = config.getFloat("hotdogSaturation", category, 0.4f, 0.01f, 1.00f, "Amount of saturation Hotdog gives.");
+
+        //magic
+        category = "magic";
+
+        dittoBlacklist = config.getStringList("dittoBlacklist", category, new String[] {
+                "tile.chest", "item.dolly.normal.full"
+        }, "Placeholder description");
+        xProducerDamage = config.get(category, "xProducerDamage", true).getBoolean(true);
 
         if(config.hasChanged()) {
             config.save();
