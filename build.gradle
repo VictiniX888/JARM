@@ -40,6 +40,21 @@ minecraft {
     runDir = "eclipse"
 }
 
+task sourceJar(type: Jar) {
+    from sourceSets.main.allSource
+    classifier = 'src'
+}
+
+task deobfJar(type: Jar) {
+    from sourceSets.main.output
+    classifier = 'deobf'
+}
+
+artifacts {
+    archives sourceJar
+    archives deobfJar
+}
+
 dependencies {
     // you may put jars on which you depend on in ./libs
     // or you may define them like so..
