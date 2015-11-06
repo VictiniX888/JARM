@@ -2,7 +2,7 @@ package victinix.jarm.items;
 
 import net.minecraft.item.Item;
 import net.minecraftforge.common.util.EnumHelper;
-import victinix.jarm.items.magic.CrushingWand;
+import victinix.jarm.items.magic.ItemCrushingWand;
 import victinix.jarm.items.food.ItemCookedSquid;
 import victinix.jarm.items.food.ItemCoolSquid;
 import victinix.jarm.items.food.ItemHotdog;
@@ -39,7 +39,7 @@ public class ModItems {
         coolSquid = new ItemCoolSquid(Configurations.coolSquidHeal, Configurations.coolSquidSaturation, true);
         hotdog = new ItemHotdog(Configurations.hotdogHeal, Configurations.hotdogSaturation, true);
 
-        crushingWand = new CrushingWand(ModItems.CRUSHER);
+        crushingWand = new ItemCrushingWand(ModItems.CRUSHER);
         ditto = new ItemDitto();
         xProducer = new ItemXProducer();
 

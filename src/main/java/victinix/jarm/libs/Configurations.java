@@ -1,5 +1,6 @@
 package victinix.jarm.libs;
 
+import net.minecraft.init.Blocks;
 import net.minecraftforge.common.config.Configuration;
 
 public class Configurations {

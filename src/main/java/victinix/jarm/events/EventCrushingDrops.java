@@ -10,7 +10,7 @@ import net.minecraftforge.oredict.OreDictionary;
 import sun.reflect.generics.tree.Wildcard;
 import victinix.jarm.items.ModItems;
 
-public class CrushingEventHandler {
+public class EventCrushingDrops {
 
     @SubscribeEvent
     public void crushingEvent(BlockEvent.BreakEvent event) {
@@ -18,7 +18,6 @@ public class CrushingEventHandler {
         if(event.getPlayer().getHeldItem() != null && event.getPlayer().getHeldItem().getItem() == ModItems.crushingWand) {
 
             if(event.block == Blocks.cobblestone) {
-
                 event.world.spawnEntityInWorld(new EntityItem(event.world, event.x, event.y, event.z, new ItemStack(Item.getItemFromBlock(Blocks.sand))));
             }
         }

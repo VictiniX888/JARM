@@ -4,17 +4,11 @@ import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
-import victinix.jarm.events.CrushingEventHandler;
 import victinix.jarm.events.EventRegistry;
 import victinix.jarm.items.ModItems;
-import victinix.jarm.libs.Configurations;
-import victinix.jarm.libs.Data;
-import victinix.jarm.libs.Recipes;
-import victinix.jarm.libs.Tabs;
+import victinix.jarm.libs.*;
 
-import java.awt.*;
 import java.io.File;
 
 @Mod(modid = Data.MODID, name = Data.MODNAME, version = Data.VERSION, dependencies = Data.DEPENDENCIES)
