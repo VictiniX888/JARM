@@ -7,6 +7,14 @@ item.jarm:hotdog.name=Hotdog
 item.jarm:ditto.name=Ditto
 item.jarm:xProducer.name=XProducer
 
+#Materials
+item.jarm:dust0.name=Iron Dust
+item.jarm:dust1.name=Gold Dust
+item.jarm:dust2.name=Coal Dust
+item.jarm:dust3.name=Diamond Dust
+item.jarm:dust4.name=Emerald Dust
+item.jarm:dust5.name=Lapis Dust
+
 #Random Weapons
 item.jarm:diamondHandbag.name=Diamond Handbag
 item.jarm:emeraldSword.name=Emerald Sword

@@ -8,6 +8,7 @@ import victinix.jarm.items.food.ItemCoolSquid;
 import victinix.jarm.items.food.ItemHotdog;
 import victinix.jarm.items.magic.ItemDitto;
 import victinix.jarm.items.magic.ItemXProducer;
+import victinix.jarm.items.materials.ItemDustBase;
 import victinix.jarm.items.weapons.ItemDiamondHandbag;
 import victinix.jarm.items.weapons.ItemEmeraldSword;
 import victinix.jarm.items.weapons.ItemRandomGun;
@@ -26,6 +27,8 @@ public class ModItems {
     public static Item ditto;
     public static Item xProducer;
 
+    public static Item dust;
+
     public static Item diamondHandbag;
     public static Item emeraldSword;
     public static Item randomGun;
@@ -42,6 +45,8 @@ public class ModItems {
         crushingWand = new ItemCrushingWand(ModItems.CRUSHER);
         ditto = new ItemDitto();
         xProducer = new ItemXProducer();
+
+        dust = new ItemDustBase();
 
         diamondHandbag = new ItemDiamondHandbag(Item.ToolMaterial.EMERALD);
         emeraldSword = new ItemEmeraldSword(ModItems.RANDOMEMERALD);
