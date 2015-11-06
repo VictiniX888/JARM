@@ -23,8 +23,8 @@ if (ENV.DRONE_BUILD_NUMBER) {
     version += "-build" + ENV.DRONE_BUILD_NUMBER
 }
 def getWorkingBranch() {
-    def workingBranch = """git --git-dir=${rootDir}/../.git
-                               --work-tree=${rootDir}/..
+    def workingBranch = """git --git-dir=${rootDir}/.git
+                               --work-tree=${rootDir}
                                rev-parse --abbrev-ref HEAD""".execute().text.trim()
     print "Working branch: " + workingBranch
     return workingBranch
