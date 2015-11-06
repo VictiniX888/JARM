@@ -30,7 +30,7 @@ def getWorkingBranch() {
     return workingBranch
 }
 if (getWorkingBranch() != "master") {
-    versionNameSuffix "-" + getWorkingBranch()
+    version += "-" + getWorkingBranch()
 }
 group= "victinix.jarm" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "jarm"
