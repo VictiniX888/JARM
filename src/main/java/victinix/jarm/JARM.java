@@ -6,7 +6,9 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.oredict.*;
+import victinix.jarm.blocks.ModBlocks;
 import victinix.jarm.events.EventRegistry;
+import victinix.jarm.gui.GuiHandler;
 import victinix.jarm.items.ModItems;
 import victinix.jarm.libs.*;
 import victinix.jarm.libs.OreDictionary;
@@ -27,6 +29,8 @@ public class JARM {
         Configurations.refreshConfig();
 
         ModItems.init();
+        ModBlocks.init();
+        ModBlocks.registerTileEntities();
         OreDictionary.oreDictRegistry();
         Recipes.registerCraftingRecipes();
     }
@@ -34,6 +38,7 @@ public class JARM {
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
 
+        new GuiHandler();
     }
 
     @Mod.EventHandler
@@ -42,4 +47,7 @@ public class JARM {
         Tabs.postInit();
         EventRegistry.postInit();
     }
+
+    @Mod.Instance(Data.MODID)
+    public static JARM instance;
 }
