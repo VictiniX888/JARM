@@ -5,9 +5,11 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.common.config.Configuration;
+import net.minecraftforge.oredict.*;
 import victinix.jarm.events.EventRegistry;
 import victinix.jarm.items.ModItems;
 import victinix.jarm.libs.*;
+import victinix.jarm.libs.OreDictionary;
 
 import java.io.File;
 
@@ -25,6 +27,7 @@ public class JARM {
         Configurations.refreshConfig();
 
         ModItems.init();
+        OreDictionary.oreDictRegistry();
         Recipes.registerCraftingRecipes();
     }
 
