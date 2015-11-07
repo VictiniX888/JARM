@@ -1,6 +1,5 @@
 package victinix.jarm.libs;
 
-import net.minecraft.init.Blocks;
 import net.minecraftforge.common.config.Configuration;
 
 public class Configurations {
@@ -35,6 +34,7 @@ public class Configurations {
     public static int hotdogHeal;
     public static float hotdogSaturation;
 
+    public static String[] canCrush;
     public static String[] dittoBlacklist;
     public static boolean xProducerDamage;
 
@@ -81,6 +81,9 @@ public class Configurations {
         //magic
         category = "magic";
 
+        canCrush = config.getStringList("canCrush", category, new String[] {
+                "minecraft:cobblestone", "minecraft:iron_ore", "minecraft:gold_ore", "minecraft:coal_ore", "minecraft:diamond_ore", "minecraft:emerald_ore", "minecraft:lapis_ore", "minecraft:redstone_ore", "minecraft:lit_redstone_ore"
+        }, "Placeholder description");
         dittoBlacklist = config.getStringList("dittoBlacklist", category, new String[] {
                 "tile.chest", "item.dolly.normal.full"
         }, "Placeholder description");

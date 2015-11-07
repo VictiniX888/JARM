@@ -1,31 +1,22 @@
 package victinix.jarm.items.magic;
 
-import com.google.common.collect.Sets;
-import cpw.mods.fml.common.registry.GameData;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemTool;
 import net.minecraft.world.World;
-import victinix.jarm.libs.Configurations;
+import victinix.jarm.items.ModItems;
 import victinix.jarm.libs.Data;
 import victinix.jarm.libs.Tabs;
-
-import java.util.*;
 
 public class ItemCrushingWand extends ItemTool {
 
     private String name = "crushingWand";
 
-    private static final Set canCrush = Sets.newHashSet(new Block[] {
-            Blocks.cobblestone, Blocks.iron_ore, Blocks.gold_ore, Blocks.coal_ore, Blocks.diamond_ore, Blocks.emerald_ore, Blocks.lapis_ore, Blocks.redstone_ore, Blocks.lit_redstone_ore
-    });
-
     public ItemCrushingWand(ToolMaterial toolMaterial) {
 
-        super(1f, toolMaterial, canCrush);
+        super(1f, toolMaterial, ModItems.canCrush);
         setUnlocalizedName(Data.MODID + ":" + name);
         setTextureName(Data.MODID + ":" + name);
         setCreativeTab(Tabs.tabRandom);

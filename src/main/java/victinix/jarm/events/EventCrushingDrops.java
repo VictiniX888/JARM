@@ -3,11 +3,10 @@ package victinix.jarm.events;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.event.world.BlockEvent;
-import net.minecraftforge.oredict.OreDictionary;
-import sun.reflect.generics.tree.Wildcard;
 import victinix.jarm.items.ModItems;
 
 public class EventCrushingDrops {
@@ -37,6 +36,12 @@ public class EventCrushingDrops {
             }
             if(event.block == Blocks.lapis_ore) {
                 event.world.spawnEntityInWorld(new EntityItem(event.world, event.x, event.y, event.z, new ItemStack(ModItems.dust, 1, 5)));
+            }
+            if(event.block == Blocks.redstone_ore) {
+                event.world.spawnEntityInWorld(new EntityItem(event.world, event.x, event.y, event.z, new ItemStack(Items.redstone, 8)));
+            }
+            if(event.block == Blocks.lit_redstone_ore) {
+                event.world.spawnEntityInWorld(new EntityItem(event.world, event.x, event.y, event.z, new ItemStack(Items.redstone, 8)));
             }
         }
     }
