@@ -335,9 +335,10 @@ public class TileEntityCompressor extends TileEntity implements ISidedInventory 
 
         if(!worldObj.isRemote) {
 
+            ItemStack stuff = new ItemStack(ModItems.dust, 1, 3);
+
             for (int i = 0; i < 8; i++) {
-                if(inventorySlots[i] != null) {
-                    if(inventorySlots[i] == new ItemStack(ModItems.dust, 1, 3)) {
+                if(inventorySlots[i] != null && inventorySlots[i].getItem() == stuff.getItem() && inventorySlots[i].getItemDamage() == stuff.getItemDamage()) {
                         System.out.println("SD in input slot!");
                         if(!compressingSomething() && canCompress()) {
                             timeCanCompress = 150;
@@ -366,7 +367,6 @@ public class TileEntityCompressor extends TileEntity implements ISidedInventory 
             if(hasBeenCompressing != compressingSomething()) {
                 changedCompressingState = true;
             }
-        }
 
         if(changedCompressingState) {
             markDirty();
