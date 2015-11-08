@@ -62,3 +62,12 @@ New versioning (only CurseForge releases will be put here)
 ==============
 
 1.1.0
+- Added Ditto, AKA Item Duper
+- Added Crushing Wand, turns ores into dusts and does other stuff
+- Added a bunch of dusts
+- Added Compressor, turns dusts into usable stuff
+- Added XProducer, "free" XP!
+- Added Chinese localization
+- Removed config for Emerald Sword harvest level
+- Removed config for Emerald Sword mining speed
+- Removed config for Emerald Sword enchantability
