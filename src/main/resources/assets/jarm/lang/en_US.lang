@@ -1,9 +1,13 @@
+#Blocks
+tile.jarm:compressor.name=Compressor
+
 #Food
 item.jarm:cookedSquid.name=Cooked Squid
 item.jarm:coolSquid.name=Cool Squid
 item.jarm:hotdog.name=Hotdog
 
 #Magic
+item.jarm:crushingWand.name=Crushing Wand
 item.jarm:ditto.name=Ditto
 item.jarm:xProducer.name=XProducer
 
@@ -15,7 +19,7 @@ item.jarm:dust3.name=Diamond Dust
 item.jarm:dust4.name=Emerald Dust
 item.jarm:dust5.name=Lapis Dust
 
-#Random Weapons
+#Weapons
 item.jarm:diamondHandbag.name=Diamond Handbag
 item.jarm:emeraldSword.name=Emerald Sword
 item.jarm:randomGun.name=Random Gun

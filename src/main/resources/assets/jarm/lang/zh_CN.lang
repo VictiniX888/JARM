@@ -1,9 +1,13 @@
+#Blocks
+tile.jarm:compressor.name=压缩机
+
 #Food
 item.jarm:cookedSquid.name=煮熟鱿鱼
 item.jarm:coolSquid.name=酷鱿鱼
 item.jarm:hotdog.name=热狗
 
 #Magic
+item.jarm:crushingWand.name=魔法棒
 item.jarm:ditto.name=模仿物
 item.jarm:xProducer.name=经验生产者
 
