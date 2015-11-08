@@ -102,9 +102,11 @@ idea {
     }
 }
 
-curseforge {
-    apiKey = project.hasProperty('curseForgeApiKey') ? project.curseForgeApiKey : ''
-    id = project.hasProperty('curseForgeID') ? project.curseForgeID : ''
-    changelog = file('changeloglatest.txt')
-    releaseType = 'release'
+if (getWorkingBranch() == 'master') {
+    curseforge {
+        apiKey = project.hasProperty('curseForgeApiKey') ? project.curseForgeApiKey : ''
+        id = project.hasProperty('curseForgeID') ? project.curseForgeID : ''
+        changelog = file('changeloglatest.txt')
+        releaseType = 'release'
+    }
 }
