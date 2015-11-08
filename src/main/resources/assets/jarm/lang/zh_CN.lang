@@ -1,11 +1,23 @@
+#Blocks
+tile.jarm:compressor.name=压缩机
+
 #Food
 item.jarm:cookedSquid.name=煮熟鱿鱼
 item.jarm:coolSquid.name=酷鱿鱼
 item.jarm:hotdog.name=热狗
 
 #Magic
+item.jarm:crushingWand.name=魔法棒
 item.jarm:ditto.name=模仿物
 item.jarm:xProducer.name=经验生产者
+
+#Materials
+item.jarm:dust0.name=铁粉
+item.jarm:dust1.name=金粉
+item.jarm:dust2.name=煤粉
+item.jarm:dust3.name=钻石粉
+item.jarm:dust4.name=绿宝石粉
+item.jarm:dust5.name=青金石粉
 
 #Random Weapons
 item.jarm:diamondHandbag.name=钻石手提包

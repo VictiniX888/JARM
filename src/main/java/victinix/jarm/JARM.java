@@ -4,14 +4,14 @@ import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
+import net.minecraftforge.oredict.*;
+import victinix.jarm.blocks.ModBlocks;
+import victinix.jarm.events.EventRegistry;
+import victinix.jarm.gui.GuiHandler;
 import victinix.jarm.items.ModItems;
-import victinix.jarm.events.EventSquidDrops;
-import victinix.jarm.libs.Configurations;
-import victinix.jarm.libs.Data;
-import victinix.jarm.libs.Recipes;
-import victinix.jarm.libs.Tabs;
+import victinix.jarm.libs.*;
+import victinix.jarm.libs.OreDictionary;
 
 import java.io.File;
 
@@ -29,18 +29,25 @@ public class JARM {
         Configurations.refreshConfig();
 
         ModItems.init();
+        ModBlocks.init();
+        ModBlocks.registerTileEntities();
+        OreDictionary.oreDictRegistry();
         Recipes.registerCraftingRecipes();
     }
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
 
+        new GuiHandler();
     }
 
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event) {
 
         Tabs.postInit();
-        MinecraftForge.EVENT_BUS.register(new EventSquidDrops());
+        EventRegistry.postInit();
     }
+
+    @Mod.Instance(Data.MODID)
+    public static JARM instance;
 }

@@ -7,7 +7,9 @@ Just another random, stupid and useless mod.
 + Direwolf20, for introducing me to the wonderful world of modded Minecraft
 + Forge guys, for making Forge
 + Freimox, for making textures
-+ ljfa, for telling me why Emerald Sword wasn't taking damage
++ Hlaaftana, for fixing shift-clicking out of Compressor
++ Jabelar, for the container blocks tutorial
++ ljfa, for a lot of stuff that won't fit in one line
 + Mojang, for making Minecraft
 + Vazkii, for Botania Github repo
 + VikeStep, for telling me how to update Forge, and why my configs weren't working
