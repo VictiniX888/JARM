@@ -1,9 +1,11 @@
 package victinix.jarm.tileentities;
 
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.inventory.Slot;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
@@ -17,9 +19,11 @@ public class TileEntityCompressor extends TileEntity implements ISidedInventory 
     public int lastSlot = 8;
     private String name = "compressor";
     public int timeCanCompress;
-    public int currentItemCompressTime;
     public int ticksCompressItemSoFar;
     public int ticksPerItem;
+    private ItemStack output;
+    private ItemStack itemStack;
+
 
     /**
      * Returns an array containing the indices of the slots that can be accessed by automation on the given side of this
@@ -277,7 +281,7 @@ public class TileEntityCompressor extends TileEntity implements ISidedInventory 
 
     public int compressingTime(ItemStack itemStack) {
 
-        return 200;
+        return 1000;
     }
 
     public boolean canCompress() {
@@ -286,8 +290,29 @@ public class TileEntityCompressor extends TileEntity implements ISidedInventory 
             return false;
         }
         else {
-            ItemStack output = new ItemStack(Items.diamond);
-
+            for (int i = 0; i < 8; i++) {
+                if(inventorySlots[i].getItem() == ModItems.dust && inventorySlots[i].getItemDamage() == 0) {
+                    output = new ItemStack(Items.iron_ingot);
+                }
+                if(inventorySlots[i].getItem() == ModItems.dust && inventorySlots[i].getItemDamage() == 1) {
+                    output = new ItemStack(Items.gold_ingot);
+                }
+                if(inventorySlots[i].getItem() == ModItems.dust && inventorySlots[i].getItemDamage() == 2) {
+                    output = new ItemStack(Items.coal);
+                }
+                if(inventorySlots[i].getItem() == ModItems.dust && inventorySlots[i].getItemDamage() == 3) {
+                    output = new ItemStack(Items.diamond);
+                }
+                if(inventorySlots[i].getItem() == ModItems.dust && inventorySlots[i].getItemDamage() == 4) {
+                    output = new ItemStack(Items.emerald);
+                }
+                if(inventorySlots[i].getItem() == ModItems.dust && inventorySlots[i].getItemDamage() == 5) {
+                    output = new ItemStack(Items.dye, 1, 4);
+                }
+                if(inventorySlots[i].getItem() == Items.redstone) {
+                    output = new ItemStack(Item.getItemFromBlock(Blocks.redstone_block));
+                }
+            }
             if (inventorySlots[8] == null) {
                 return true;
             }
@@ -304,7 +329,29 @@ public class TileEntityCompressor extends TileEntity implements ISidedInventory 
     public void compressItem() {
         if(canCompress()) {
 
-            ItemStack itemStack = new ItemStack(Items.diamond);
+            for (int i = 0; i < 8; i++) {
+                if(inventorySlots[i].getItem() == ModItems.dust && inventorySlots[i].getItemDamage() == 0) {
+                    itemStack = new ItemStack(Items.iron_ingot);
+                }
+                if(inventorySlots[i].getItem() == ModItems.dust && inventorySlots[i].getItemDamage() == 1) {
+                    itemStack = new ItemStack(Items.gold_ingot);
+                }
+                if(inventorySlots[i].getItem() == ModItems.dust && inventorySlots[i].getItemDamage() == 2) {
+                    itemStack = new ItemStack(Items.coal);
+                }
+                if(inventorySlots[i].getItem() == ModItems.dust && inventorySlots[i].getItemDamage() == 3) {
+                    itemStack = new ItemStack(Items.diamond);
+                }
+                if(inventorySlots[i].getItem() == ModItems.dust && inventorySlots[i].getItemDamage() == 4) {
+                    itemStack = new ItemStack(Items.emerald);
+                }
+                if(inventorySlots[i].getItem() == ModItems.dust && inventorySlots[i].getItemDamage() == 5) {
+                    itemStack = new ItemStack(Items.dye, 1, 4);
+                }
+                if(inventorySlots[i].getItem() == Items.redstone) {
+                    itemStack = new ItemStack(Item.getItemFromBlock(Blocks.redstone_block));
+                }
+            }
 
             if(inventorySlots[8] == null) {
                 inventorySlots[8] = itemStack.copy();
@@ -335,11 +382,8 @@ public class TileEntityCompressor extends TileEntity implements ISidedInventory 
 
         if(!worldObj.isRemote) {
 
-            ItemStack stuff = new ItemStack(ModItems.dust, 1, 3);
-
             for (int i = 0; i < 8; i++) {
-                if(inventorySlots[i] != null && inventorySlots[i].getItem() == stuff.getItem() && inventorySlots[i].getItemDamage() == stuff.getItemDamage()) {
-                        System.out.println("SD in input slot!");
+                if(inventorySlots[i] != null) {
                         if(!compressingSomething() && canCompress()) {
                             timeCanCompress = 150;
                             if(compressingSomething()) {
