@@ -16,7 +16,7 @@ buildscript {
 }
 
 plugins {
-    id 'com.matthewprenger.cursegradle' version '2.0.4'
+    id 'com.matthewprenger.cursegradle' version '1.0.4'
 }
 
 apply plugin: 'forge'
@@ -105,6 +105,6 @@ idea {
 curseforge {
     apiKey = project.hasProperty('curseForgeApiKey') ? project.curseForgeApiKey : ''
     id = project.hasProperty('curseForgeID') ? project.curseForgeID : ''
-    changelog = changeloglatest.txt
+    changelog = file('changeloglatest.txt')
     releaseType = 'release'
 }
