@@ -7,14 +7,17 @@ public class Configurations {
     public static Configuration config;
     public static boolean configExists;
 
+    public static boolean compressorRegister;
     public static boolean cookedSquidRegister;
     public static boolean coolSquidRegister;
     public static boolean hotdogRegister;
+    public static boolean crushingWandRegister;
     public static boolean dittoRegister;
+    public static boolean dustRegister;
+    public static boolean xProducerRegister;
     public static boolean diamondHandbagRegister;
     public static boolean emeraldSwordRegister;
     public static boolean randomGunRegister;
-    public static boolean xProducerRegister;
 
     public static boolean diamondHandbagRecoil;
     public static float diamondHandbagRecoilChance;
@@ -35,6 +38,7 @@ public class Configurations {
     public static float hotdogSaturation;
 
     public static String[] canCrush;
+    public static int crushDustAmount;
     public static String[] dittoBlacklist;
     public static boolean xProducerDamage;
 
@@ -45,14 +49,17 @@ public class Configurations {
         //registry
         category = "registry";
 
+        compressorRegister = config.get(category, "compressorRegister", true).getBoolean(true);
         cookedSquidRegister = config.get(category, "cookedSquidRegister", true).getBoolean(true);
         coolSquidRegister = config.get(category, "coolSquidRegister", true).getBoolean(true);
         hotdogRegister = config.get(category, "hotdogRegister", true).getBoolean(true);
+        crushingWandRegister = config.get(category, "crushingWandRegister", true).getBoolean(true);
         dittoRegister = config.get(category, "dittoRegister", true).getBoolean(true);
+        xProducerRegister = config.get(category, "xProducerRegister", true).getBoolean(true);
+        dustRegister = config.get(category, "dustRegister", true).getBoolean(true);
         diamondHandbagRegister = config.get(category, "diamondHandbagRegister", true).getBoolean(true);
         emeraldSwordRegister = config.get(category, "emeraldSwordRegister", true).getBoolean(true);
         randomGunRegister = config.get(category, "randomGunRegister", true).getBoolean(true);
-        xProducerRegister = config.get(category, "xProducerRegister", true).getBoolean(true);
 
         //weapons
         category = "weapons";
@@ -83,11 +90,12 @@ public class Configurations {
 
         canCrush = config.getStringList("canCrush", category, new String[] {
                 "minecraft:cobblestone", "minecraft:iron_ore", "minecraft:gold_ore", "minecraft:coal_ore", "minecraft:diamond_ore", "minecraft:emerald_ore", "minecraft:lapis_ore", "minecraft:redstone_ore", "minecraft:lit_redstone_ore"
-        }, "Placeholder description");
+        }, "Things the Crushing Wand can crush");
+        crushDustAmount = config.get(category, "crushDustAmount", 12, "Amount of dust that drops when you use the Crushing Wand on an ore").getInt();
         dittoBlacklist = config.getStringList("dittoBlacklist", category, new String[] {
                 "tile.chest", "item.dolly.normal.full"
-        }, "Placeholder description");
-        xProducerDamage = config.get(category, "xProducerDamage", true).getBoolean(true);
+        }, "Things the Ditto cannot dupe");
+        xProducerDamage = config.get(category, "xProducerDamage", true, "Whether the XProducer damages the player when creating XP").getBoolean(true);
 
         if(config.hasChanged()) {
             config.save();

@@ -16,6 +16,7 @@ import net.minecraft.util.IIcon;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 import victinix.jarm.JARM;
+import victinix.jarm.libs.Configurations;
 import victinix.jarm.libs.Data;
 import victinix.jarm.libs.Tabs;
 import victinix.jarm.tileentities.TileEntityCompressor;
@@ -32,7 +33,9 @@ public class BlockCompressor extends BlockContainer {
         setBlockName(Data.MODID + ":" + name);
         setBlockTextureName(Data.MODID + ":" + name);
         setCreativeTab(Tabs.tabRandom);
-        GameRegistry.registerBlock(this, name);
+        if(Configurations.compressorRegister) {
+            GameRegistry.registerBlock(this, name);
+        }
     }
 
     @Override

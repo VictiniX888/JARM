@@ -8,6 +8,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.event.world.BlockEvent;
 import victinix.jarm.items.ModItems;
+import victinix.jarm.libs.Configurations;
 
 public class EventCrushingDrops {
 
@@ -19,23 +20,25 @@ public class EventCrushingDrops {
             if(event.block == Blocks.cobblestone) {
                 event.world.spawnEntityInWorld(new EntityItem(event.world, event.x, event.y, event.z, new ItemStack(Item.getItemFromBlock(Blocks.sand))));
             }
-            if(event.block == Blocks.iron_ore) {
-                event.world.spawnEntityInWorld(new EntityItem(event.world, event.x, event.y, event.z, new ItemStack(ModItems.dust, 1, 0)));
-            }
-            if(event.block == Blocks.gold_ore) {
-                event.world.spawnEntityInWorld(new EntityItem(event.world, event.x, event.y, event.z, new ItemStack(ModItems.dust, 1, 1)));
-            }
-            if(event.block == Blocks.coal_ore) {
-                event.world.spawnEntityInWorld(new EntityItem(event.world, event.x, event.y, event.z, new ItemStack(ModItems.dust, 1, 2)));
-            }
-            if(event.block == Blocks.diamond_ore) {
-                event.world.spawnEntityInWorld(new EntityItem(event.world, event.x, event.y, event.z, new ItemStack(ModItems.dust, 1, 3)));
-            }
-            if(event.block == Blocks.emerald_ore) {
-                event.world.spawnEntityInWorld(new EntityItem(event.world, event.x, event.y, event.z, new ItemStack(ModItems.dust, 1, 4)));
-            }
-            if(event.block == Blocks.lapis_ore) {
-                event.world.spawnEntityInWorld(new EntityItem(event.world, event.x, event.y, event.z, new ItemStack(ModItems.dust, 1, 5)));
+            if(Configurations.dustRegister) {
+                if (event.block == Blocks.iron_ore) {
+                    event.world.spawnEntityInWorld(new EntityItem(event.world, event.x, event.y, event.z, new ItemStack(ModItems.dust, Configurations.crushDustAmount, 0)));
+                }
+                if (event.block == Blocks.gold_ore) {
+                    event.world.spawnEntityInWorld(new EntityItem(event.world, event.x, event.y, event.z, new ItemStack(ModItems.dust, Configurations.crushDustAmount, 1)));
+                }
+                if (event.block == Blocks.coal_ore) {
+                    event.world.spawnEntityInWorld(new EntityItem(event.world, event.x, event.y, event.z, new ItemStack(ModItems.dust, Configurations.crushDustAmount, 2)));
+                }
+                if (event.block == Blocks.diamond_ore) {
+                    event.world.spawnEntityInWorld(new EntityItem(event.world, event.x, event.y, event.z, new ItemStack(ModItems.dust, Configurations.crushDustAmount, 3)));
+                }
+                if (event.block == Blocks.emerald_ore) {
+                    event.world.spawnEntityInWorld(new EntityItem(event.world, event.x, event.y, event.z, new ItemStack(ModItems.dust, Configurations.crushDustAmount, 4)));
+                }
+                if (event.block == Blocks.lapis_ore) {
+                    event.world.spawnEntityInWorld(new EntityItem(event.world, event.x, event.y, event.z, new ItemStack(ModItems.dust, Configurations.crushDustAmount, 5)));
+                }
             }
             if(event.block == Blocks.redstone_ore) {
                 event.world.spawnEntityInWorld(new EntityItem(event.world, event.x, event.y, event.z, new ItemStack(Items.redstone, 8)));

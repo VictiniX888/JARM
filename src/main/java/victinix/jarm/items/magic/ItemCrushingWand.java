@@ -7,6 +7,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemTool;
 import net.minecraft.world.World;
 import victinix.jarm.items.ModItems;
+import victinix.jarm.libs.Configurations;
 import victinix.jarm.libs.Data;
 import victinix.jarm.libs.Tabs;
 
@@ -20,7 +21,9 @@ public class ItemCrushingWand extends ItemTool {
         setUnlocalizedName(Data.MODID + ":" + name);
         setTextureName(Data.MODID + ":" + name);
         setCreativeTab(Tabs.tabRandom);
-        GameRegistry.registerItem(this, name);
+        if(Configurations.crushingWandRegister) {
+            GameRegistry.registerItem(this, name);
+        }
     }
 
     @Override

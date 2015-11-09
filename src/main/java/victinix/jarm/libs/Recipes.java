@@ -7,11 +7,25 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 import net.minecraftforge.oredict.ShapelessOreRecipe;
+import victinix.jarm.blocks.ModBlocks;
 import victinix.jarm.items.ModItems;
 
 public class Recipes {
 
     public static void registerCraftingRecipes() {
+
+        if(Configurations.compressorRegister) {
+            GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.compressor, 1, 0), new Object[] {
+                    "ABA",
+                    "ACA",
+                    "DED",
+                    'A', "ingotIron",
+                    'B', new ItemStack(Blocks.obsidian),
+                    'C', "dustRedstone",
+                    'D', "stone",
+                    'E', new ItemStack(Items.lava_bucket)
+            }));
+        }
 
         if(Configurations.cookedSquidRegister) {
             GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.cookedSquid, Configurations.cookedSquidCraftingAmount, 0), new Object[]{
@@ -26,6 +40,36 @@ public class Recipes {
             GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ModItems.hotdog, Configurations.hotdogCraftingAmount, 0), new Object[]{
                     new ItemStack(Items.bread),
                     new ItemStack(Items.cooked_chicken)
+            }));
+        }
+
+        if(Configurations.crushingWandRegister) {
+            GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.crushingWand, 1, 0), new Object[]{
+                    "  A",
+                    " A ",
+                    "AA ",
+                    'A', "stickWood",
+            }));
+        }
+
+        if(Configurations.dittoRegister) {
+            GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.ditto, 1, 0), new Object[]{
+                    "ABA",
+                    "BCB",
+                    "ABA",
+                    'A', new ItemStack(Items.blaze_powder),
+                    'B', new ItemStack(Items.ghast_tear),
+                    'C', new ItemStack(Items.nether_star)
+            }));
+        }
+
+        if(Configurations.xProducerRegister) {
+            GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.xProducer, 1, 0), new Object[]{
+                    "AAA",
+                    "ABA",
+                    "AAA",
+                    'A', "ingotIron",
+                    'B', new ItemStack(Blocks.stone_button)
             }));
         }
 
