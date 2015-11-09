@@ -71,3 +71,8 @@ New versioning (only CurseForge releases will be put here)
 - Removed config for Emerald Sword harvest level
 - Removed config for Emerald Sword mining speed
 - Removed config for Emerald Sword enchantability
+
+1.1.1
+- Added registry configs for Compressor, Crushing Wand & dusts
+- Added recipes for Compressor, Crushing Wand, Ditto & XProducer
+- Changed default amount of dusts dropped when breaking ores using Crushing Wand
