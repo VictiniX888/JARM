@@ -7,14 +7,17 @@ public class Configurations {
     public static Configuration config;
     public static boolean configExists;
 
+    public static boolean compressorRegister;
     public static boolean cookedSquidRegister;
     public static boolean coolSquidRegister;
     public static boolean hotdogRegister;
+    public static boolean crushingWandRegister;
     public static boolean dittoRegister;
+    public static boolean dustRegister;
+    public static boolean xProducerRegister;
     public static boolean diamondHandbagRegister;
     public static boolean emeraldSwordRegister;
     public static boolean randomGunRegister;
-    public static boolean xProducerRegister;
 
     public static boolean diamondHandbagRecoil;
     public static float diamondHandbagRecoilChance;
@@ -46,14 +49,17 @@ public class Configurations {
         //registry
         category = "registry";
 
+        compressorRegister = config.get(category, "compressorRegister", true).getBoolean(true);
         cookedSquidRegister = config.get(category, "cookedSquidRegister", true).getBoolean(true);
         coolSquidRegister = config.get(category, "coolSquidRegister", true).getBoolean(true);
         hotdogRegister = config.get(category, "hotdogRegister", true).getBoolean(true);
+        crushingWandRegister = config.get(category, "crushingWandRegister", true).getBoolean(true);
         dittoRegister = config.get(category, "dittoRegister", true).getBoolean(true);
+        xProducerRegister = config.get(category, "xProducerRegister", true).getBoolean(true);
+        dustRegister = config.get(category, "dustRegister", true).getBoolean(true);
         diamondHandbagRegister = config.get(category, "diamondHandbagRegister", true).getBoolean(true);
         emeraldSwordRegister = config.get(category, "emeraldSwordRegister", true).getBoolean(true);
         randomGunRegister = config.get(category, "randomGunRegister", true).getBoolean(true);
-        xProducerRegister = config.get(category, "xProducerRegister", true).getBoolean(true);
 
         //weapons
         category = "weapons";

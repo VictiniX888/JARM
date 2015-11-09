@@ -23,7 +23,7 @@ public class ItemDustBase extends Item {
         setUnlocalizedName(Data.MODID + ":" + name);
         setHasSubtypes(true);
         setCreativeTab(Tabs.tabRandom);
-        if(Configurations.randomGunRegister) {
+        if(Configurations.dustRegister) {
             GameRegistry.registerItem(this, name);
         }
     }
