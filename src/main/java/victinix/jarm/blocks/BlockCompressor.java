@@ -9,8 +9,10 @@ import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.IIcon;
 import net.minecraft.util.MathHelper;
@@ -21,15 +23,20 @@ import victinix.jarm.libs.Data;
 import victinix.jarm.libs.Tabs;
 import victinix.jarm.tileentities.TileEntityCompressor;
 
+import java.util.Random;
+
 public class BlockCompressor extends BlockContainer {
 
     private String name = "compressor";
 
     public IIcon[] icons = new IIcon[3];
 
+    private final Random random = new Random();
+
     public BlockCompressor(Material material) {
 
         super(material);
+        setHardness(5F);
         setBlockName(Data.MODID + ":" + name);
         setBlockTextureName(Data.MODID + ":" + name);
         setCreativeTab(Tabs.tabRandom);
@@ -124,6 +131,40 @@ public class BlockCompressor extends BlockContainer {
         }
 
         return true;
+    }
+
+    @Override
+    public void breakBlock(World world, int x, int y, int z, Block block, int meta) {
+
+        TileEntityCompressor tileEntityCompressor = (TileEntityCompressor)world.getTileEntity(x, y, z);
+
+        if(tileEntityCompressor != null) {
+            for (int i = 0; i < tileEntityCompressor.getSizeInventory(); i++) {
+                ItemStack itemToBeDropped = tileEntityCompressor.getStackInSlot(i);
+
+                if(itemToBeDropped != null) {
+
+                    while(itemToBeDropped.stackSize > 0) {
+                        int j = this.random.nextInt(21) + 10;
+
+                        if(j > itemToBeDropped.stackSize) {
+                            j = itemToBeDropped.stackSize;
+                        }
+
+                        itemToBeDropped.stackSize -= j;
+                        EntityItem entityItem = new EntityItem(world, x, y, z, new ItemStack(itemToBeDropped.getItem(), j, itemToBeDropped.getItemDamage()));
+
+                        if(itemToBeDropped.hasTagCompound()) {
+                            entityItem.getEntityItem().setTagCompound((NBTTagCompound)itemToBeDropped.getTagCompound().copy());
+                        }
+
+                        world.spawnEntityInWorld(entityItem);
+                    }
+                }
+            }
+        }
+
+        super.breakBlock(world, x, y, z, block, meta);
     }
 }
 
