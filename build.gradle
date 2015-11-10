@@ -22,15 +22,9 @@ def ENV = System.getenv()
 if (ENV.DRONE_BUILD_NUMBER) {
     version += ".build" + ENV.DRONE_BUILD_NUMBER
 }
-def getWorkingBranch() {
-    def workingBranch = """git --git-dir=${rootDir}/.git
-                               --work-tree=${rootDir}
-                               rev-parse --abbrev-ref HEAD""".execute().text.trim()
-    print "Working branch: " + workingBranch
-    return workingBranch
-}
-if (getWorkingBranch() != "master") {
-    version += "-" + getWorkingBranch()
+
+if (ENV.DRONE_BRANCH != "master") {
+    version += "-" + ENV.DRONE_BRANCH
 }
 group= "victinix.jarm" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "jarm"
@@ -68,7 +62,6 @@ dependencies {
     // for more info...
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
-
 }
 
 processResources
