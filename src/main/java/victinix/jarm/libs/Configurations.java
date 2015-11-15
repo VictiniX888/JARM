@@ -89,7 +89,7 @@ public class Configurations {
         category = "magic";
 
         canCrush = config.getStringList("canCrush", category, new String[] {
-                "minecraft:cobblestone", "minecraft:iron_ore", "minecraft:gold_ore", "minecraft:coal_ore", "minecraft:diamond_ore", "minecraft:emerald_ore", "minecraft:lapis_ore", "minecraft:redstone_ore", "minecraft:lit_redstone_ore"
+                "minecraft:cobblestone", "minecraft:iron_ore", "minecraft:gold_ore", "minecraft:coal_ore", "minecraft:diamond_ore", "minecraft:emerald_ore", "minecraft:lapis_ore", "minecraft:redstone_ore", "minecraft:lit_redstone_ore", "minecraft:obsidian"
         }, "Things the Crushing Wand can crush");
         crushDustAmount = config.get(category, "crushDustAmount", 12, "Amount of dust that drops when you use the Crushing Wand on an ore").getInt();
         dittoBlacklist = config.getStringList("dittoBlacklist", category, new String[] {

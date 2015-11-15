@@ -15,7 +15,7 @@ import java.util.List;
 public class ItemDustBase extends Item {
 
     private String name = "dust";
-    private IIcon[] icons = new IIcon[6];
+    private IIcon[] icons = new IIcon[7];
 
     public ItemDustBase() {
 
@@ -39,7 +39,7 @@ public class ItemDustBase extends Item {
     @Override
     public IIcon getIconFromDamage(int meta) {
 
-        if(meta > 5) {
+        if(meta > 6) {
             meta = 0;
         }
 

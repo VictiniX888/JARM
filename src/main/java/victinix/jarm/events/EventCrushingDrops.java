@@ -1,6 +1,8 @@
 package victinix.jarm.events;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import cpw.mods.fml.common.registry.GameData;
+import net.minecraft.block.Block;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -19,6 +21,12 @@ public class EventCrushingDrops {
 
             if(event.block == Blocks.cobblestone) {
                 event.world.spawnEntityInWorld(new EntityItem(event.world, event.x, event.y, event.z, new ItemStack(Item.getItemFromBlock(Blocks.sand))));
+            }
+            if(event.block == Blocks.redstone_ore) {
+                event.world.spawnEntityInWorld(new EntityItem(event.world, event.x, event.y, event.z, new ItemStack(Items.redstone, 8)));
+            }
+            if(event.block == Blocks.lit_redstone_ore) {
+                event.world.spawnEntityInWorld(new EntityItem(event.world, event.x, event.y, event.z, new ItemStack(Items.redstone, 8)));
             }
             if(Configurations.dustRegister) {
                 if (event.block == Blocks.iron_ore) {
@@ -39,12 +47,11 @@ public class EventCrushingDrops {
                 if (event.block == Blocks.lapis_ore) {
                     event.world.spawnEntityInWorld(new EntityItem(event.world, event.x, event.y, event.z, new ItemStack(ModItems.dust, Configurations.crushDustAmount, 5)));
                 }
-            }
-            if(event.block == Blocks.redstone_ore) {
-                event.world.spawnEntityInWorld(new EntityItem(event.world, event.x, event.y, event.z, new ItemStack(Items.redstone, 8)));
-            }
-            if(event.block == Blocks.lit_redstone_ore) {
-                event.world.spawnEntityInWorld(new EntityItem(event.world, event.x, event.y, event.z, new ItemStack(Items.redstone, 8)));
+                for (int i = 0; i < Configurations.canCrush.length; i++) {
+                    if ((event.block != Blocks.cobblestone && event.block != Blocks.redstone_ore && event.block != Blocks.lit_redstone_ore && event.block != Blocks.iron_ore && event.block != Blocks.gold_ore && event.block != Blocks.coal_ore && event.block != Blocks.diamond_ore && event.block != Blocks.emerald_ore && event.block != Blocks.lapis_ore) && event.block == GameData.getBlockRegistry().getObject(Configurations.canCrush[i])) {
+                        event.world.spawnEntityInWorld(new EntityItem(event.world, event.x, event.y, event.z, new ItemStack(ModItems.dust, Configurations.crushDustAmount, 6)));
+                    }
+                }
             }
         }
     }
