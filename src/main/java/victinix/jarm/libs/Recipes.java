@@ -28,11 +28,20 @@ public class Recipes {
         }
 
         if(Configurations.cookedSquidRegister) {
+            if(Configurations.emeraldSwordRegister) {
+                GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.cookedSquid, Configurations.cookedSquidCraftingAmount, 0), new Object[]{
+                        "A",
+                        "B",
+                        'A', new ItemStack(ModItems.emeraldSword, 1, OreDictionary.WILDCARD_VALUE),
+                        'B', new ItemStack(ModItems.coolSquid)
+                }));
+            }
             GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.cookedSquid, Configurations.cookedSquidCraftingAmount, 0), new Object[]{
-                    "A",
-                    "B",
-                    'A', new ItemStack(ModItems.emeraldSword, 1, OreDictionary.WILDCARD_VALUE),
-                    'B', new ItemStack(ModItems.coolSquid)
+                    "AC",
+                    "B ",
+                    'A', new ItemStack(Items.diamond_sword, 1, OreDictionary.WILDCARD_VALUE),
+                    'B', new ItemStack(ModItems.coolSquid),
+                    'C', new ItemStack(Items.blaze_powder)
             }));
         }
 
