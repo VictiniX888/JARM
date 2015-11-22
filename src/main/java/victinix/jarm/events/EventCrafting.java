@@ -6,6 +6,7 @@ import cpw.mods.fml.common.gameevent.PlayerEvent;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
+import net.minecraftforge.oredict.OreDictionary;
 import victinix.jarm.items.ModItems;
 import victinix.jarm.libs.Configurations;
 
@@ -16,9 +17,9 @@ public class EventCrafting {
 
         for (int i = 0; i < event.craftMatrix.getSizeInventory(); i++) {
             ItemStack itemStackInSlot = event.craftMatrix.getStackInSlot(i);
-            if(itemStackInSlot.getItem() == Items.diamond_sword) {
+            if(itemStackInSlot.getItem().equals(Items.diamond_sword)) {
                 ItemStack damagedItem = new ItemStack(Items.diamond_sword, 1, (itemStackInSlot.getItemDamage() + Configurations.cookedSquidCraftingAmount));
-                event.craftMatrix.setInventorySlotContents(i, damagedItem);
+                event.craftMatrix.setInventorySlotContents(event.player.inventory.getFirstEmptyStack(), damagedItem);
             }
             else {
                 return;
