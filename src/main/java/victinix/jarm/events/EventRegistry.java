@@ -13,6 +13,5 @@ public class EventRegistry {
             MinecraftForge.EVENT_BUS.register(new EventCrushingDrops());
             MinecraftForge.EVENT_BUS.register(new EventWandMalfuntion());
         }
-        FMLCommonHandler.instance().bus().register(new EventCrafting());
     }
 }

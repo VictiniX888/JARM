@@ -36,12 +36,10 @@ public class Recipes {
                         'B', new ItemStack(ModItems.coolSquid)
                 }));
             }
-            GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.cookedSquid, Configurations.cookedSquidCraftingAmount, 0), new Object[]{
-                    "AC",
-                    "B ",
-                    'A', new ItemStack(Items.diamond_sword, 1, OreDictionary.WILDCARD_VALUE),
-                    'B', new ItemStack(ModItems.coolSquid),
-                    'C', new ItemStack(Items.blaze_powder)
+            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ModItems.cookedSquid, Configurations.cookedSquidCraftingAmount, 0), new Object[]{
+                    new ItemStack(Items.diamond_sword.setContainerItem(Items.diamond_sword)),
+                    new ItemStack(ModItems.coolSquid),
+                    new ItemStack(Items.blaze_powder)
             }));
         }
 
