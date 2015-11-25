@@ -24,7 +24,6 @@ public class TileEntityCompressor extends TileEntity implements ISidedInventory 
     private ItemStack output;
     private ItemStack itemStack;
 
-
     /**
      * Returns an array containing the indices of the slots that can be accessed by automation on the given side of this
      * block.
