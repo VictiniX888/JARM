@@ -33,3 +33,7 @@ jarm.randomGun.tooltip=小心射击
 
 #Creative Tab
 itemGroup.tabRandom=JARM
+
+#GUI
+container.compressor=压缩机
+container.inventory=物品栏

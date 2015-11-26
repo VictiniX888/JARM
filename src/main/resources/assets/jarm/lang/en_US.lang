@@ -33,3 +33,7 @@ jarm.randomGun.tooltip=Shoot with caution
 
 #Creative Tab
 itemGroup.tabRandom=JARM
+
+#GUI
+container.compressor=Compressor
+container.inventory=Inventory
