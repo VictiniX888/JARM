@@ -1,6 +1,5 @@
 package victinix.jarm.libs;
 
-import jdk.nashorn.internal.runtime.regexp.joni.Config;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
