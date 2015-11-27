@@ -76,3 +76,6 @@ New versioning (only CurseForge releases will be put here)
 - Added registry configs for Compressor, Crushing Wand & dusts
 - Added recipes for Compressor, Crushing Wand, Ditto & XProducer
 - Changed default amount of dusts dropped when breaking ores using Crushing Wand
+
+1.1.2
+- Fix crash when left-clicking blocks
