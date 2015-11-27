@@ -18,8 +18,8 @@ public class EventWandMalfuntion {
 
         Block[] canCrush = ModItems.canCrush.toArray(new Block[ModItems.canCrush.size()]);
 
-        if(event.action != null && event.action == PlayerInteractEvent.Action.LEFT_CLICK_BLOCK) {
-            if(event.entityPlayer.getHeldItem().getItem() == ModItems.crushingWand) {
+        if(event.entityPlayer.getHeldItem() != null && event.entityPlayer.getHeldItem().getItem() == ModItems.crushingWand) {
+            if(event.action != null && event.action == PlayerInteractEvent.Action.LEFT_CLICK_BLOCK) {
                 for (int i = 0; i < ModItems.canCrush.size(); i++) {
                     if(!Arrays.asList(canCrush).contains(event.world.getBlock(event.x, event.y, event.z))) {
                         event.world.setRainStrength(1f);
