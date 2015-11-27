@@ -13,8 +13,6 @@ import victinix.jarm.tileentities.TileEntityCompressor;
 public class GuiCompressor extends GuiContainer {
 
     public static final ResourceLocation texture = new ResourceLocation(Data.MODID, "textures/gui/compressor.png");
-    private final IInventory tileCompressor;
-    private final InventoryPlayer inventoryPlayer;
 
     public GuiCompressor(InventoryPlayer invPlayer, TileEntityCompressor tileEntityCompressor) {
 
@@ -22,17 +20,15 @@ public class GuiCompressor extends GuiContainer {
 
         xSize = 176;
         ySize = 165;
-
-        inventoryPlayer = invPlayer;
-        tileCompressor = tileEntityCompressor;
     }
 
     @Override
     protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
 
-        String name = I18n.format("container.compressor");
-        fontRendererObj.drawString(name, xSize/2-fontRendererObj.getStringWidth(name)/2, 6, 4210752);
-        fontRendererObj.drawString(inventoryPlayer.getInventoryName(), 8, ySize - 96 + 2, 4210752);
+        String nameCompressor = I18n.format("container.compressor");
+        String nameInventory = I18n.format("container.inventory");
+        fontRendererObj.drawString(nameCompressor, xSize/2-fontRendererObj.getStringWidth(nameCompressor)/2, 6, 4210752);
+        fontRendererObj.drawString(nameInventory, 8, ySize - 96 + 2, 4210752);
     }
 
     @Override
