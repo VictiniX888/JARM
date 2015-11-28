@@ -13,8 +13,9 @@ public class Configurations {
     public static boolean hotdogRegister;
     public static boolean crushingWandRegister;
     public static boolean dittoRegister;
-    public static boolean dustRegister;
+    public static boolean superBurgerRegister;
     public static boolean xProducerRegister;
+    public static boolean dustRegister;
     public static boolean diamondHandbagRegister;
     public static boolean emeraldSwordRegister;
     public static boolean randomGunRegister;
@@ -55,6 +56,7 @@ public class Configurations {
         hotdogRegister = config.get(category, "hotdogRegister", true).getBoolean(true);
         crushingWandRegister = config.get(category, "crushingWandRegister", true).getBoolean(true);
         dittoRegister = config.get(category, "dittoRegister", true).getBoolean(true);
+        superBurgerRegister = config.get(category, "superBurgerRegister", true).getBoolean(true);
         xProducerRegister = config.get(category, "xProducerRegister", true).getBoolean(true);
         dustRegister = config.get(category, "dustRegister", true).getBoolean(true);
         diamondHandbagRegister = config.get(category, "diamondHandbagRegister", true).getBoolean(true);

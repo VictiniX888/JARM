@@ -9,6 +9,7 @@ import victinix.jarm.items.food.ItemCookedSquid;
 import victinix.jarm.items.food.ItemCoolSquid;
 import victinix.jarm.items.food.ItemHotdog;
 import victinix.jarm.items.magic.ItemDitto;
+import victinix.jarm.items.magic.ItemSuperBurger;
 import victinix.jarm.items.magic.ItemXProducer;
 import victinix.jarm.items.materials.ItemDustBase;
 import victinix.jarm.items.weapons.ItemDiamondHandbag;
@@ -30,6 +31,7 @@ public class ModItems {
     public static HashSet<Block> canCrush = new HashSet<Block>();
     public static Item crushingWand;
     public static Item ditto;
+    public static Item superBurger;
     public static Item xProducer;
 
     public static Item dust;
@@ -52,6 +54,7 @@ public class ModItems {
         }
         crushingWand = new ItemCrushingWand(ModItems.CRUSHER);
         ditto = new ItemDitto();
+        superBurger = new ItemSuperBurger();
         xProducer = new ItemXProducer();
 
         dust = new ItemDustBase();

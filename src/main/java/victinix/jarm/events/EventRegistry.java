@@ -15,5 +15,8 @@ public class EventRegistry {
             MinecraftForge.EVENT_BUS.register(new EventCrushingDrops());
             MinecraftForge.EVENT_BUS.register(new EventWandMalfuntion());
         }
+        if(Configurations.superBurgerRegister) {
+            FMLCommonHandler.instance().bus().register(new EventBurgerTick());
+        }
     }
 }
