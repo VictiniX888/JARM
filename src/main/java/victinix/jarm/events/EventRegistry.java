@@ -8,7 +8,9 @@ public class EventRegistry {
 
     public static void postInit() {
 
-        MinecraftForge.EVENT_BUS.register(new EventSquidDrops());
+        if(Configurations.coolSquidRegister) {
+            MinecraftForge.EVENT_BUS.register(new EventSquidDrops());
+        }
         if(Configurations.crushingWandRegister) {
             MinecraftForge.EVENT_BUS.register(new EventCrushingDrops());
             MinecraftForge.EVENT_BUS.register(new EventWandMalfuntion());

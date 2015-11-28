@@ -16,7 +16,7 @@ public class ItemCookedSquid extends ItemFood {
         setUnlocalizedName(Data.MODID + ":" + name);
         setTextureName(Data.MODID + ":" + name);
         setCreativeTab(Tabs.tabRandom);
-        if(Configurations.cookedSquidRegister)
+        if(Configurations.cookedSquidRegister && Configurations.cookedSquidRegister)
             GameRegistry.registerItem(this, name);
     }
 }

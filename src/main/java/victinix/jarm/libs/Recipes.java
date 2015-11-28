@@ -27,7 +27,7 @@ public class Recipes {
             }));
         }
 
-        if(Configurations.cookedSquidRegister) {
+        if(Configurations.cookedSquidRegister && Configurations.coolSquidRegister) {
             if(Configurations.emeraldSwordRegister) {
                 GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.cookedSquid, Configurations.cookedSquidCraftingAmount, 0), new Object[]{
                         "A",
