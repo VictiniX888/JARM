@@ -12,7 +12,7 @@ public class EventBurgerTick {
 
         if(event.player.getHeldItem() != null && event.player.getHeldItem().getItem() == ModItems.superBurger) {
 
-            event.player.addPotionEffect(new PotionEffect(23, 500));
+            event.player.addPotionEffect(new PotionEffect(23, 20));
         }
     }
 }
