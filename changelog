@@ -91,3 +91,6 @@ New versioning (only CurseForge releases will be put here)
 - Added Super Burger, gives saturation effect when held
 - Added Burger Ring, bauble that gives saturation effect when equipped
 - Added soft-dependency on Baubles
+
+1.1.4
+- The mod actually builds now
