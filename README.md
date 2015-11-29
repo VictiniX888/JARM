@@ -13,8 +13,11 @@ Nightly builds: https://drone.io/github.com/VictiniX888/JARM/files
 + Forge guys, for making Forge
 + Freimox, for making textures
 + Hlaaftana, for fixing shift-clicking out of Compressor
++ InfinityRaider, for helping me with CCC & NEI
 + Jabelar, for the container blocks tutorial
 + ljfa, for a lot of stuff that won't fit in one line
 + Mojang, for making Minecraft
++ SatanicSanta, for helping me with CCC & NEI
++ SoraZodia, for helping me with CCC & NEI
 + Vazkii, for Botania Github repo
 + VikeStep, for telling me how to update Forge, and why my configs weren't working
