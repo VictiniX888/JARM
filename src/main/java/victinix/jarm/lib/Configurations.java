@@ -8,6 +8,7 @@ public class Configurations {
     public static boolean configExists;
 
     public static boolean compressorRegister;
+    public static boolean burgerRingRegister;
     public static boolean cookedSquidRegister;
     public static boolean coolSquidRegister;
     public static boolean hotdogRegister;
@@ -51,6 +52,7 @@ public class Configurations {
         category = "registry";
 
         compressorRegister = config.get(category, "compressorRegister", true).getBoolean(true);
+        burgerRingRegister = config.get(category, "burgerRingRegister", true).getBoolean(true);
         cookedSquidRegister = config.get(category, "cookedSquidRegister", true).getBoolean(true);
         coolSquidRegister = config.get(category, "coolSquidRegister", true).getBoolean(true);
         hotdogRegister = config.get(category, "hotdogRegister", true).getBoolean(true);
