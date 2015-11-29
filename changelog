@@ -79,3 +79,15 @@ New versioning (only CurseForge releases will be put here)
 
 1.1.2
 - Fix crash when left-clicking blocks
+
+1.1.3
+- Compressor now drops its contents when broken
+- Compressor no longer breaks instantly
+- Added Ash, gotten when Crushing Wand breaks something it can break but doesn't drop anything
+- Added alternative recipe for Cooked Squid so that it can be crafted when Emerald Sword is disabled
+- Changed Creative Tab icon to Random Gun
+- Display inventory names in Compressor GUI
+- Cooked Squid is no longer loaded when Cool Squid is disabled
+- Added Super Burger, gives saturation effect when held
+- Added Burger Ring, bauble that gives saturation effect when equipped
+- Added soft-dependency on Baubles
