@@ -1,4 +1,4 @@
-package victinix.jarm.libs;
+package victinix.jarm.lib;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Items;

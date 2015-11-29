@@ -2,9 +2,9 @@ package victinix.jarm.items.magic;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.item.Item;
-import victinix.jarm.libs.Configurations;
-import victinix.jarm.libs.Data;
-import victinix.jarm.libs.Tabs;
+import victinix.jarm.lib.Configurations;
+import victinix.jarm.lib.Data;
+import victinix.jarm.lib.Tabs;
 
 public class ItemSuperBurger extends Item {
 

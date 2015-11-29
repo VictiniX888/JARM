@@ -1,12 +1,10 @@
 package victinix.jarm.items.food;
 
 import cpw.mods.fml.common.registry.GameRegistry;
-import net.minecraft.init.Items;
 import net.minecraft.item.ItemFood;
-import net.minecraft.item.ItemStack;
-import victinix.jarm.libs.Configurations;
-import victinix.jarm.libs.Data;
-import victinix.jarm.libs.Tabs;
+import victinix.jarm.lib.Configurations;
+import victinix.jarm.lib.Data;
+import victinix.jarm.lib.Tabs;
 
 public class ItemCoolSquid extends ItemFood {
 

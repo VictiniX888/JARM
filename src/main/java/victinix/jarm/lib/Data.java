@@ -1,4 +1,4 @@
-package victinix.jarm.libs;
+package victinix.jarm.lib;
 
 public class Data {
 

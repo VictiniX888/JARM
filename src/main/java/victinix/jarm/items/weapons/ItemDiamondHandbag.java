@@ -9,9 +9,9 @@ import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.StatCollector;
-import victinix.jarm.libs.Configurations;
-import victinix.jarm.libs.Data;
-import victinix.jarm.libs.Tabs;
+import victinix.jarm.lib.Configurations;
+import victinix.jarm.lib.Data;
+import victinix.jarm.lib.Tabs;
 
 import java.util.List;
 import java.util.Random;

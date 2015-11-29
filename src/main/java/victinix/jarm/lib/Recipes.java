@@ -1,4 +1,4 @@
-package victinix.jarm.libs;
+package victinix.jarm.lib;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.init.Blocks;
@@ -67,6 +67,16 @@ public class Recipes {
                     'A', new ItemStack(Items.blaze_powder),
                     'B', new ItemStack(Items.ghast_tear),
                     'C', new ItemStack(Items.nether_star)
+            }));
+        }
+
+        if(Configurations.superBurgerRegister) {
+            GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.superBurger, 1, 0), new Object[]{
+                    "AAA",
+                    "BBB",
+                    "AAA",
+                    'A', new ItemStack(Items.bread),
+                    'B', new ItemStack(Blocks.grass)
             }));
         }
 

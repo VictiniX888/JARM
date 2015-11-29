@@ -1,13 +1,10 @@
 package victinix.jarm.events;
 
-import akka.actor.dsl.Creators;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import net.minecraft.block.Block;
 import net.minecraft.entity.effect.EntityLightningBolt;
-import net.minecraft.world.World;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import victinix.jarm.items.ModItems;
-import victinix.jarm.libs.Configurations;
 
 import java.util.Arrays;
 

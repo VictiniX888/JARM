@@ -5,13 +5,12 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.common.config.Configuration;
-import net.minecraftforge.oredict.*;
 import victinix.jarm.blocks.ModBlocks;
 import victinix.jarm.events.EventRegistry;
 import victinix.jarm.gui.GuiHandler;
 import victinix.jarm.items.ModItems;
-import victinix.jarm.libs.*;
-import victinix.jarm.libs.OreDictionary;
+import victinix.jarm.lib.*;
+import victinix.jarm.lib.OreDictionary;
 
 import java.io.File;
 

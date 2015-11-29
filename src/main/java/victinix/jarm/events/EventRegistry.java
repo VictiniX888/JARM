@@ -2,7 +2,7 @@ package victinix.jarm.events;
 
 import cpw.mods.fml.common.FMLCommonHandler;
 import net.minecraftforge.common.MinecraftForge;
-import victinix.jarm.libs.Configurations;
+import victinix.jarm.lib.Configurations;
 
 public class EventRegistry {
 

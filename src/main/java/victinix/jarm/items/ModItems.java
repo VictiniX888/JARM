@@ -15,7 +15,7 @@ import victinix.jarm.items.materials.ItemDustBase;
 import victinix.jarm.items.weapons.ItemDiamondHandbag;
 import victinix.jarm.items.weapons.ItemEmeraldSword;
 import victinix.jarm.items.weapons.ItemRandomGun;
-import victinix.jarm.libs.Configurations;
+import victinix.jarm.lib.Configurations;
 
 import java.util.HashSet;
 

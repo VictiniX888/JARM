@@ -2,7 +2,6 @@ package victinix.jarm.events;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.registry.GameData;
-import net.minecraft.block.Block;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -10,7 +9,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.event.world.BlockEvent;
 import victinix.jarm.items.ModItems;
-import victinix.jarm.libs.Configurations;
+import victinix.jarm.lib.Configurations;
 
 public class EventCrushingDrops {
 

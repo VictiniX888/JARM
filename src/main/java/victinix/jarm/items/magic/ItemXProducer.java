@@ -6,8 +6,8 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
-import victinix.jarm.libs.Configurations;
-import victinix.jarm.libs.Data;
+import victinix.jarm.lib.Configurations;
+import victinix.jarm.lib.Data;
 
 public class ItemXProducer extends Item {
 

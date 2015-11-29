@@ -2,8 +2,6 @@ package victinix.jarm.blocks;
 
 import cpw.mods.fml.common.network.internal.FMLNetworkHandler;
 import cpw.mods.fml.common.registry.GameRegistry;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
@@ -18,9 +16,9 @@ import net.minecraft.util.IIcon;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 import victinix.jarm.JARM;
-import victinix.jarm.libs.Configurations;
-import victinix.jarm.libs.Data;
-import victinix.jarm.libs.Tabs;
+import victinix.jarm.lib.Configurations;
+import victinix.jarm.lib.Data;
+import victinix.jarm.lib.Tabs;
 import victinix.jarm.tileentities.TileEntityCompressor;
 
 import java.util.Random;

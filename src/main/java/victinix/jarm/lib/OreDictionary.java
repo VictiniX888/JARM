@@ -1,4 +1,4 @@
-package victinix.jarm.libs;
+package victinix.jarm.lib;
 
 import net.minecraft.item.ItemStack;
 import victinix.jarm.items.ModItems;
