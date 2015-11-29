@@ -7,6 +7,7 @@ Stable releases: http://minecraft.curseforge.com/projects/jarm/files
 Nightly builds: https://drone.io/github.com/VictiniX888/JARM/files
 
 ### Special thanks to:
++ Azanor, for Baubles
 + Chisel 2 team, for Chisel 2 Github repo
 + CoolSquid, for helping me with the Random Gun and giving me the idea to make Cool Squid
 + Direwolf20, for introducing me to the wonderful world of modded Minecraft

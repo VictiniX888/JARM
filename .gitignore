@@ -37,6 +37,3 @@ world
 *.json
 /server.properties
 *.dat
-
-gradle.properties
-libs
