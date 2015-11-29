@@ -1,5 +1,6 @@
 package victinix.jarm.lib;
 
+import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -25,6 +26,27 @@ public class Recipes {
                     'D', "stone",
                     'E', new ItemStack(Items.lava_bucket)
             }));
+        }
+
+        if(Loader.isModLoaded("Baubles") && Configurations.burgerRingRegister) {
+            if(Configurations.superBurgerRegister) {
+                GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.burgerRing), new Object[]{
+                        "A",
+                        "B",
+                        'A', new ItemStack(ModItems.superBurger),
+                        'B', new ItemStack(GameRegistry.findItem("Baubles", "Ring"))
+                }));
+            }
+            else {
+                GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.burgerRing), new Object[]{
+                        "AAA",
+                        "BCB",
+                        "AAA",
+                        'A', new ItemStack(Items.bread),
+                        'B', new ItemStack(Blocks.tallgrass, 1, 1),
+                        'C', new ItemStack(GameRegistry.findItem("Baubles", "Ring"))
+                }));
+            }
         }
 
         if(Configurations.cookedSquidRegister && Configurations.coolSquidRegister) {
@@ -76,7 +98,7 @@ public class Recipes {
                     "BBB",
                     "AAA",
                     'A', new ItemStack(Items.bread),
-                    'B', new ItemStack(Blocks.grass)
+                    'B', new ItemStack(Blocks.tallgrass, 1, 1)
             }));
         }
 
