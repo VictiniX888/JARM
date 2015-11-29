@@ -1,6 +1,9 @@
 #Blocks
 tile.jarm:compressor.name=压缩机
 
+#Bauble
+item.jarm:burgerRing.name=汉堡包指环
+
 #Food
 item.jarm:cookedSquid.name=煮熟鱿鱼
 item.jarm:coolSquid.name=酷鱿鱼

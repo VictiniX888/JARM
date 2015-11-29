@@ -4,6 +4,7 @@ import cpw.mods.fml.common.registry.GameData;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraftforge.common.util.EnumHelper;
+import victinix.jarm.items.bauble.ItemBurgerRing;
 import victinix.jarm.items.magic.ItemCrushingWand;
 import victinix.jarm.items.food.ItemCookedSquid;
 import victinix.jarm.items.food.ItemCoolSquid;
@@ -23,6 +24,8 @@ public class ModItems {
 
     public static Item.ToolMaterial RANDOMEMERALD;
     public static Item.ToolMaterial CRUSHER;
+
+    public static Item burgerRing;
 
     public static Item cookedSquid;
     public static Item coolSquid;
@@ -44,6 +47,8 @@ public class ModItems {
 
         RANDOMEMERALD = EnumHelper.addToolMaterial("RANDOMEMERALD", 4, Configurations.emeraldSwordDurability, 10f, Configurations.emeraldSwordDamage, 18);
         CRUSHER = EnumHelper.addToolMaterial("CRUSHER", 4, 2000, 2000f, 0, 0);
+
+        burgerRing = new ItemBurgerRing();
 
         cookedSquid = new ItemCookedSquid(Configurations.cookedSquidHeal, Configurations.cookedSquidSaturation, true);
         coolSquid = new ItemCoolSquid(Configurations.coolSquidHeal, Configurations.coolSquidSaturation, true);

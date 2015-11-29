@@ -1,6 +1,9 @@
 #Blocks
 tile.jarm:compressor.name=Compressor
 
+#Bauble
+item.jarm:burgerRing.name=Burger Ring
+
 #Food
 item.jarm:cookedSquid.name=Cooked Squid
 item.jarm:coolSquid.name=Cool Squid
