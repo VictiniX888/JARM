@@ -41,6 +41,7 @@ public class Configurations {
 
     public static String[] canCrush;
     public static int crushDustAmount;
+    public static boolean wandChangeBlocks;
     public static String[] dittoBlacklist;
     public static boolean xProducerDamage;
 
@@ -96,6 +97,7 @@ public class Configurations {
                 "minecraft:cobblestone", "minecraft:iron_ore", "minecraft:gold_ore", "minecraft:coal_ore", "minecraft:diamond_ore", "minecraft:emerald_ore", "minecraft:lapis_ore", "minecraft:redstone_ore", "minecraft:lit_redstone_ore", "minecraft:obsidian"
         }, "Things the Crushing Wand can crush");
         crushDustAmount = config.get(category, "crushDustAmount", 12, "Amount of dust that drops when you use the Crushing Wand on an ore").getInt();
+        wandChangeBlocks = config.get(category, "wandChangeBlocks", true, "Whether the Crushing Wand can change blocks to other things on right-click").getBoolean();
         dittoBlacklist = config.getStringList("dittoBlacklist", category, new String[] {
                 "tile.chest", "item.dolly.normal.full"
         }, "Things the Ditto cannot dupe");
