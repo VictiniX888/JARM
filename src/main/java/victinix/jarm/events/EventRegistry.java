@@ -18,5 +18,6 @@ public class EventRegistry {
         if(Configurations.superBurgerRegister) {
             FMLCommonHandler.instance().bus().register(new EventBurgerTick());
         }
+        MinecraftForge.EVENT_BUS.register(new EventPotionFlying());
     }
 }
