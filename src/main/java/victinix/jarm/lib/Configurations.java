@@ -14,6 +14,7 @@ public class Configurations {
     public static boolean hotdogRegister;
     public static boolean crushingWandRegister;
     public static boolean dittoRegister;
+    public static boolean flyingPotionRegister;
     public static boolean superBurgerRegister;
     public static boolean xProducerRegister;
     public static boolean dustRegister;
@@ -43,6 +44,7 @@ public class Configurations {
     public static int crushDustAmount;
     public static boolean wandChangeBlocks;
     public static String[] dittoBlacklist;
+    public static int potionFlyingID;
     public static boolean xProducerDamage;
 
     public static boolean refreshConfig() {
@@ -59,6 +61,7 @@ public class Configurations {
         hotdogRegister = config.get(category, "hotdogRegister", true).getBoolean(true);
         crushingWandRegister = config.get(category, "crushingWandRegister", true).getBoolean(true);
         dittoRegister = config.get(category, "dittoRegister", true).getBoolean(true);
+        flyingPotionRegister = config.get(category, "flyingPotionRegister", true).getBoolean(true);
         superBurgerRegister = config.get(category, "superBurgerRegister", true).getBoolean(true);
         xProducerRegister = config.get(category, "xProducerRegister", true).getBoolean(true);
         dustRegister = config.get(category, "dustRegister", true).getBoolean(true);
@@ -101,6 +104,7 @@ public class Configurations {
         dittoBlacklist = config.getStringList("dittoBlacklist", category, new String[] {
                 "tile.chest", "item.dolly.normal.full"
         }, "Things the Ditto cannot dupe");
+        potionFlyingID = config.get(category, "potionFlyingID", 32, "Flying Potion ID").getInt();
         xProducerDamage = config.get(category, "xProducerDamage", true, "Whether the XProducer damages the player when creating XP").getBoolean(true);
 
         if(config.hasChanged()) {

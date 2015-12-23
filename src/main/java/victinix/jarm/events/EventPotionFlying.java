@@ -2,8 +2,6 @@ package victinix.jarm.events;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.TickEvent;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraftforge.event.entity.living.LivingEvent;
 import victinix.jarm.JARM;
 
 public class EventPotionFlying {

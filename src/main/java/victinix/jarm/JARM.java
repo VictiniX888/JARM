@@ -66,7 +66,7 @@ public class JARM {
     public void init(FMLInitializationEvent event) {
 
         new GuiHandler();
-        flyingPotion = new PotionFlying(32, false, 0);
+        flyingPotion = new PotionFlying(Configurations.potionFlyingID, false, 0);
     }
 
     @Mod.EventHandler

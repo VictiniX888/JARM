@@ -92,6 +92,23 @@ public class Recipes {
             }));
         }
 
+        if(Configurations.flyingPotionRegister) {
+            if(Configurations.crushingWandRegister) {
+                GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ModItems.potionFlying, 1, 0), new Object[]{
+                        new ItemStack(Items.potionitem, 1, 0),
+                        new ItemStack(Items.nether_wart),
+                        new ItemStack(ModItems.crushingWand.setContainerItem(ModItems.crushingWand))
+                }));
+            }
+            else {
+                GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ModItems.potionFlying, 1, 0), new Object[]{
+                        new ItemStack(Items.potionitem, 1, 0),
+                        new ItemStack(Items.nether_wart),
+                        new ItemStack(Items.blaze_powder)
+                }));
+            }
+        }
+
         if(Configurations.superBurgerRegister) {
             GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.superBurger, 1, 0), new Object[]{
                     "AAA",
