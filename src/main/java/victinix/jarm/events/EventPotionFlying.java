@@ -1,6 +1,7 @@
 package victinix.jarm.events;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import cpw.mods.fml.common.gameevent.TickEvent;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraftforge.event.entity.living.LivingEvent;
 import victinix.jarm.JARM;
@@ -8,20 +9,20 @@ import victinix.jarm.JARM;
 public class EventPotionFlying {
 
     @SubscribeEvent
-    public void flyingEvent(LivingEvent.LivingUpdateEvent event) {
+    public void flyingEvent(TickEvent.PlayerTickEvent event) {
 
-        if(event.entityLiving.isPotionActive(JARM.flyingPotion)) {
+        if(event.player.isPotionActive(JARM.flyingPotion)) {
 
-            ((EntityPlayer)event.entityLiving).capabilities.allowFlying = true;
-        }
-
-        if(event.entityLiving instanceof EntityPlayer && event.entityLiving.isPotionActive(JARM.flyingPotion)) {
-            if(event.entityLiving.getActivePotionEffect(JARM.flyingPotion).getDuration() == 100) {
-                event.entityLiving.removePotionEffect(JARM.flyingPotion.id);
-                ((EntityPlayer)event.entityLiving).capabilities.allowFlying = false;
-                ((EntityPlayer)event.entityLiving).capabilities.isFlying = false;
-                return;
+            if(event.player.getActivePotionEffect(JARM.flyingPotion).getDuration() > 0) {
+                event.player.capabilities.allowFlying = true;
             }
+            else {
+                event.player.removePotionEffect(JARM.flyingPotion.id);
+            }
+        }
+        else if(!event.player.capabilities.isCreativeMode) {
+            event.player.capabilities.allowFlying = false;
+            event.player.capabilities.isFlying = false;
         }
     }
 }
