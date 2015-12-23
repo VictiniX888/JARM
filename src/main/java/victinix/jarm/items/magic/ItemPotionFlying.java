@@ -20,8 +20,11 @@ public class ItemPotionFlying extends Item {
         super();
         setMaxStackSize(1);
         setUnlocalizedName(Data.MODID + ":" + name);
+        setTextureName(Data.MODID + ":" + name);
         setCreativeTab(Tabs.tabRandom);
-        GameRegistry.registerItem(this, name);
+        if(Configurations.flyingPotionRegister) {
+            GameRegistry.registerItem(this, name);
+        }
     }
 
     @Override

@@ -5,13 +5,13 @@ import victinix.jarm.lib.Data;
 
 public class PotionFlying extends Potion {
 
-    String name = "potionFlying";
+    String name = "Flying";
 
     public PotionFlying(int id, boolean b, int j) {
 
         super(id, b, j);
         setIconIndex(0, 0);
-        setPotionName(Data.MODID + ":" + name);
+        setPotionName(name);
     }
 
     @Override
