@@ -24,13 +24,14 @@ repositories {
 
 apply plugin: 'forge'
 
-version = "1.1.5"
+versionNumber = "1.1.5"
 def ENV = System.getenv()
-if (ENV.DRONE_BUILD_NUMBER) {
-    version += ".build" + ENV.DRONE_BUILD_NUMBER
-}
 if (ENV.DRONE_BRANCH != "master") {
     version += "-" + ENV.DRONE_BRANCH
+}
+version += versionNumber
+if (ENV.DRONE_BUILD_NUMBER) {
+    version += ".build" + ENV.DRONE_BUILD_NUMBER
 }
 group= "victinix.jarm" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "jarm"
