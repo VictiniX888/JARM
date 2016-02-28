@@ -21,15 +21,18 @@ public class JARM {
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
 
+        proxy.preInit(event);
     }
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
 
+        proxy.init(event);
     }
 
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event) {
 
+        proxy.postInit(event);
     }
 }
