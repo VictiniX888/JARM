@@ -3,7 +3,6 @@ package victinix.jarm.lib;
 public class Data {
 
     public static final String MODID = "jarm";
-    public static final String MODNAME = "Just Another Random Mod";
-    public static final String VERSION = "1.1.5";
-    public static final String DEPENDENCIES = "after:harvestcraft;after:Baubles";
+    public static final String NAME = "Just Another Random Mod";
+    public static final String VERSION = "2.0.0-0";
 }
