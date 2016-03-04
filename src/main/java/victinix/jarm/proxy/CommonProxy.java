@@ -6,6 +6,7 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import victinix.jarm.items.ModItems;
 import victinix.jarm.lib.Configurations;
+import victinix.jarm.tab.CreativeTabRegistry;
 
 import java.io.File;
 
@@ -28,5 +29,6 @@ public class CommonProxy {
 
     public void postInit(FMLPostInitializationEvent event) {
 
+        CreativeTabRegistry.init();
     }
 }

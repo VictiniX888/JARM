@@ -14,6 +14,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import victinix.jarm.lib.Configurations;
 import victinix.jarm.lib.Data;
+import victinix.jarm.tab.CreativeTabRegistry;
 
 import java.util.Random;
 
@@ -28,6 +29,7 @@ public class ItemRandomGun extends Item {
         super();
         setRegistryName(Data.MODID + ":" + "random_gun");
         setUnlocalizedName(Data.MODID + ":" + "random_gun");
+        setCreativeTab(CreativeTabRegistry.creativeTabJARM);
         GameRegistry.registerItem(this);
     }
 

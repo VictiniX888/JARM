@@ -1,1 +1,5 @@
+##Weapons
 item.jarm:random_gun.name=Random Gun
+
+##Creative Tab
+itemGroup.creativeTabJARM=JARM
