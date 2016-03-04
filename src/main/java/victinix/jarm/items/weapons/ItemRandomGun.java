@@ -30,7 +30,9 @@ public class ItemRandomGun extends Item {
         setRegistryName(Data.MODID + ":" + "random_gun");
         setUnlocalizedName(Data.MODID + ":" + "random_gun");
         setCreativeTab(CreativeTabRegistry.creativeTabJARM);
-        GameRegistry.registerItem(this);
+        if(Configurations.randomGunRegistry) {
+            GameRegistry.registerItem(this);
+        }
     }
 
     @SideOnly(Side.CLIENT)
