@@ -1,4 +1,6 @@
 ##Weapons
+item.jarm:diamond_handbag.name=Diamond Handbag
+item.jarm:emerald_sword.name=Emerald Sword
 item.jarm:random_gun.name=Random Gun
 
 ##Creative Tab

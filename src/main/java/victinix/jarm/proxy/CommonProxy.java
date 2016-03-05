@@ -20,7 +20,8 @@ public class CommonProxy {
         Configurations.config.load();
         Configurations.refreshConfig();
 
-        ModItems.init();
+        ModItems.initToolMaterials();
+        ModItems.initItems();
     }
 
     public void init(FMLInitializationEvent event) {
