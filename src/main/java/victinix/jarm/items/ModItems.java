@@ -4,6 +4,9 @@ import net.minecraft.item.Item;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import victinix.jarm.items.food.ItemCookedSquid;
+import victinix.jarm.items.food.ItemCoolSquid;
+import victinix.jarm.items.food.ItemHotdog;
 import victinix.jarm.items.weapons.ItemDiamondHandbag;
 import victinix.jarm.items.weapons.ItemEmeraldSword;
 import victinix.jarm.items.weapons.ItemRandomGun;
@@ -11,6 +14,10 @@ import victinix.jarm.items.weapons.ItemRandomGun;
 public class ModItems {
 
     public static Item.ToolMaterial RANDOMEMERALD;
+
+    public static ItemCookedSquid cooked_squid;
+    public static ItemCoolSquid cool_squid;
+    public static ItemHotdog hotdog;
 
     public static ItemDiamondHandbag diamond_handbag;
     public static ItemEmeraldSword emerald_sword;
@@ -23,6 +30,10 @@ public class ModItems {
 
     public static void initItems() {
 
+        cooked_squid = new ItemCookedSquid(1, 0.04f, true);
+        cool_squid = new ItemCoolSquid(6, 0.2f, true);
+        hotdog = new ItemHotdog(6, 0.4f, true);
+
         diamond_handbag = new ItemDiamondHandbag(Item.ToolMaterial.EMERALD);
         emerald_sword = new ItemEmeraldSword(RANDOMEMERALD);
         random_gun = new ItemRandomGun();
@@ -30,6 +41,10 @@ public class ModItems {
 
     @SideOnly(Side.CLIENT)
     public static void initModels() {
+
+        cooked_squid.initModel();
+        cool_squid.initModel();
+        hotdog.initModel();
 
         diamond_handbag.initModel();
         emerald_sword.initModel();

@@ -1,3 +1,8 @@
+##Food
+item.jarm:cooked_squid.name=Cooked Squid
+item.jarm:cool_squid.name=Cool Squid
+item.jarm:hotdog.name=Hotdog
+
 ##Weapons
 item.jarm:diamond_handbag.name=Diamond Handbag
 item.jarm:emerald_sword.name=Emerald Sword
