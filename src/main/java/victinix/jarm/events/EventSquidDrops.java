@@ -10,7 +10,7 @@ import victinix.jarm.items.ModItems;
 public class EventSquidDrops {
 
     @SubscribeEvent
-    public void squidDropsEvent(LivingDropsEvent event) {
+    public void eventSquidDrops(LivingDropsEvent event) {
 
         if(event.entity instanceof EntitySquid) {
             ItemStack drops = new ItemStack(ModItems.cool_squid, 1);

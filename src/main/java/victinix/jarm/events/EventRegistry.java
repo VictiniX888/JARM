@@ -10,5 +10,8 @@ public class EventRegistry {
         if(Configurations.coolSquidRegistry) {
             MinecraftForge.EVENT_BUS.register(new EventSquidDrops());
         }
+        if(Configurations.superBurgerRegistry) {
+            MinecraftForge.EVENT_BUS.register(new EventBurgerTick());
+        }
     }
 }
