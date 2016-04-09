@@ -10,6 +10,7 @@ public class Configurations {
     public static boolean cookedSquidRegistry;
     public static boolean coolSquidRegistry;
     public static boolean hotdogRegistry;
+    public static boolean crushingWandRegistry;
     public static boolean dittoRegistry;
     public static boolean superBurgerRegistry;
     public static boolean xProducerRegistry;
@@ -17,6 +18,7 @@ public class Configurations {
     public static boolean emeraldSwordRegistry;
     public static boolean randomGunRegistry;
 
+    public static String[] canCrush;
     public static String[] dittoBlacklist;
     public static boolean xProducerDamage;
 
@@ -32,6 +34,7 @@ public class Configurations {
         cookedSquidRegistry = config.get(category, "cookedSquidRegistry", true).getBoolean(true);
         coolSquidRegistry = config.get(category, "coolSquidRegistry", true).getBoolean(true);
         hotdogRegistry = config.get(category, "hotdogRegistry", true).getBoolean(true);
+        crushingWandRegistry = config.get(category, "crushingWandRegistry", true).getBoolean(true);
         dittoRegistry = config.get(category, "dittoRegistry", true).getBoolean(true);
         superBurgerRegistry = config.get(category, "superBurgerRegistry", true).getBoolean(true);
         xProducerRegistry = config.get(category, "xProducerRegistry", true).getBoolean(true);
@@ -42,6 +45,9 @@ public class Configurations {
         category = "food";
 
         category = "magic";
+        canCrush = config.get(category, "canCrush", new String[] {
+                "minecraft:cobblestone", "minecraft:iron_ore", "minecraft:gold_ore", "minecraft:coal_ore", "minecraft:diamond_ore", "minecraft:emerald_ore", "minecraft:lapis_ore", "minecraft:redstone_ore", "minecraft:lit_redstone_ore", "minecraft:obsidian"
+        }, "Things the Crushing Wand can crush").getStringList();
         dittoBlacklist = config.get(category, "dittoBlocklist", new String[] {
                 "Chest"
         }, "Things the Ditto cannot dupe").getStringList();

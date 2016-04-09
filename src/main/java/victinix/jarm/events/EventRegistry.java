@@ -13,5 +13,8 @@ public class EventRegistry {
         if(Configurations.superBurgerRegistry) {
             MinecraftForge.EVENT_BUS.register(new EventBurgerTick());
         }
+        if(Configurations.crushingWandRegistry) {
+            MinecraftForge.EVENT_BUS.register(new EventWandMalfunction());
+        }
     }
 }
