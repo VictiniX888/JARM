@@ -3,6 +3,21 @@ item.jarm:cooked_squid.name=Cooked Squid
 item.jarm:cool_squid.name=Cool Squid
 item.jarm:hotdog.name=Hotdog
 
+##Magic
+item.jarm:crushing_wand=Crushing Wand
+item.jarm:ditto=Ditto
+item.jarm:super_burger=Super Burger
+item.jarm:xproducer=XProducer
+
+#Materials
+item.jarm:dust0.name=Iron Dust
+item.jarm:dust1.name=Gold Dust
+item.jarm:dust2.name=Coal Dust
+item.jarm:dust3.name=Diamond Dust
+item.jarm:dust4.name=Emerald Dust
+item.jarm:dust5.name=Lapis Dust
+item.jarm:dust6.name=Ash
+
 ##Weapons
 item.jarm:diamond_handbag.name=Diamond Handbag
 item.jarm:emerald_sword.name=Emerald Sword

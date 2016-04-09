@@ -13,6 +13,7 @@ import victinix.jarm.items.magic.ItemCrushingWand;
 import victinix.jarm.items.magic.ItemDitto;
 import victinix.jarm.items.magic.ItemSuperBurger;
 import victinix.jarm.items.magic.ItemXProducer;
+import victinix.jarm.items.materials.ItemDust;
 import victinix.jarm.items.weapons.ItemDiamondHandbag;
 import victinix.jarm.items.weapons.ItemEmeraldSword;
 import victinix.jarm.items.weapons.ItemRandomGun;
@@ -36,6 +37,8 @@ public class ModItems {
     public static ItemDitto ditto;
     public static ItemSuperBurger super_burger;
     public static ItemXProducer xproducer;
+
+    public static ItemDust dust;
 
     public static ItemDiamondHandbag diamond_handbag;
     public static ItemEmeraldSword emerald_sword;
@@ -62,6 +65,8 @@ public class ModItems {
         super_burger = new ItemSuperBurger();
         xproducer = new ItemXProducer();
 
+        dust = new ItemDust();
+
         diamond_handbag = new ItemDiamondHandbag(Item.ToolMaterial.EMERALD);
         emerald_sword = new ItemEmeraldSword(RANDOMEMERALD);
         random_gun = new ItemRandomGun();
@@ -78,6 +83,8 @@ public class ModItems {
         ditto.initModel();
         super_burger.initModel();
         xproducer.initModel();
+
+        dust.initModel();
 
         diamond_handbag.initModel();
         emerald_sword.initModel();

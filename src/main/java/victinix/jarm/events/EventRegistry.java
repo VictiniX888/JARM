@@ -15,6 +15,7 @@ public class EventRegistry {
         }
         if(Configurations.crushingWandRegistry) {
             MinecraftForge.EVENT_BUS.register(new EventWandMalfunction());
+            MinecraftForge.EVENT_BUS.register(new EventWandDrops());
         }
     }
 }

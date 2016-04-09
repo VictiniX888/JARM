@@ -14,6 +14,7 @@ public class Configurations {
     public static boolean dittoRegistry;
     public static boolean superBurgerRegistry;
     public static boolean xProducerRegistry;
+    public static boolean dustRegistry;
     public static boolean diamondHandbagRegistry;
     public static boolean emeraldSwordRegistry;
     public static boolean randomGunRegistry;
@@ -38,6 +39,7 @@ public class Configurations {
         dittoRegistry = config.get(category, "dittoRegistry", true).getBoolean(true);
         superBurgerRegistry = config.get(category, "superBurgerRegistry", true).getBoolean(true);
         xProducerRegistry = config.get(category, "xProducerRegistry", true).getBoolean(true);
+        dustRegistry = config.get(category, "dustRegistry", true).getBoolean(true);
         diamondHandbagRegistry = config.get(category, "diamondHandbagRegistry", true).getBoolean(true);
         emeraldSwordRegistry = config.get(category, "emeraldSwordRegistry", true).getBoolean(true);
         randomGunRegistry = config.get(category, "randomGunRegistry", true).getBoolean(true);
