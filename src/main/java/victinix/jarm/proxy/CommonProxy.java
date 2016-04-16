@@ -4,6 +4,7 @@ import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import victinix.jarm.blocks.ModBlocks;
 import victinix.jarm.events.EventRegistry;
 import victinix.jarm.items.ModItems;
 import victinix.jarm.lib.Configurations;
@@ -22,6 +23,7 @@ public class CommonProxy {
         Configurations.config.load();
         Configurations.refreshConfig();
 
+        ModBlocks.initBlocks();
         ModItems.initToolMaterials();
         ModItems.initItems();
     }
