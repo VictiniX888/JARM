@@ -6,6 +6,7 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import victinix.jarm.blocks.ModBlocks;
 import victinix.jarm.events.EventRegistry;
+import victinix.jarm.gui.GuiHandler;
 import victinix.jarm.items.ModItems;
 import victinix.jarm.lib.Configurations;
 import victinix.jarm.lib.Recipes;
@@ -31,6 +32,7 @@ public class CommonProxy {
     public void init(FMLInitializationEvent event) {
 
         Recipes.init();
+        new GuiHandler();
     }
 
     public void postInit(FMLPostInitializationEvent event) {
