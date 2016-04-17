@@ -1,14 +1,16 @@
 package victinix.jarm.items.weapons;
 
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.resources.model.ModelResourceLocation;
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.ChatComponentText;
+import net.minecraft.util.ActionResult;
+import net.minecraft.util.EnumActionResult;
+import net.minecraft.util.EnumHand;
+import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.World;
 import net.minecraftforge.client.model.ModelLoader;
-import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -31,7 +33,7 @@ public class ItemRandomGun extends Item {
         setUnlocalizedName(Data.MODID + ":" + "random_gun");
         setCreativeTab(CreativeTabRegistry.creativeTabJARM);
         if(Configurations.randomGunRegistry) {
-            GameRegistry.registerItem(this);
+            GameRegistry.register(this);
         }
     }
 
@@ -42,11 +44,11 @@ public class ItemRandomGun extends Item {
     }
 
     @Override
-    public ItemStack onItemRightClick(ItemStack itemStackIn, World worldIn, EntityPlayer playerIn) {
+    public ActionResult<ItemStack> onItemRightClick(ItemStack itemStackIn, World worldIn, EntityPlayer player, EnumHand hand) {
 
         if(worldIn.isRemote)
-        Minecraft.getMinecraft().thePlayer.addChatComponentMessage(new ChatComponentText(Configurations.randomGunText));
+        Minecraft.getMinecraft().thePlayer.addChatComponentMessage(new TextComponentString(Configurations.randomGunText));
 
-        return itemStackIn;
+        return ActionResult.newResult(EnumActionResult.SUCCESS, itemStackIn);
     }
 }

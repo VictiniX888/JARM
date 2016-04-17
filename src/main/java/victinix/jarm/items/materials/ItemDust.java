@@ -1,12 +1,11 @@
 package victinix.jarm.items.materials;
 
 import net.minecraft.client.renderer.ItemMeshDefinition;
-import net.minecraft.client.resources.model.ModelBakery;
-import net.minecraft.client.resources.model.ModelResourceLocation;
+import net.minecraft.client.renderer.block.model.ModelBakery;
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
@@ -27,7 +26,7 @@ public class ItemDust extends Item {
         setHasSubtypes(true);
         setCreativeTab(CreativeTabRegistry.creativeTabJARM);
         if(Configurations.dustRegistry) {
-            GameRegistry.registerItem(this);
+            GameRegistry.register(this);
         }
     }
 

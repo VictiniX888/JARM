@@ -1,7 +1,8 @@
 package victinix.jarm.items.weapons;
 
-import net.minecraft.client.resources.model.ModelResourceLocation;
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.init.MobEffects;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import net.minecraft.potion.Potion;
@@ -26,7 +27,7 @@ public class ItemDiamondHandbag extends ItemSword {
         setUnlocalizedName(Data.MODID + ":" + "diamond_handbag");
         setCreativeTab(CreativeTabRegistry.creativeTabJARM);
         if(Configurations.diamondHandbagRegistry) {
-            GameRegistry.registerItem(this);
+            GameRegistry.register(this);
         }
     }
 
@@ -39,7 +40,7 @@ public class ItemDiamondHandbag extends ItemSword {
     @Override
     public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker) {
 
-        target.addPotionEffect(new PotionEffect(Potion.wither.id, 500));
+        target.addPotionEffect(new PotionEffect(MobEffects.wither, 500));
 
         Random random = new Random();
         int recoilChance = random.nextInt(100);

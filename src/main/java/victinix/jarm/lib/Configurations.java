@@ -46,11 +46,9 @@ public class Configurations {
         emeraldSwordRegistry = config.get(category, "emeraldSwordRegistry", true).getBoolean(true);
         randomGunRegistry = config.get(category, "randomGunRegistry", true).getBoolean(true);
 
-        category = "food";
-
         category = "magic";
         canCrush = config.get(category, "canCrush", new String[] {
-                "minecraft:cobblestone", "minecraft:iron_ore", "minecraft:gold_ore", "minecraft:coal_ore", "minecraft:diamond_ore", "minecraft:emerald_ore", "minecraft:lapis_ore", "minecraft:redstone_ore", "minecraft:lit_redstone_ore", "minecraft:obsidian"
+                "Cobblestone", "Iron Ore", "Gold Ore", "Coal Ore", "Diamond Ore", "Emerald Ore", "Lapis Ore", "Redstone Ore", "Obsidian"
         }, "Things the Crushing Wand can crush").getStringList();
         dittoBlacklist = config.get(category, "dittoBlocklist", new String[] {
                 "Chest"

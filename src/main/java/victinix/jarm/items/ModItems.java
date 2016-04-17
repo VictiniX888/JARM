@@ -3,7 +3,6 @@ package victinix.jarm.items;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraftforge.common.util.EnumHelper;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import victinix.jarm.items.food.ItemCookedSquid;
@@ -26,7 +25,7 @@ public class ModItems {
 
     public static Set<Block> canCrush = new HashSet<Block>();
 
-    public static Item.ToolMaterial RANDOMEMERALD;
+    public static Item.ToolMaterial EMERALD;
     public static Item.ToolMaterial CRUSHER;
 
     public static ItemCookedSquid cooked_squid;
@@ -46,29 +45,29 @@ public class ModItems {
 
     public static void initToolMaterials() {
 
-        RANDOMEMERALD = EnumHelper.addToolMaterial("RANDOMEMERALD", 4, 3000, 10f, 4f, 18);
+        EMERALD = EnumHelper.addToolMaterial("EMERALD", 4, 3000, 10f, 4f, 18);
         CRUSHER = EnumHelper.addToolMaterial("CRUSHER", 4, 2000, 2000f, 0, 0);
     }
 
     public static void initItems() {
 
         for (int i = 0; i < Configurations.canCrush.length; i++) {
-            canCrush.add(GameRegistry.findBlock(Configurations.canCrush[i].split(":")[0], Configurations.canCrush[i].split(":")[1]));
+            canCrush.add(Block.getBlockFromName(Configurations.canCrush[i]));
         }
 
         cooked_squid = new ItemCookedSquid(1, 0.04f, true);
         cool_squid = new ItemCoolSquid(6, 0.2f, true);
         hotdog = new ItemHotdog(6, 0.4f, true);
 
-        crushing_wand = new ItemCrushingWand(1f, CRUSHER, canCrush);
+        crushing_wand = new ItemCrushingWand(CRUSHER, canCrush);
         ditto = new ItemDitto();
         super_burger = new ItemSuperBurger();
         xproducer = new ItemXProducer();
 
         dust = new ItemDust();
 
-        diamond_handbag = new ItemDiamondHandbag(Item.ToolMaterial.EMERALD);
-        emerald_sword = new ItemEmeraldSword(RANDOMEMERALD);
+        diamond_handbag = new ItemDiamondHandbag(Item.ToolMaterial.DIAMOND);
+        emerald_sword = new ItemEmeraldSword(EMERALD);
         random_gun = new ItemRandomGun();
     }
 

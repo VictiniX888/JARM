@@ -1,6 +1,6 @@
 package victinix.jarm.items.weapons;
 
-import net.minecraft.client.resources.model.ModelResourceLocation;
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -22,7 +22,7 @@ public class ItemEmeraldSword extends ItemSword {
         setUnlocalizedName(Data.MODID + ":" + "emerald_sword");
         setCreativeTab(CreativeTabRegistry.creativeTabJARM);
         if(Configurations.emeraldSwordRegistry) {
-            GameRegistry.registerItem(this);
+            GameRegistry.register(this);
         }
     }
 

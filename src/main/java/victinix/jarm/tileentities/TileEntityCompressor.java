@@ -7,10 +7,10 @@ import net.minecraft.launchwrapper.Launch;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.EnumFacing;
-import net.minecraft.util.IChatComponent;
 import net.minecraft.util.ITickable;
+import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.text.TextComponentString;
 import victinix.jarm.recipes.RecipeCompressorBase;
 
 public class TileEntityCompressor extends TileEntity implements ISidedInventory, ITickable {
@@ -177,9 +177,9 @@ public class TileEntityCompressor extends TileEntity implements ISidedInventory,
     }
 
     @Override
-    public IChatComponent getDisplayName() {
+    public ITextComponent getDisplayName() {
 
-        return new ChatComponentText(getName());
+        return new TextComponentString(getName());
     }
 
     @Override

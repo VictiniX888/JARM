@@ -1,10 +1,13 @@
 package victinix.jarm.items.magic;
 
-import net.minecraft.client.resources.model.ModelResourceLocation;
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.ActionResult;
 import net.minecraft.util.DamageSource;
+import net.minecraft.util.EnumActionResult;
+import net.minecraft.util.EnumHand;
 import net.minecraft.world.World;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
@@ -23,7 +26,7 @@ public class ItemXProducer extends Item {
         setUnlocalizedName(Data.MODID + ":" + "xproducer");
         setCreativeTab(CreativeTabRegistry.creativeTabJARM);
         if(Configurations.xProducerRegistry) {
-            GameRegistry.registerItem(this);
+            GameRegistry.register(this);
         }
     }
 
@@ -34,11 +37,11 @@ public class ItemXProducer extends Item {
     }
 
     @Override
-    public ItemStack onItemRightClick(ItemStack itemStackIn, World worldIn, EntityPlayer playerIn) {
+    public ActionResult<ItemStack> onItemRightClick(ItemStack itemStackIn, World worldIn, EntityPlayer playerIn, EnumHand hand) {
 
         playerIn.attackEntityFrom(DamageSource.generic, 2f);
         playerIn.addExperience(10);
 
-        return itemStackIn;
+        return ActionResult.newResult(EnumActionResult.SUCCESS, itemStackIn);
     }
 }

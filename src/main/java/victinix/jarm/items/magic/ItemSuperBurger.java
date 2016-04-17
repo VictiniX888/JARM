@@ -1,6 +1,6 @@
 package victinix.jarm.items.magic;
 
-import net.minecraft.client.resources.model.ModelResourceLocation;
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
@@ -19,7 +19,7 @@ public class ItemSuperBurger extends Item {
         setUnlocalizedName(Data.MODID + ":" + "super_burger");
         setCreativeTab(CreativeTabRegistry.creativeTabJARM);
         if(Configurations.superBurgerRegistry) {
-            GameRegistry.registerItem(this);
+            GameRegistry.register(this);
         }
     }
 

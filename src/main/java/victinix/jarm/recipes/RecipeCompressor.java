@@ -1,6 +1,5 @@
 package victinix.jarm.recipes;
 
-import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import victinix.jarm.items.ModItems;
