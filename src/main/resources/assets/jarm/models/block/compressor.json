@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "jarm:blocks/compressor_front",
+    "down": "jarm:blocks/compressor_side",
+    "up": "jarm:blocks/compressor_top",
+    "east": "jarm:blocks/compressor_side",
+    "west": "jarm:blocks/compressor_side",
+    "north": "jarm:blocks/compressor_front",
+    "south": "jarm:blocks/compressor_side"
+  }
+}

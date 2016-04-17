@@ -1,0 +1,18 @@
+{
+  "parent": "builtin/generated",
+  "textures": {
+    "layer0": "jarm:items/diamond_handbag"
+  },
+  "display": {
+    "thirdperson": {
+      "rotation": [ 174, 2, 0 ],
+      "translation": [ 0.00, 3.50, 0.00 ],
+      "scale": [ 0.50, 1.00, 0.50 ]
+    },
+    "firstperson": {
+      "rotation": [ 138, 63, 77 ],
+      "translation": [ -1.25, 0.50, 2.00 ],
+      "scale": [ 1.70, 1.70, 1.70 ]
+    }
+  }
+}
