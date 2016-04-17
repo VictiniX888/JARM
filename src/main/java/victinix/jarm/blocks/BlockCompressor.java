@@ -21,6 +21,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import victinix.jarm.JARM;
+import victinix.jarm.lib.Configurations;
 import victinix.jarm.lib.Data;
 import victinix.jarm.tab.CreativeTabRegistry;
 import victinix.jarm.tileentities.TileEntityCompressor;
@@ -36,8 +37,10 @@ public class BlockCompressor extends Block {
         setUnlocalizedName(Data.MODID + ":" + "compressor");
         setCreativeTab(CreativeTabRegistry.creativeTabJARM);
         setDefaultState(blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
-        GameRegistry.registerBlock(this);
-        GameRegistry.registerTileEntity(TileEntityCompressor.class, (Data.MODID + ":" + "compressor"));
+        if(Configurations.compressorRegistry) {
+            GameRegistry.registerBlock(this);
+            GameRegistry.registerTileEntity(TileEntityCompressor.class, (Data.MODID + ":" + "compressor"));
+        }
     }
 
     @SideOnly(Side.CLIENT)
