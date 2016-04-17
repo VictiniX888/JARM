@@ -12,9 +12,9 @@ public class EventSquidDrops {
     @SubscribeEvent
     public void eventSquidDrops(LivingDropsEvent event) {
 
-        if(event.entity instanceof EntitySquid) {
+        if(event.getEntity() instanceof EntitySquid) {
             ItemStack drops = new ItemStack(ModItems.cool_squid, 1);
-            event.drops.add(new EntityItem(event.entity.worldObj, event.entity.posX, event.entity.posY, event.entity.posZ, drops));
+            event.getDrops().add(new EntityItem(event.getEntity().worldObj, event.getEntity().posX, event.getEntity().posY, event.getEntity().posZ, drops));
         }
     }
 }

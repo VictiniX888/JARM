@@ -1,19 +1,19 @@
 package victinix.jarm.blocks;
 
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyDirection;
-import net.minecraft.block.state.BlockState;
+import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.client.resources.model.ModelResourceLocation;
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
+import net.minecraft.util.EnumHand;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.network.internal.FMLNetworkHandler;
@@ -38,7 +38,7 @@ public class BlockCompressor extends Block {
         setCreativeTab(CreativeTabRegistry.creativeTabJARM);
         setDefaultState(blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
         if(Configurations.compressorRegistry) {
-            GameRegistry.registerBlock(this);
+            GameRegistry.register(this);
             GameRegistry.registerTileEntity(TileEntityCompressor.class, (Data.MODID + ":" + "compressor"));
         }
     }
@@ -73,9 +73,9 @@ public class BlockCompressor extends Block {
     }
 
     @Override
-    protected BlockState createBlockState() {
+    protected BlockStateContainer createBlockState() {
 
-        return new BlockState(this, FACING);
+        return new BlockStateContainer(this, FACING);
     }
 
     @Override
@@ -91,7 +91,7 @@ public class BlockCompressor extends Block {
     }
 
     @Override
-    public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumFacing side, float hitX, float hitY, float hitZ) {
+    public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, ItemStack itemStack, EnumFacing side, float hitX, float hitY, float hitZ) {
 
         if(!worldIn.isRemote) {
             FMLNetworkHandler.openGui(playerIn, JARM.instance, 0, worldIn, pos.getX(), pos.getY(), pos.getZ());

@@ -1,6 +1,5 @@
 package victinix.jarm.blocks;
 
-
 import net.minecraft.block.material.Material;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;

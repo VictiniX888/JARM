@@ -1,6 +1,6 @@
 package victinix.jarm.items.food;
 
-import net.minecraft.client.resources.model.ModelResourceLocation;
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.ItemFood;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
@@ -19,7 +19,7 @@ public class ItemHotdog extends ItemFood {
         setUnlocalizedName(Data.MODID + ":" + "hotdog");
         setCreativeTab(CreativeTabRegistry.creativeTabJARM);
         if(Configurations.hotdogRegistry) {
-            GameRegistry.registerItem(this);
+            GameRegistry.register(this);
         }
     }
 

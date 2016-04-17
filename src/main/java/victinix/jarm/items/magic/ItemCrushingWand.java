@@ -1,17 +1,19 @@
 package victinix.jarm.items.magic;
 
 import net.minecraft.block.Block;
-import net.minecraft.client.resources.model.ModelResourceLocation;
+import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemTool;
-import net.minecraft.util.BlockPos;
+import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumFacing;
+import net.minecraft.util.EnumHand;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.client.model.ModelLoader;
-import net.minecraftforge.fml.common.registry.GameData;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -24,14 +26,14 @@ import java.util.Set;
 
 public class ItemCrushingWand extends ItemTool {
 
-    public ItemCrushingWand(float attackDamage, ToolMaterial material, Set<Block> effectiveBlocks) {
+    public ItemCrushingWand(ToolMaterial material, Set<Block> effectiveBlocks) {
 
-        super(attackDamage, material, effectiveBlocks);
+        super(material, effectiveBlocks);
         setRegistryName(Data.MODID + ":" + "crushing_wand");
         setUnlocalizedName(Data.MODID + ":" + "crushing_wand");
         setCreativeTab(CreativeTabRegistry.creativeTabJARM);
         if(Configurations.crushingWandRegistry) {
-            GameRegistry.registerItem(this);
+            GameRegistry.register(this);
         }
     }
 
@@ -42,26 +44,26 @@ public class ItemCrushingWand extends ItemTool {
     }
 
     @Override
-    public boolean canHarvestBlock(Block blockIn) {
+    public boolean canHarvestBlock(IBlockState blockIn) {
 
         return super.canHarvestBlock(blockIn);
     }
 
     @Override
-    public boolean onBlockDestroyed(ItemStack stack, World worldIn, Block blockIn, BlockPos pos, EntityLivingBase playerIn) {
+    public boolean onBlockDestroyed(ItemStack stack, World worldIn, IBlockState blockStateIn, BlockPos pos, EntityLivingBase playerIn) {
 
         return true;
     }
 
     @Override
-    public boolean onItemUse(ItemStack stack, EntityPlayer playerIn, World worldIn, BlockPos pos, EnumFacing side, float hitX, float hitY, float hitZ) {
+    public EnumActionResult onItemUse(ItemStack stack, EntityPlayer playerIn, World worldIn, BlockPos pos, EnumHand hand, EnumFacing side, float hitX, float hitY, float hitZ) {
 
         Random random = new Random();
         Block block = null;
 
         while(true) {
             int id = random.nextInt(4096);
-            block = GameData.getBlockRegistry().getObjectById(id);
+            block = Block.getBlockById(id);
             if(block != null && block != Blocks.air) {
                 break;
             }
@@ -69,10 +71,10 @@ public class ItemCrushingWand extends ItemTool {
 
         if(!worldIn.isRemote) {
             worldIn.setBlockState(pos, block.getDefaultState());
-            return true;
+            return EnumActionResult.SUCCESS;
         }
         else {
-            return false;
+            return EnumActionResult.FAIL;
         }
     }
 }
