@@ -2,13 +2,13 @@
 {
   "modid": "jarm",
   "name": "Just Another Random Mod",
-  "description": "Placeholder description",
+  "description": "Expect lots of random things",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
+  "authorList": ["VictiniX888"],
+  "credits": "",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
