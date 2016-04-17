@@ -10,6 +10,7 @@ import victinix.jarm.gui.GuiHandler;
 import victinix.jarm.items.ModItems;
 import victinix.jarm.lib.Configurations;
 import victinix.jarm.lib.Recipes;
+import victinix.jarm.recipes.RecipeCompressor;
 import victinix.jarm.tab.CreativeTabRegistry;
 
 import java.io.File;
@@ -32,6 +33,7 @@ public class CommonProxy {
     public void init(FMLInitializationEvent event) {
 
         Recipes.init();
+        RecipeCompressor.init();
         new GuiHandler();
     }
 

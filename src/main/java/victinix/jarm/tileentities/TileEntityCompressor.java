@@ -1,9 +1,9 @@
 package victinix.jarm.tileentities;
 
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Items;
 import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.ItemStack;
+import net.minecraft.launchwrapper.Launch;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
@@ -11,7 +11,7 @@ import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.IChatComponent;
 import net.minecraft.util.ITickable;
-import victinix.jarm.items.ModItems;
+import victinix.jarm.recipes.RecipeCompressorBase;
 
 public class TileEntityCompressor extends TileEntity implements ISidedInventory, ITickable {
 
@@ -23,7 +23,6 @@ public class TileEntityCompressor extends TileEntity implements ISidedInventory,
     public int ticksCompressItemSoFar;
     public int ticksPerItem;
     private ItemStack output;
-    private ItemStack itemStack;
 
     @Override
     public int[] getSlotsForFace(EnumFacing side) {
@@ -121,12 +120,7 @@ public class TileEntityCompressor extends TileEntity implements ISidedInventory,
     @Override
     public boolean isUseableByPlayer(EntityPlayer player) {
 
-        if(worldObj.getTileEntity(pos) != this) {
-            return false;
-        }
-        else {
-            return player.getDistanceSq(pos.getX() + 0.5D, pos.getY() + 0.5D, pos.getZ() + 0.5D) <= 64.0D;
-        }
+        return worldObj.getTileEntity(pos) == this && player.getDistanceSq(pos.getX() + 0.5D, pos.getY() + 0.5D, pos.getZ() + 0.5D) <= 64.0D;
     }
 
     @Override
@@ -235,7 +229,12 @@ public class TileEntityCompressor extends TileEntity implements ISidedInventory,
 
     public int compressingTime(ItemStack itemStack) {
 
-        return 1000;
+        if((Boolean) Launch.blackboard.get("fml.deobfuscatedEnvironment")) {
+            return 200;
+        }
+        else {
+            return 1000;
+        }
     }
 
     public boolean canCompress() {
@@ -252,12 +251,17 @@ public class TileEntityCompressor extends TileEntity implements ISidedInventory,
             return false;
         }
         else {
-            for (int i = 0; i < getSizeInventory() - 1; i++) {
-                if(inventorySlots[i].getItem() == ModItems.dust && inventorySlots[i].getItemDamage() == 0) {
-                    output = new ItemStack(Items.iron_ingot);
+            for (ItemStack input : RecipeCompressorBase.map.keySet()) {
+                for (int i = 0; i < getSizeInventory() - 1; i++) {
+                    if(inventorySlots[i].getItem() == input.getItem() && inventorySlots[i].getItemDamage() == input.getItemDamage()) {
+                        output = RecipeCompressorBase.map.get(input);
+                    }
+                    else {
+                        output = null;
+                        break;
+                    }
                 }
-                else {
-                    output = null;
+                if(output != null) {
                     break;
                 }
             }
@@ -280,17 +284,11 @@ public class TileEntityCompressor extends TileEntity implements ISidedInventory,
     public void compressItem() {
 
         if(canCompress()) {
-            for (int i = 0; i < 8; i++) {
-                if (inventorySlots[i].getItem() == ModItems.dust && inventorySlots[i].getItemDamage() == 0) {
-                    itemStack = new ItemStack(Items.iron_ingot);
-                }
-            }
-
             if(inventorySlots[8] == null) {
-                inventorySlots[8] = itemStack.copy();
+                inventorySlots[8] = output.copy();
             }
-            else if(inventorySlots[8].getItem() == itemStack.getItem()) {
-                inventorySlots[8].stackSize += itemStack.stackSize;
+            else if(inventorySlots[8].getItem() == output.getItem()) {
+                inventorySlots[8].stackSize += output.stackSize;
             }
 
             for (int i = 0; i < 8; i++) {
@@ -309,21 +307,10 @@ public class TileEntityCompressor extends TileEntity implements ISidedInventory,
         boolean hasBeenCompressing = compressingSomething();
         boolean changedCompressingState = false;
 
-        if(compressingSomething()) {
-            timeCanCompress--;
-        }
-
         if(!worldObj.isRemote) {
 
             for (int i = 0; i < 8; i++) {
                 if(inventorySlots[i] != null) {
-                    if(!compressingSomething() && canCompress()) {
-                        timeCanCompress = 150;
-                        if(compressingSomething()) {
-                            changedCompressingState = true;
-                        }
-                    }
-
                     if(compressingSomething() && canCompress()) {
                         ticksCompressItemSoFar++;
                         if(ticksCompressItemSoFar == ticksPerItem) {
