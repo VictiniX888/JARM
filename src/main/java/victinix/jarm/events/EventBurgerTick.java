@@ -12,9 +12,11 @@ public class EventBurgerTick {
     @SubscribeEvent
     public void eventBurgerTick(TickEvent.PlayerTickEvent event) {
 
-        if(event.player.getHeldItem(event.player.getActiveHand()) != null) {
-            if(event.player.getHeldItem(event.player.getActiveHand()).getItem() == ModItems.super_burger) {
-                event.player.addPotionEffect(new PotionEffect(MobEffects.saturation, 2));
+        if(event.player.getActiveHand() != null) {
+            if (event.player.getHeldItem(event.player.getActiveHand()) != null) {
+                if (event.player.getHeldItem(event.player.getActiveHand()).getItem() == ModItems.super_burger) {
+                    event.player.addPotionEffect(new PotionEffect(MobEffects.saturation, 2));
+                }
             }
         }
     }

@@ -9,6 +9,7 @@ import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
@@ -29,16 +30,19 @@ import victinix.jarm.tileentities.TileEntityCompressor;
 public class BlockCompressor extends Block {
 
     public static final PropertyDirection FACING = PropertyDirection.create("facing");
+    Item itemBlock = new ItemBlock(this);
 
     public BlockCompressor(Material materialIn) {
 
         super(materialIn);
         setRegistryName(Data.MODID + ":" + "compressor");
         setUnlocalizedName(Data.MODID + ":" + "compressor");
+        itemBlock.setRegistryName(Data.MODID + ":" + "compressor");
         setCreativeTab(CreativeTabRegistry.creativeTabJARM);
         setDefaultState(blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
         if(Configurations.compressorRegistry) {
             GameRegistry.register(this);
+            GameRegistry.register(itemBlock);
             GameRegistry.registerTileEntity(TileEntityCompressor.class, (Data.MODID + ":" + "compressor"));
         }
     }
