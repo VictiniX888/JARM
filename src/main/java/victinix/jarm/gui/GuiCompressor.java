@@ -12,12 +12,14 @@ import victinix.jarm.tileentities.TileEntityCompressor;
 public class GuiCompressor extends GuiContainer {
 
     private static final ResourceLocation texture = new ResourceLocation(Data.MODID, "textures/gui/compressor.png");
+    private TileEntityCompressor compressor;
 
     GuiCompressor(InventoryPlayer inventorySlotsIn, TileEntityCompressor compressor) {
 
         super(new ContainerCompressor(inventorySlotsIn, compressor));
         xSize = 176;
         ySize = 166;
+        this.compressor = compressor;
     }
 
     @Override
@@ -35,5 +37,10 @@ public class GuiCompressor extends GuiContainer {
         GL11.glColor4f(1f, 1f, 1f, 1f);
         mc.getTextureManager().bindTexture(texture);
         drawTexturedModalRect(guiLeft, guiTop, 0, 0, xSize, ySize);
+
+        if(compressor.ticksCompressItemSoFar > 0) {
+            int progress = compressor.ticksCompressItemSoFar / (compressor.compressingTime() / 12);
+            drawTexturedModalRect(guiLeft + 85, guiTop + 39, 176, 0, 6, progress + 1);
+        }
     }
 }
