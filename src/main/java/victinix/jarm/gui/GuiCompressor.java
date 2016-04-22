@@ -38,9 +38,12 @@ public class GuiCompressor extends GuiContainer {
         mc.getTextureManager().bindTexture(texture);
         drawTexturedModalRect(guiLeft, guiTop, 0, 0, xSize, ySize);
 
-        if(compressor.ticksCompressItemSoFar > 0) {
+        if(compressor.canCompress() && compressor.compressingSomething()) {
             int progress = compressor.ticksCompressItemSoFar / (compressor.compressingTime() / 12);
             drawTexturedModalRect(guiLeft + 85, guiTop + 39, 176, 0, 6, progress + 1);
+        }
+        else {
+            drawTexturedModalRect(guiLeft + 85, guiTop + 39, 176, 0, 6, 0);
         }
     }
 }

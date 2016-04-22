@@ -324,6 +324,9 @@ public class TileEntityCompressor extends TileEntity implements ISidedInventory,
                         ticksCompressItemSoFar = 0;
                     }
                 }
+                else {
+                    ticksCompressItemSoFar = 0;
+                }
             }
         }
 
