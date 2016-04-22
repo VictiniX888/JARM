@@ -89,10 +89,10 @@ public class ContainerCompressor extends Container {
                 iCrafting.sendProgressBarUpdate(this, 0, compressor.timeCanCompress);
             }
             if(ticksCompressItemSoFar != compressor.ticksCompressItemSoFar) {
-                iCrafting.sendProgressBarUpdate(this, 0, compressor.ticksCompressItemSoFar);
+                iCrafting.sendProgressBarUpdate(this, 1, compressor.ticksCompressItemSoFar);
             }
             if(ticksPerItem != compressor.ticksPerItem) {
-                iCrafting.sendProgressBarUpdate(this, 0, compressor.ticksPerItem);
+                iCrafting.sendProgressBarUpdate(this, 2, compressor.ticksPerItem);
             }
         }
     }

@@ -105,7 +105,7 @@ public class TileEntityCompressor extends TileEntity implements ISidedInventory,
         }
 
         if(index == 0 && !isSameItemStackAlreadyInSlot) {
-            ticksPerItem = compressingTime(stack);
+            ticksPerItem = compressingTime();
             ticksCompressItemSoFar = 0;
             markDirty();
         }
@@ -227,13 +227,13 @@ public class TileEntityCompressor extends TileEntity implements ISidedInventory,
         return true;
     }
 
-    public int compressingTime(ItemStack itemStack) {
+    public int compressingTime() {
 
         if((Boolean) Launch.blackboard.get("fml.deobfuscatedEnvironment")) {
-            return 200;
+            return 180;
         }
         else {
-            return 1000;
+            return 1020;
         }
     }
 
@@ -315,7 +315,7 @@ public class TileEntityCompressor extends TileEntity implements ISidedInventory,
                         ticksCompressItemSoFar++;
                         if(ticksCompressItemSoFar == ticksPerItem) {
                             ticksCompressItemSoFar = 0;
-                            ticksPerItem = compressingTime(inventorySlots[1]);
+                            ticksPerItem = compressingTime();
                             compressItem();
                             changedCompressingState = true;
                         }
