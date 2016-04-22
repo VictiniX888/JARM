@@ -11,13 +11,13 @@ import victinix.jarm.tileentities.TileEntityCompressor;
 
 public class GuiCompressor extends GuiContainer {
 
-    public static final ResourceLocation texture = new ResourceLocation(Data.MODID, "textures/gui/compressor.png");
+    private static final ResourceLocation texture = new ResourceLocation(Data.MODID, "textures/gui/compressor.png");
 
-    public GuiCompressor(InventoryPlayer inventorySlotsIn, TileEntityCompressor compressor) {
+    GuiCompressor(InventoryPlayer inventorySlotsIn, TileEntityCompressor compressor) {
 
         super(new ContainerCompressor(inventorySlotsIn, compressor));
         xSize = 176;
-        ySize = 165;
+        ySize = 166;
     }
 
     @Override
