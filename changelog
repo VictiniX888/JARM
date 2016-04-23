@@ -3,3 +3,10 @@ Changelog - 1.9
 
 3.0.0
 - Initial port to 1.9
+
+3.0.1
+- Compressor drops its contents when broken
+- Black line at the bottom of Compressor GUI appears now
+- Added progress bar for Compressor
+- Added dusts to the OreDictionary
+- Chinese localization
